@@ -1,0 +1,348 @@
+{
+  "level": "Pre-A1",
+  "titleAr": "ما قبل المبتدئ",
+  "descriptionAr": "يتعرف المتعلم إلى عبارات الصف والتحية، ويكوّن جملاً قصيرة جداً حول الذات والأشياء القريبة.",
+  "units": [
+    {
+      "id": "pre-a1-u1",
+      "titleAr": "مواقف وتراكيب أساسية",
+      "lessons": [
+        {
+          "id": "pre-a1-l1",
+          "titleAr": "التحية والتعارف",
+          "titleTr": "Merhaba, ben…",
+          "objectivesAr": [
+            "إلقاء التحية والوداع في موقف بسيط.",
+            "ذكر الاسم والسؤال عنه."
+          ],
+          "explanationAr": "تبدأ المحادثة التركية غالباً بتحية قصيرة، ثم يأتي الاسم مع ben «أنا». في السؤال عن الاسم نقول Adınız ne? بصيغة مهذبة، واسمك غير الرسمي Adın ne?",
+          "vocabulary": [
+            {
+              "id": "pre-a1-l1-v1",
+              "tr": "merhaba",
+              "ar": "مرحباً",
+              "ipa": "",
+              "pos": "اسم/تحية",
+              "exampleTr": "Merhaba, Ece.",
+              "exampleAr": "مرحباً يا إيجه.",
+              "category": "المحادثات الرسمية وغير الرسمية"
+            },
+            {
+              "id": "pre-a1-l1-v2",
+              "tr": "ben",
+              "ar": "أنا",
+              "ipa": "",
+              "pos": "ضمير",
+              "exampleTr": "Ben Ali.",
+              "exampleAr": "أنا علي.",
+              "category": "المحادثات الرسمية وغير الرسمية"
+            },
+            {
+              "id": "pre-a1-l1-v3",
+              "tr": "ad",
+              "ar": "اسم",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Adım Lina.",
+              "exampleAr": "اسمي لينا.",
+              "category": "الحياة اليومية"
+            },
+            {
+              "id": "pre-a1-l1-v4",
+              "tr": "güle güle",
+              "ar": "إلى اللقاء (للمغادر)",
+              "ipa": "",
+              "pos": "عبارة",
+              "exampleTr": "Güle güle, Mehmet.",
+              "exampleAr": "إلى اللقاء يا محمد.",
+              "category": "المحادثات الرسمية وغير الرسمية"
+            }
+          ],
+          "grammar": {
+            "titleAr": "الضمائر والتعريف بالاسم",
+            "explanationAr": "يأتي الضمير قبل الاسم أو الجملة الاسمية. تُضاف لاحقة الملكية -ım/-im/-um/-üm إلى ad لتكوين adım «اسمي»؛ تتحدد الصورة وفق انسجام الحركات.",
+            "form": "ben + ad / ad + -(I)m",
+            "examples": [
+              {
+                "tr": "Benim adım Lina.",
+                "ar": "اسمي لينا.",
+                "wrong": "Ben adım Lina.",
+                "correction": "Benim adım Lina.",
+                "why": "الملكية تحتاج ضميراً مضافاً أو لاحقة الملكية؛ والصيغة الطبيعية هنا Benim adım…"
+              },
+              {
+                "tr": "Adın ne?",
+                "ar": "ما اسمك؟ (غير رسمي)",
+                "wrong": "Adın kim?",
+                "correction": "Adın ne?",
+                "why": "نستخدم ne للسؤال عن الاسم، لا kim."
+              }
+            ]
+          },
+          "dialogue": [
+            {
+              "speaker": "A",
+              "tr": "Merhaba!",
+              "ar": "مرحباً!"
+            },
+            {
+              "speaker": "B",
+              "tr": "Merhaba. Ben Ali.",
+              "ar": "مرحباً. أنا علي."
+            },
+            {
+              "speaker": "A",
+              "tr": "Benim adım Ece.",
+              "ar": "اسمي إيجه."
+            },
+            {
+              "speaker": "B",
+              "tr": "Memnun oldum.",
+              "ar": "سُررت بلقائك."
+            },
+            {
+              "speaker": "A",
+              "tr": "Ben de memnun oldum. Güle güle!",
+              "ar": "وأنا أيضاً. إلى اللقاء!"
+            }
+          ],
+          "reading": {
+            "titleAr": "لقاء في الصف",
+            "textTr": "Merhaba! Benim adım Sara. Bu, yeni arkadaşım Can. Can da öğrenci. Ders başlıyor; sonra görüşürüz.",
+            "translationAr": "مرحباً! اسمي سارة. هذا صديقي الجديد جان. جان طالب أيضاً. يبدأ الدرس؛ نلتقي لاحقاً.",
+            "questions": [
+              {
+                "questionAr": "من صديق سارة الجديد؟",
+                "options": [
+                  "جان",
+                  "المعلم",
+                  "طالب آخر"
+                ],
+                "correctIndex": 0,
+                "explanationAr": "تعرّف سارة جاناً بأنه صديقها الجديد."
+              }
+            ]
+          },
+          "comprehension": [
+            {
+              "questionAr": "ما العبارة المناسبة لتوديع شخص مغادر؟",
+              "options": [
+                "Günaydın.",
+                "Güle güle.",
+                "Adım ne?"
+              ],
+              "correctIndex": 1,
+              "explanationAr": "Güle güle تقال عادةً لمن يغادر."
+            }
+          ],
+          "writing": [
+            {
+              "promptAr": "اكتب جملة تعرّف فيها باسمك.",
+              "expectedTr": "Benim adım Lina.",
+              "acceptNameIntro": true,
+              "explanationAr": "استبدل Lina باسمك، ويمكنك قول Ben Ali عند التعريف المباشر."
+            }
+          ],
+          "listening": [
+            {
+              "sentenceTr": "Benim adım Deniz.",
+              "questionAr": "ما اسم المتحدث؟",
+              "options": [
+                "دنيز",
+                "علي",
+                "إيجة"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "المتحدث يقول Benim adım Deniz."
+            }
+          ],
+          "pronunciation": [
+            {
+              "textTr": "merhaba",
+              "focusAr": "انتبه إلى وضوح الحركتين e وa، وإلى نطق h خفيفاً."
+            }
+          ],
+          "finalQuiz": [
+            {
+              "questionAr": "ما معنى Memnun oldum?",
+              "options": [
+                "إلى اللقاء",
+                "سُررت بلقائك",
+                "ما اسمك؟"
+              ],
+              "correctIndex": 1,
+              "explanationAr": "تقال بعد التعارف بمعنى «سُررت بلقائك»."
+            }
+          ]
+        },
+        {
+          "id": "pre-a1-l2",
+          "titleAr": "أشياء الصف وعباراته",
+          "titleTr": "Sınıfta",
+          "objectivesAr": [
+            "تسمية أشياء مألوفة في الصف.",
+            "استخدام هذا/هذه والسؤال عن شيء."
+          ],
+          "explanationAr": "تُستخدم bu بمعنى «هذا/هذه» قبل الاسم. والسؤال Bu ne? يعني «ما هذا؟». غالباً لا يتغير الاسم بعد bu.",
+          "vocabulary": [
+            {
+              "id": "pre-a1-l2-v1",
+              "tr": "kitap",
+              "ar": "كتاب",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Bu bir kitap.",
+              "exampleAr": "هذا كتاب.",
+              "category": "الدراسة"
+            },
+            {
+              "id": "pre-a1-l2-v2",
+              "tr": "kalem",
+              "ar": "قلم",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Kalem masada.",
+              "exampleAr": "القلم على الطاولة.",
+              "category": "الدراسة"
+            },
+            {
+              "id": "pre-a1-l2-v3",
+              "tr": "defter",
+              "ar": "دفتر",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Defterim burada.",
+              "exampleAr": "دفتري هنا.",
+              "category": "الدراسة"
+            },
+            {
+              "id": "pre-a1-l2-v4",
+              "tr": "öğretmen",
+              "ar": "معلّم/معلّمة",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Öğretmen sınıfta.",
+              "exampleAr": "المعلّم في الصف.",
+              "category": "الدراسة"
+            }
+          ],
+          "grammar": {
+            "titleAr": "أداة الإشارة bu والسؤال ne",
+            "explanationAr": "ضع bu قبل الاسم للإشارة إلى شيء قريب، واستخدم ne للسؤال عن ماهيته. أداة التنكير bir تسبق الاسم المفرد عند الحاجة.",
+            "form": "bu + (bir) + اسم / Bu ne?",
+            "examples": [
+              {
+                "tr": "Bu bir defter.",
+                "ar": "هذا دفتر.",
+                "wrong": "Bu bir defter mi?",
+                "correction": "Bu bir defter.",
+                "why": "العبارة خبرية؛ لا نضيف mi إلا إذا كان المقصود سؤال نعم أو لا."
+              },
+              {
+                "tr": "Bu ne?",
+                "ar": "ما هذا؟",
+                "wrong": "Bu kim? (عن كتاب)",
+                "correction": "Bu ne?",
+                "why": "ne للأشياء، أما kim فللأشخاص."
+              }
+            ]
+          },
+          "dialogue": [
+            {
+              "speaker": "A",
+              "tr": "Bu ne?",
+              "ar": "ما هذا؟"
+            },
+            {
+              "speaker": "B",
+              "tr": "Bu bir kitap.",
+              "ar": "هذا كتاب."
+            },
+            {
+              "speaker": "A",
+              "tr": "Peki, bu ne?",
+              "ar": "حسناً، ما هذا؟"
+            },
+            {
+              "speaker": "B",
+              "tr": "Bu kalem.",
+              "ar": "هذا قلم."
+            },
+            {
+              "speaker": "A",
+              "tr": "Teşekkür ederim.",
+              "ar": "شكراً لك."
+            }
+          ],
+          "reading": {
+            "titleAr": "حقيبة ندى",
+            "textTr": "Nida sınıfta. Çantasında bir kitap, iki kalem ve bir defter var. Öğretmen yeni bir kelime yazıyor. Nida defterine bakıyor.",
+            "translationAr": "ندى في الصف. في حقيبتها كتاب وقلمان ودفتر. يكتب المعلم كلمة جديدة. تنظر ندى إلى دفترها.",
+            "questions": [
+              {
+                "questionAr": "ماذا يوجد في حقيبة ندى؟",
+                "options": [
+                  "كتاب وقلمان ودفتر",
+                  "ثلاثة كتب",
+                  "دفتر فقط"
+                ],
+                "correctIndex": 0,
+                "explanationAr": "تذكر الجملة الثانية هذه الأشياء الثلاثة."
+              }
+            ]
+          },
+          "comprehension": [
+            {
+              "questionAr": "أين توجد ندى؟",
+              "options": [
+                "في الصف",
+                "في السوق",
+                "في الحديقة"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "تبدأ القراءة بقولها Nida sınıfta."
+            }
+          ],
+          "writing": [
+            {
+              "promptAr": "اكتب جملة تسمي فيها شيئاً في حقيبتك.",
+              "expectedTr": "Çantamda bir kitap var.",
+              "explanationAr": "استخدم var للدلالة على وجود الشيء، وبدّل الاسم بما يناسبك."
+            }
+          ],
+          "listening": [
+            {
+              "sentenceTr": "Bu bir kalem.",
+              "questionAr": "ما الشيء المذكور؟",
+              "options": [
+                "دفتر",
+                "قلم",
+                "كتاب"
+              ],
+              "correctIndex": 1,
+              "explanationAr": "kalem تعني قلم."
+            }
+          ],
+          "pronunciation": [
+            {
+              "textTr": "öğretmen",
+              "focusAr": "تدرّب على الحرف التركي ğ؛ فهو لا يُنطق عادةً كـ g عربية صلبة، بل يطيل الحركة أو يربطها."
+            }
+          ],
+          "finalQuiz": [
+            {
+              "questionAr": "أي سؤال تسأله عن شيء لا تعرف اسمه؟",
+              "options": [
+                "Bu kim?",
+                "Bu ne?",
+                "Adın ne?"
+              ],
+              "correctIndex": 1,
+              "explanationAr": "Bu ne? هو سؤال «ما هذا؟»."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

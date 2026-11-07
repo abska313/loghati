@@ -1,0 +1,357 @@
+{
+  "level": "C2",
+  "titleAr": "المستوى المتقدم الأعلى",
+  "descriptionAr": "يصوغ المعنى بدقة عالية، ويراعي السجل والأسلوب وحدود الدليل في التواصل المعقد.",
+  "units": [
+    {
+      "id": "c2-u1",
+      "titleAr": "التواصل والتحليل",
+      "lessons": [
+        {
+          "id": "c2-l1",
+          "titleAr": "اختيار السجل المناسب",
+          "titleTr": "Üslup ve bağlam",
+          "objectivesAr": [
+            "تمييز السجل الرسمي من اليومي.",
+            "إعادة صياغة طلب مباشر بصيغة لبقة ودقيقة."
+          ],
+          "explanationAr": "يتشكل السجل من اختيار المفردات، وصيغ المخاطبة، ودرجة المباشرة. في الطلبات الرسمية تُستخدم صيغ مثل rica ederim وmümkünse، مع توضيح الإجراء المطلوب دون إخفاء المقصود.",
+          "vocabulary": [
+            {
+              "id": "c2-l1-v1",
+              "tr": "arz etmek",
+              "ar": "يعرض/يرفع (رسمي)",
+              "ipa": "",
+              "pos": "فعل مركب",
+              "exampleTr": "Bilginize arz ederim.",
+              "exampleAr": "أحيطكم علماً.",
+              "category": "المحادثات الرسمية وغير الرسمية"
+            },
+            {
+              "id": "c2-l1-v2",
+              "tr": "rica",
+              "ar": "رجاء/التماس",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Yardımınızı rica ederim.",
+              "exampleAr": "ألتمس مساعدتكم.",
+              "category": "المحادثات الرسمية وغير الرسمية"
+            },
+            {
+              "id": "c2-l1-v3",
+              "tr": "ivedi",
+              "ar": "عاجل",
+              "ipa": "",
+              "pos": "صفة",
+              "exampleTr": "İvedi yanıtınızı bekliyoruz.",
+              "exampleAr": "ننتظر ردكم العاجل.",
+              "category": "العمل"
+            },
+            {
+              "id": "c2-l1-v4",
+              "tr": "ek",
+              "ar": "مرفق/إضافة",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Ek dosyayı iletiyorum.",
+              "exampleAr": "أرسل الملف المرفق.",
+              "category": "التكنولوجيا"
+            }
+          ],
+          "grammar": {
+            "titleAr": "الطلب الرسمي وتخفيف المباشرة",
+            "explanationAr": "تُستخدم rica ederim أو rica ediyorum في المراسلات الرسمية. ويمكن لـ mümkünse أن تخفف الطلب، بينما يحدد الرجاء الفعل والمهلة بوضوح. تجنب الإفراط في التراكيب الاسمية التي تحجب المطلوب.",
+            "form": "Mümkünse + طلب؛ [الاسم] + rica ederim",
+            "examples": [
+              {
+                "tr": "Mümkünse raporu bugün iletir misiniz?",
+                "ar": "هل يمكنكم إرسال التقرير اليوم إن أمكن؟",
+                "wrong": "Raporu hemen gönder. (رسمي)",
+                "correction": "Mümkünse raporu bugün iletir misiniz?",
+                "why": "الأمر المباشر gönder قد يبدو حاداً في المراسلة؛ صيغة السؤال والشرط ألطف."
+              },
+              {
+                "tr": "Ek dosyayı incelemenizi rica ederim.",
+                "ar": "أرجو منكم مراجعة الملف المرفق.",
+                "wrong": "Ek dosyayı incelemek rica ederim.",
+                "correction": "Ek dosyayı incelemenizi rica ederim.",
+                "why": "يحتاج الفعل هنا إلى صيغة الطلب من المخاطب: incelemenizi."
+              }
+            ]
+          },
+          "dialogue": [
+            {
+              "speaker": "A",
+              "tr": "Merhaba, raporu bugün gönderebilir misin?",
+              "ar": "مرحباً، هل تستطيع إرسال التقرير اليوم؟"
+            },
+            {
+              "speaker": "B",
+              "tr": "Elbette. Hangi sürümü kullanayım?",
+              "ar": "بالتأكيد. أي نسخة أستخدم؟"
+            },
+            {
+              "speaker": "A",
+              "tr": "Mümkünse son düzenlemelerin yer aldığı dosyayı.",
+              "ar": "إن أمكن، الملف الذي يتضمن آخر التعديلات."
+            },
+            {
+              "speaker": "B",
+              "tr": "Anladım; ek dosyayı kontrol edip saat üçe kadar ileteceğim.",
+              "ar": "فهمت؛ سأراجع الملف المرفق وأرسله قبل الثالثة."
+            },
+            {
+              "speaker": "A",
+              "tr": "Teşekkür ederim. Bir sorun çıkarsa lütfen haber ver.",
+              "ar": "شكراً. أرجو إخباري إن ظهرت مشكلة."
+            },
+            {
+              "speaker": "B",
+              "tr": "Tabii, bilginize sunarım.",
+              "ar": "بالطبع، سأحيطكم علماً."
+            }
+          ],
+          "reading": {
+            "titleAr": "رسالة مهنية موجزة",
+            "textTr": "Bir ekip yöneticisi, çalışma arkadaşlarına kısa bir ileti gönderdi: “Mümkünse güncel raporu saat 15.00’e kadar paylaşmanızı rica ederim. Ek dosyada kullanılan biçim yer alıyor. Süre yetişmeyecekse lütfen önceden bilgi verin; teslim tarihini birlikte gözden geçirebiliriz.” Mesaj, talebin kapsamını ve zamanını açıkça belirtirken gecikme olasılığına da çözüm alanı bırakıyor.",
+            "translationAr": "أرسل مدير فريق رسالة قصيرة إلى زملائه: «أرجو منكم مشاركة التقرير المحدّث قبل الساعة 15:00 إن أمكن. يتضمن الملف المرفق التنسيق المستخدم. إذا تعذر الالتزام بالموعد، فالرجاء إبلاغي مسبقاً؛ ويمكننا مراجعة موعد التسليم معاً». تحدد الرسالة نطاق الطلب ووقته بوضوح، مع إتاحة مجال لحل احتمال التأخير.",
+            "questions": [
+              {
+                "questionAr": "ما الذي تطلبه الرسالة؟",
+                "options": [
+                  "مشاركة التقرير المحدّث قبل الثالثة",
+                  "إلغاء التقرير",
+                  "إرسال الملف دون مراجعته"
+                ],
+                "correctIndex": 0,
+                "explanationAr": "تحدد الجملة الأولى المطلوب والموعد."
+              }
+            ]
+          },
+          "comprehension": [
+            {
+              "questionAr": "كيف تتعامل الرسالة مع احتمال التأخير؟",
+              "options": [
+                "تطلب الإبلاغ مسبقاً وتقترح مراجعة الموعد",
+                "تفرض عقوبة مباشرة",
+                "تتجاهل المشكلة"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "تدعو إلى الإبلاغ مسبقاً وتتيح مراجعة موعد التسليم."
+            }
+          ],
+          "writing": [
+            {
+              "promptAr": "حوّل أمراً مباشراً إلى طلب مهني لبق مع موعد واضح.",
+              "expectedTr": "Mümkünse belgeyi yarın öğlene kadar paylaşmanızı rica ederim.",
+              "explanationAr": "تحدد الصيغة المهذبة الفعل والمهلة، وتخفف المباشرة بـ mümkünse وrica ederim."
+            }
+          ],
+          "listening": [
+            {
+              "sentenceTr": "Mümkünse yanıtınızı cuma gününe kadar iletmenizi rica ederim.",
+              "questionAr": "ما المهلة المطلوبة؟",
+              "options": [
+                "حتى يوم الجمعة",
+                "اليوم فوراً",
+                "الأسبوع المقبل"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "cuma gününe kadar تعني حتى يوم الجمعة."
+            }
+          ],
+          "pronunciation": [
+            {
+              "textTr": "rica ederim",
+              "focusAr": "انطق c التركية كالجيم، وراعِ الفصل الطبيعي بين كلمتي العبارة."
+            }
+          ],
+          "finalQuiz": [
+            {
+              "questionAr": "أي طلب أنسب لبريد مهني؟",
+              "options": [
+                "Dosyayı hemen yolla!",
+                "Mümkünse dosyayı bugün iletmenizi rica ederim.",
+                "Dosya gönder."
+              ],
+              "correctIndex": 1,
+              "explanationAr": "الطلب الثاني مهذب ومحدد ويستخدم صيغة رسمية."
+            }
+          ]
+        },
+        {
+          "id": "c2-l2",
+          "titleAr": "حجة دقيقة وحدودها",
+          "titleTr": "Bir savın sınırları",
+          "objectivesAr": [
+            "صياغة أطروحة مع التحفظ على حدود الدليل.",
+            "استخدام تراكيب اسمية وأدوات إحالة متقدمة."
+          ],
+          "explanationAr": "تتيح التراكيب الاسمية مثل uygulanmasının «تطبيقه» دمج الأفكار في نثر تحليلي موجز. وتحدد ne var ki أو bununla birlikte حدود الاستنتاج، بينما تشير bu bulgu إلى دليل سبق ذكره.",
+          "vocabulary": [
+            {
+              "id": "c2-l2-v1",
+              "tr": "varsayım",
+              "ar": "افتراض",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Bu varsayım sınanmalıdır.",
+              "exampleAr": "ينبغي اختبار هذا الافتراض.",
+              "category": "الثقافة"
+            },
+            {
+              "id": "c2-l2-v2",
+              "tr": "bulgu",
+              "ar": "نتيجة/معطى بحثي",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Bulgu tek başına yeterli değil.",
+              "exampleAr": "النتيجة وحدها غير كافية.",
+              "category": "الدراسة"
+            },
+            {
+              "id": "c2-l2-v3",
+              "tr": "kapsam",
+              "ar": "نطاق",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Araştırmanın kapsamı sınırlı.",
+              "exampleAr": "نطاق البحث محدود.",
+              "category": "الدراسة"
+            },
+            {
+              "id": "c2-l2-v4",
+              "tr": "genellenebilir",
+              "ar": "قابل للتعميم",
+              "ipa": "",
+              "pos": "صفة",
+              "exampleTr": "Sonuçlar genellenebilir değil.",
+              "exampleAr": "النتائج غير قابلة للتعميم.",
+              "category": "الدراسة"
+            }
+          ],
+          "grammar": {
+            "titleAr": "الاسمية والتحفظ في الحجة",
+            "explanationAr": "تُبنى صيغة الاسم من الفعل واللاحقة الاسمية: uygulanması «تطبيقه». ثم تربطها لاحقة الملكية أو الحالة بحسب السياق. أدوات مثل ne var ki تحد من مدى النتيجة ولا تنقض الدليل تلقائياً.",
+            "form": "جذر/فعل + -mA + لاحقة ملكية/حالة",
+            "examples": [
+              {
+                "tr": "Araştırmanın küçük bir örneklemle yürütülmesi genellemeyi sınırlar.",
+                "ar": "يحد إجراء البحث على عينة صغيرة من التعميم.",
+                "wrong": "Araştırmanın küçük örneklem yürütmek genellemeyi sınır.",
+                "correction": "Araştırmanın küçük bir örneklemle yürütülmesi genellemeyi sınırlar.",
+                "why": "يحتاج الفعل إلى صيغة اسمية yürütülmesi، كما أن sınırlar يطابق الفاعل الاسمي."
+              },
+              {
+                "tr": "Bu bulgu önemli; ne var ki tek başına nedensellik göstermez.",
+                "ar": "هذه النتيجة مهمة؛ غير أنها لا تثبت السببية بمفردها.",
+                "wrong": "Bu bulgu önemli, bu yüzden nedensellik gösterir.",
+                "correction": "Bu bulgu önemli; ne var ki tek başına nedensellik göstermez.",
+                "why": "المعطى المهم لا يعني بالضرورة إثبات السببية؛ ne var ki يقدم تحفظاً منطقياً."
+              }
+            ]
+          },
+          "dialogue": [
+            {
+              "speaker": "A",
+              "tr": "Rapor, eğitimin başarıyı artırdığını söylüyor.",
+              "ar": "يقول التقرير إن التعليم يزيد النجاح."
+            },
+            {
+              "speaker": "B",
+              "tr": "Hangi veriye dayanıyor?",
+              "ar": "على أي بيانات يستند؟"
+            },
+            {
+              "speaker": "A",
+              "tr": "İki okuldan alınan sonuçlara.",
+              "ar": "على نتائج مأخوذة من مدرستين."
+            },
+            {
+              "speaker": "B",
+              "tr": "Bu bulgu değerli; ne var ki örneklem sınırlı olduğu için genellenebilirliği tartışmalı.",
+              "ar": "هذه النتيجة مهمة؛ غير أن قابلية تعميمها موضع نقاش لأن العينة محدودة."
+            },
+            {
+              "speaker": "A",
+              "tr": "Yani ilişki var, ama neden-sonuç iddiası için ek kanıt gerekiyor.",
+              "ar": "أي إن ثمة علاقة، لكن ادعاء السبب والنتيجة يحتاج إلى دليل إضافي."
+            },
+            {
+              "speaker": "B",
+              "tr": "Evet; kapsamı açıkça belirtmek gerekir.",
+              "ar": "نعم؛ ينبغي توضيح نطاق البحث صراحةً."
+            }
+          ],
+          "reading": {
+            "titleAr": "نتيجة وحدودها",
+            "textTr": "Bir değerlendirme raporu, iki okulda uygulanan yeni programın sınav puanlarını yükselttiğini bildiriyor. Bulgular, program ile puan artışı arasında bir ilişki bulunduğunu düşündürüyor. Bununla birlikte, okulların gönüllü olarak seçilmesi ve karşılaştırma grubunun küçük olması, sonucun başka bağlamlara aktarılmasını güçleştiriyor. Ayrıca puan artışının yalnızca programdan kaynaklandığı gösterilmiş değil. Bu nedenle rapor, umut verici bir işaret sunsa da daha geniş ve karşılaştırmalı araştırmalar yapılmadan kesin bir nedensellik iddiasını desteklemiyor.",
+            "translationAr": "يفيد تقرير تقييمي بأن البرنامج الجديد المطبق في مدرستين رفع درجات الامتحانات. وتشير النتائج إلى وجود علاقة بين البرنامج وزيادة الدرجات. ومع ذلك، فإن اختيار المدارس طوعاً وصغر مجموعة المقارنة يصعبان نقل النتيجة إلى سياقات أخرى. كما لم يثبت أن زيادة الدرجات ناتجة عن البرنامج وحده. لذلك، ورغم أن التقرير يقدم مؤشراً واعداً، فإنه لا يدعم ادعاءً سببياً قاطعاً قبل إجراء بحوث أوسع ومقارنة.",
+            "questions": [
+              {
+                "questionAr": "ما الاستنتاج الأكثر دقة؟",
+                "options": [
+                  "توجد إشارة واعدة لكن السببية والتعميم غير محسومين",
+                  "ثبت أن البرنامج يسبب النجاح في كل المدارس",
+                  "لا توجد أي علاقة بين البرنامج والدرجات"
+                ],
+                "correctIndex": 0,
+                "explanationAr": "النص يذكر علاقة محتملة، لكنه يوضح حدود السببية والتعميم."
+              }
+            ]
+          },
+          "comprehension": [
+            {
+              "questionAr": "ما أحد قيود التقرير؟",
+              "options": [
+                "اختيار مدرستين متطوعتين وعينة مقارنة صغيرة",
+                "غياب درجات الامتحان تماماً",
+                "تطبيق البرنامج في كل المدارس"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "يذكر النص اختيار المدارس طوعاً وصغر مجموعة المقارنة."
+            }
+          ],
+          "writing": [
+            {
+              "promptAr": "اكتب جملة أطروحة وجملة تحدد حدود الدليل المتاح.",
+              "expectedTr": "Programın puanlarla ilişkili olduğu görülüyor. Ne var ki örneklem sınırlı olduğundan nedensellik ve genellenebilirlik henüz gösterilmiş değil.",
+              "explanationAr": "ميّز بين العلاقة والسببية، واذكر قيداً محدداً باستخدام ne var ki."
+            }
+          ],
+          "listening": [
+            {
+              "sentenceTr": "Bu bulgu ilişkiye işaret ediyor; ne var ki nedenselliği kanıtlamıyor.",
+              "questionAr": "ماذا يثبت المعطى بحسب المتحدث؟",
+              "options": [
+                "يشير إلى علاقة ولا يثبت السببية",
+                "يثبت السببية قطعاً",
+                "ينفي وجود أي علاقة"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "الجملة تفرق صراحةً بين الإشارة إلى علاقة وإثبات السببية."
+            }
+          ],
+          "pronunciation": [
+            {
+              "textTr": "genellenebilirlik",
+              "focusAr": "قسّم اللاحقات الطويلة إلى مقاطع، وحافظ على النبر والإيقاع من دون حذف حركات."
+            }
+          ],
+          "finalQuiz": [
+            {
+              "questionAr": "أي صياغة تحافظ على التحفظ العلمي؟",
+              "options": [
+                "Program kesinlikle herkeste başarı sağlar.",
+                "Bulgular ilişkiye işaret ediyor; ancak nedensellik gösterilmiş değil.",
+                "İki okul yeterlidir, sonuç genellenir."
+              ],
+              "correctIndex": 1,
+              "explanationAr": "الصياغة الثانية تفرق بين العلاقة والسببية وتتحفظ بحسب الدليل."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

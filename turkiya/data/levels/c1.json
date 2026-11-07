@@ -1,0 +1,357 @@
+{
+  "level": "C1",
+  "titleAr": "المستوى المتقدم الأول",
+  "descriptionAr": "يقرأ نصوصاً متعمقة، ويحلل الحجج والدلالات ويستخدم تراكيب مرنة في سياقات متعددة.",
+  "units": [
+    {
+      "id": "c1-u1",
+      "titleAr": "التواصل والتحليل",
+      "lessons": [
+        {
+          "id": "c1-l1",
+          "titleAr": "المدينة والفضاء العام",
+          "titleTr": "Kamusal alan üzerine",
+          "objectivesAr": [
+            "بناء حجة متوازنة حول التخطيط الحضري.",
+            "استخدام sıfat-fiil وعبارات التنازل."
+          ],
+          "explanationAr": "تختصر sıfat-fiil الجملة الوصفية قبل الاسم: büyüyen şehir «المدينة التي تنمو». وتقدم her ne kadar… olsa da تنازلاً يعقبه الرأي الرئيس.",
+          "vocabulary": [
+            {
+              "id": "c1-l1-v1",
+              "tr": "kamusal",
+              "ar": "عام/عمومي",
+              "ipa": "",
+              "pos": "صفة",
+              "exampleTr": "Kamusal alan herkes için olmalı.",
+              "exampleAr": "ينبغي أن يكون الفضاء العام للجميع.",
+              "category": "الثقافة"
+            },
+            {
+              "id": "c1-l1-v2",
+              "tr": "erişilebilirlik",
+              "ar": "إمكانية الوصول",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Erişilebilirlik tasarımda önemlidir.",
+              "exampleAr": "إمكانية الوصول مهمة في التصميم.",
+              "category": "الحياة اليومية"
+            },
+            {
+              "id": "c1-l1-v3",
+              "tr": "yoğunluk",
+              "ar": "كثافة/ازدحام",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Trafik yoğunluğu arttı.",
+              "exampleAr": "ازدادت كثافة المرور.",
+              "category": "المواصلات"
+            },
+            {
+              "id": "c1-l1-v4",
+              "tr": "dönüşüm",
+              "ar": "تحول",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Kentsel dönüşüm dikkatle planlanmalı.",
+              "exampleAr": "ينبغي تخطيط التحول الحضري بعناية.",
+              "category": "العمل"
+            }
+          ],
+          "grammar": {
+            "titleAr": "الصفة الفعلية والتنازل",
+            "explanationAr": "تأتي الصفة الفعلية قبل الاسم، مثل büyüyen mahalle. وتُستخدم her ne kadar… olsa da للإقرار بجانب من الرأي قبل طرح نتيجة مخالفة أو موازنة.",
+            "form": "جذر + -(y)An + اسم ؛ her ne kadar … olsa da",
+            "examples": [
+              {
+                "tr": "Yaya yolları güvenliği artırıyor.",
+                "ar": "تعزز ممرات المشاة السلامة.",
+                "wrong": "Yürüyen yollar güvenliği artırıyor.",
+                "correction": "Yaya yolları güvenliği artırıyor.",
+                "why": "yaya yolu هو التعبير الطبيعي عن ممر المشاة؛ أما yürüyen yollar فتبدو ترجمة حرفية غير سليمة هنا."
+              },
+              {
+                "tr": "Her ne kadar proje pahalı olsa da uzun vadede yarar sağlayabilir.",
+                "ar": "مع أن المشروع مكلف، فقد يحقق فائدة على المدى الطويل.",
+                "wrong": "Her ne kadar proje pahalı, uzun vadede yararlı.",
+                "correction": "Her ne kadar proje pahalı olsa da uzun vadede yarar sağlayabilir.",
+                "why": "تركيب التنازل يحتاج olsa da، ثم تكتمل الجملة الرئيسة."
+              }
+            ]
+          },
+          "dialogue": [
+            {
+              "speaker": "A",
+              "tr": "Yeni meydan hakkında ne düşünüyorsun?",
+              "ar": "ما رأيك في الساحة الجديدة؟"
+            },
+            {
+              "speaker": "B",
+              "tr": "Yaya alanlarının artması olumlu; erişilebilirlik de düşünülmüş.",
+              "ar": "زيادة مساحات المشاة أمر إيجابي، وقد روعيت إمكانية الوصول أيضاً."
+            },
+            {
+              "speaker": "A",
+              "tr": "Ama araç trafiği çevre sokaklara kaymış.",
+              "ar": "لكن حركة السيارات انتقلت إلى الشوارع المحيطة."
+            },
+            {
+              "speaker": "B",
+              "tr": "Doğru; her ne kadar meydan daha canlı olsa da ulaşım bütünüyle çözülmüş değil.",
+              "ar": "صحيح؛ فعلى الرغم من أن الساحة أصبحت أكثر حيوية، لم تُحل مشكلة النقل تماماً."
+            },
+            {
+              "speaker": "A",
+              "tr": "O hâlde etkiyi mahalle genelinde ölçmek gerekir.",
+              "ar": "إذن ينبغي قياس الأثر على مستوى الحي كله."
+            },
+            {
+              "speaker": "B",
+              "tr": "Kesinlikle, tasarım kadar uygulama da önemli.",
+              "ar": "بالتأكيد، فالتنفيذ مهم بقدر التصميم."
+            }
+          ],
+          "reading": {
+            "titleAr": "ساحة جديدة",
+            "textTr": "Büyük bir meydanın yayalara açılması, merkezdeki kamusal yaşamı canlandırdı. Çocukların ve yaşlıların rahatça kullanabildiği oturma alanları oluşturuldu. Bununla birlikte, araç trafiğinin çevre sokaklara yönelmesi bazı mahalle sakinlerini rahatsız etti. Uzmanlar, projeyi yalnızca meydandaki yaya sayısıyla değerlendirmek yerine erişilebilirlik, gürültü ve çevre sokaklardaki hareketlilik gibi ölçütlerle birlikte ele almayı öneriyor. Böylece dönüşümün kimin için yarar sağladığı daha açık görülebilir.",
+            "translationAr": "أدى فتح ساحة كبيرة للمشاة إلى تنشيط الحياة العامة في المركز. وأُنشئت أماكن جلوس يستطيع الأطفال وكبار السن استخدامها بسهولة. ومع ذلك، أزعج تحويل حركة السيارات إلى الشوارع المحيطة بعض سكان الحي. ويوصي الخبراء بتقييم المشروع من خلال معايير مثل إمكانية الوصول والضوضاء والحركة في الشوارع المجاورة، لا بعدد المشاة في الساحة وحده. وبذلك يمكن رؤية الفئات التي أفادها التحول بوضوح أكبر.",
+            "questions": [
+              {
+                "questionAr": "لماذا يقترح الخبراء معايير متعددة؟",
+                "options": [
+                  "لرؤية أثر المشروع على نطاق أوسع",
+                  "لزيادة عدد السيارات",
+                  "لإلغاء أماكن الجلوس"
+                ],
+                "correctIndex": 0,
+                "explanationAr": "تتيح المعايير المتعددة تقييم من استفاد وما الأثر خارج الساحة."
+              }
+            ]
+          },
+          "comprehension": [
+            {
+              "questionAr": "ما الأثر السلبي الذي ورد؟",
+              "options": [
+                "انتقال المرور إلى الشوارع المحيطة",
+                "إغلاق الساحة",
+                "غياب مقاعد الجلوس"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "ورد أن حركة السيارات انتقلت إلى الشوارع المجاورة."
+            }
+          ],
+          "writing": [
+            {
+              "promptAr": "اكتب فقرة موجزة توازن بين فائدة مشروع عام ومحدودية محتملة.",
+              "expectedTr": "Her ne kadar yeni meydan yaya erişimini kolaylaştırsa da çevre sokaklardaki trafik ayrıca değerlendirilmelidir.",
+              "explanationAr": "ابدأ بإقرار تنازلي ثم اطرح نقطة التوازن باستخدام olsa da."
+            }
+          ],
+          "listening": [
+            {
+              "sentenceTr": "Her ne kadar ulaşım kolaylaşsa da erişilebilirlik sorunları sürüyor.",
+              "questionAr": "ما الفكرة الرئيسة؟",
+              "options": [
+                "تحسن النقل مع بقاء مشكلات الوصول",
+                "لم يتغير النقل",
+                "انتهت كل المشكلات"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "تعترف الجملة بتحسن ما، لكنها تقول إن مشكلات إمكانية الوصول مستمرة."
+            }
+          ],
+          "pronunciation": [
+            {
+              "textTr": "erişilebilirlik",
+              "focusAr": "قسّم الكلمة إلى مقاطع، وانطق ş وç بوضوح من دون تسوية الحركات المنقوطة وغير المنقوطة."
+            }
+          ],
+          "finalQuiz": [
+            {
+              "questionAr": "أي تركيب يقدم تنازلاً صحيحاً؟",
+              "options": [
+                "Her ne kadar önemli olsa da…",
+                "Her ne kadar önemli ama…",
+                "Önemli olduğu rağmen…"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "الصيغة القياسية هي her ne kadar… olsa da."
+            }
+          ]
+        },
+        {
+          "id": "c1-l2",
+          "titleAr": "ذاكرة المكان",
+          "titleTr": "Mekânın belleği",
+          "objectivesAr": [
+            "تحليل دلالة مكان في سرد قصير.",
+            "استخدام -miş gibi وعبارات الاستنتاج."
+          ],
+          "explanationAr": "تفيد -miş gibi معنى «كما لو أن…»، وتستعمل görünen o ki أو anlaşılan للكشف عن استنتاج مبني على قرائن. في الكتابة الأدبية تتحدد دلالة المكان عبر الأفعال والتفاصيل لا الوصف المباشر وحده.",
+          "vocabulary": [
+            {
+              "id": "c1-l2-v1",
+              "tr": "eşik",
+              "ar": "عتبة",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Eşikte biraz durdu.",
+              "exampleAr": "توقف قليلاً عند العتبة.",
+              "category": "المنزل"
+            },
+            {
+              "id": "c1-l2-v2",
+              "tr": "solmak",
+              "ar": "يبهت",
+              "ipa": "",
+              "pos": "فعل",
+              "exampleTr": "Duvarın rengi solmuş.",
+              "exampleAr": "بهت لون الجدار.",
+              "category": "الحياة اليومية"
+            },
+            {
+              "id": "c1-l2-v3",
+              "tr": "iz",
+              "ar": "أثر",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Masada eski bir iz vardı.",
+              "exampleAr": "كان على الطاولة أثر قديم.",
+              "category": "الثقافة"
+            },
+            {
+              "id": "c1-l2-v4",
+              "tr": "anımsamak",
+              "ar": "يتذكر",
+              "ipa": "",
+              "pos": "فعل",
+              "exampleTr": "Sokağın kokusunu anımsadı.",
+              "exampleAr": "تذكر رائحة الشارع.",
+              "category": "المشاعر"
+            }
+          ],
+          "grammar": {
+            "titleAr": "التشبيه والاستنتاج في السرد",
+            "explanationAr": "يأتي الفعل بصيغة -miş مثل قبل gibi: beklemiş gibi «كما لو أنه انتظر». وتقدم görünen o ki استنتاجاً يعلله السياق، لا حقيقة مستقلة عن القرائن.",
+            "form": "فعل + -mış gibi ؛ görünen o ki + جملة",
+            "examples": [
+              {
+                "tr": "Kapı yıllardır açılmamış gibi görünüyordu.",
+                "ar": "بدت كأن الباب لم يُفتح منذ سنوات.",
+                "wrong": "Kapı yıllardır açılmadı gibi görünüyordu.",
+                "correction": "Kapı yıllardır açılmamış gibi görünüyordu.",
+                "why": "قبل gibi تأتي صيغة -mış، وفي النفي تكون açılmamış."
+              },
+              {
+                "tr": "Görünen o ki ev boş kalmış.",
+                "ar": "يبدو أن البيت ظل خالياً.",
+                "wrong": "Görünen o ki ev boş kaldı. (استنتاج من القرائن)",
+                "correction": "Görünen o ki ev boş kalmış.",
+                "why": "صيغة -mış تلائم الاستنتاج من آثار يلاحظها الراوي."
+              }
+            ]
+          },
+          "dialogue": [
+            {
+              "speaker": "A",
+              "tr": "Eski evin önünden geçtin mi?",
+              "ar": "هل مررت بالبيت القديم؟"
+            },
+            {
+              "speaker": "B",
+              "tr": "Evet. Kapısı yıllardır açılmamış gibi görünüyordu.",
+              "ar": "نعم. بدا كأن بابه لم يُفتح منذ سنوات."
+            },
+            {
+              "speaker": "A",
+              "tr": "Bahçede hâlâ bir limon ağacı var mı?",
+              "ar": "هل ما زالت هناك شجرة ليمون في الحديقة؟"
+            },
+            {
+              "speaker": "B",
+              "tr": "Var; duvarın dibindeki taşlar bile çocukluğumu anımsattı.",
+              "ar": "نعم؛ حتى الحجارة عند الجدار ذكرتني بطفولتي."
+            },
+            {
+              "speaker": "A",
+              "tr": "Görünen o ki ev boş kalmış.",
+              "ar": "يبدو أن البيت ظل خالياً."
+            },
+            {
+              "speaker": "B",
+              "tr": "Ama sokak, eski seslerini hâlâ saklıyor.",
+              "ar": "لكن الشارع ما زال يحتفظ بأصواته القديمة."
+            }
+          ],
+          "reading": {
+            "titleAr": "باب لا يفتح",
+            "textTr": "Leyla, çocukluğunun geçtiği sokağa yıllar sonra döndü. Eski evin duvarındaki boya solmuş, eşikte ince bir toz birikmişti. Bahçedeki limon ağacıysa hâlâ ayaktaydı. Kapı açılmamış gibi sessiz duruyordu; yine de rüzgâr, içeriden kalmış bir perdeyi hafifçe oynattı. Leyla o anda evin değil, kendi belleğinin kapısında beklediğini düşündü.",
+            "translationAr": "عادت ليلى بعد سنوات إلى الشارع الذي قضت طفولتها فيه. بهت الطلاء على جدار البيت القديم، وتراكم غبار رقيق عند العتبة. لكن شجرة الليمون في الحديقة بقيت قائمة. ظل الباب ساكناً كما لو أنه لم يُفتح، ومع ذلك حرّكت الريح ستارةً بقيت في الداخل قليلاً. فكرت ليلى عندئذ أنها تنتظر عند باب ذاكرتها هي، لا عند باب البيت.",
+            "questions": [
+              {
+                "questionAr": "ما الذي بقي قائماً في الحديقة؟",
+                "options": [
+                  "شجرة الليمون",
+                  "الستارة",
+                  "الباب المفتوح"
+                ],
+                "correctIndex": 0,
+                "explanationAr": "تقول القراءة إن شجرة الليمون بقيت قائمة."
+              }
+            ]
+          },
+          "comprehension": [
+            {
+              "questionAr": "ما دلالة صورة «باب الذاكرة»؟",
+              "options": [
+                "استعادة ليلى لذكرياتها",
+                "انتقالها إلى بيت جديد",
+                "فتح الباب فعلياً"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "الخاتمة تحول العودة إلى الشارع إلى استعارة عن استعادة الذكريات."
+            }
+          ],
+          "writing": [
+            {
+              "promptAr": "اكتب جملتين تصفان مكاناً قديماً وتستنتجان ما يوحي به.",
+              "expectedTr": "Duvarın rengi solmuştu. Görünen o ki bu ev uzun zamandır boş kalmıştı.",
+              "explanationAr": "استخدم تفصيلاً محسوساً ثم استنتاجاً حذراً بصيغة görünen o ki."
+            }
+          ],
+          "listening": [
+            {
+              "sentenceTr": "Kapı açılmamış gibi sessiz duruyordu.",
+              "questionAr": "كيف بدا الباب؟",
+              "options": [
+                "كأنه لم يُفتح",
+                "كأنه جديد",
+                "كان مفتوحاً"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "açılmamış gibi تعني كما لو أنه لم يُفتح."
+            }
+          ],
+          "pronunciation": [
+            {
+              "textTr": "açılmamış",
+              "focusAr": "حافظ على ç وı، وانطق اللاحقة -mış بحركة خلفية غير منقوطة."
+            }
+          ],
+          "finalQuiz": [
+            {
+              "questionAr": "ما معنى yıllardır açılmamış gibi؟",
+              "options": [
+                "كما لو أنه لم يُفتح منذ سنوات",
+                "سيفتح بعد سنوات",
+                "فُتح كل سنة"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "-mış gibi تقدم تشبيهاً أو مظهراً محتملاً."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

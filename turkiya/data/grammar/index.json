@@ -1,0 +1,338 @@
+[
+  {
+    "id": "g-01",
+    "level": "pre-a1",
+    "titleAr": "الملكية في الاسم",
+    "explanationAr": "للتعريف بالاسم الشخصي يشيع تركيب benim adım؛ تلحق بالاسم علامة ملكية منسجمة صوتياً.",
+    "form": "الضمير المضاف + الاسم + -(I)m",
+    "whenToUse": "في التعارف وتحديد صاحب شيء.",
+    "examples": [
+      {
+        "tr": "Benim adım Deniz.",
+        "ar": "اسمي دنيز.",
+        "wrong": "Benim ad Deniz.",
+        "correction": "Benim adım Deniz.",
+        "why": "تحتاج الكلمة علامة الملكية -ım."
+      },
+      {
+        "tr": "Adın ne?",
+        "ar": "ما اسمك؟",
+        "wrong": "Adın kim?",
+        "correction": "Adın ne?",
+        "why": "السؤال عن الاسم يكون بـ ne."
+      }
+    ]
+  },
+  {
+    "id": "g-02",
+    "level": "pre-a1",
+    "titleAr": "الإشارة والسؤال عن الأشياء",
+    "explanationAr": "تسبق bu الاسم القريب، ويستخدم ne للسؤال عن ماهيته وkim للسؤال عن شخص.",
+    "form": "bu + (bir) + اسم / Bu ne?",
+    "whenToUse": "عند تسمية شيء قريب أو السؤال عنه.",
+    "examples": [
+      {
+        "tr": "Bu bir kalem.",
+        "ar": "هذا قلم.",
+        "wrong": "Bu kalem mi? (خبر)",
+        "correction": "Bu bir kalem.",
+        "why": "mi يحولها إلى سؤال نعم أو لا."
+      },
+      {
+        "tr": "Bu kim?",
+        "ar": "من هذا؟",
+        "wrong": "Bu ne? (عن شخص)",
+        "correction": "Bu kim?",
+        "why": "kim مخصص للسؤال عن الأشخاص."
+      }
+    ]
+  },
+  {
+    "id": "g-03",
+    "level": "A1",
+    "titleAr": "الحاضر المستمر -yor",
+    "explanationAr": "يدل على حدث جارٍ أو نشاط في الفترة الحالية، وتحدد الحركات اللاحقة بالانسجام الصوتي.",
+    "form": "جذر الفعل + -(I)yor + لاحقة الشخص",
+    "whenToUse": "لوصف حدث جارٍ أو نشاط معتاد في الوقت الحالي.",
+    "examples": [
+      {
+        "tr": "Şimdi çalışıyorum.",
+        "ar": "أعمل الآن.",
+        "wrong": "Şimdi çalışıyor. (أنا)",
+        "correction": "Şimdi çalışıyorum.",
+        "why": "لاحقة المتكلم المفرد -um لازمة."
+      },
+      {
+        "tr": "Ece kitap okuyor.",
+        "ar": "تقرأ إيجه كتاباً.",
+        "wrong": "Ece kitap okuyorum.",
+        "correction": "Ece kitap okuyor.",
+        "why": "الفاعل الغائب يأخذ صيغة الغائب بلا لاحقة متكلم."
+      }
+    ]
+  },
+  {
+    "id": "g-04",
+    "level": "A1",
+    "titleAr": "الطلب والرغبة",
+    "explanationAr": "يأتي اسم الشيء قبل istiyorum، وتفيد alabilir miyim? طلباً مهذباً ممكناً.",
+    "form": "اسم + istiyorum / اسم-(y)I alabilir miyim?",
+    "whenToUse": "في الطلبات اليومية، ولا سيما في المقاهي والمتاجر.",
+    "examples": [
+      {
+        "tr": "Bir çay istiyorum.",
+        "ar": "أريد شاياً.",
+        "wrong": "Bir çay istiyor. (أنا)",
+        "correction": "Bir çay istiyorum.",
+        "why": "istiyorum صيغة المتكلم."
+      },
+      {
+        "tr": "Hesabı alabilir miyim?",
+        "ar": "هل يمكنني أخذ الحساب؟",
+        "wrong": "Hesapı alabilir miyim?",
+        "correction": "Hesabı alabilir miyim?",
+        "why": "تُكتب اللاحقة -ı بعد p مع تليين p إلى b في الحساب المحدد: hesap → hesabı."
+      }
+    ]
+  },
+  {
+    "id": "g-05",
+    "level": "A2",
+    "titleAr": "لواحق المكان والاتجاه",
+    "explanationAr": "لاحقة المكان -DA، الاتجاه -A، والانطلاق -DAn تتغير وفق انسجام الحركات ومماثلة الصوامت.",
+    "form": "اسم + -(y)DA / -(y)A / -DAn",
+    "whenToUse": "لتحديد موقع الحركة أو اتجاهها أو مصدرها.",
+    "examples": [
+      {
+        "tr": "Durakta bekliyorum.",
+        "ar": "أنتظر في الموقف.",
+        "wrong": "Durakda bekliyorum.",
+        "correction": "Durakta bekliyorum.",
+        "why": "الصامت k مهموس، فتتحول d إلى t."
+      },
+      {
+        "tr": "Okula gidiyorum.",
+        "ar": "أذهب إلى المدرسة.",
+        "wrong": "Okulda gidiyorum.",
+        "correction": "Okula gidiyorum.",
+        "why": "الاتجاه إلى المدرسة يأخذ -a، لا لاحقة الموقع -da."
+      }
+    ]
+  },
+  {
+    "id": "g-06",
+    "level": "A2",
+    "titleAr": "المستقبل -acak/-ecek",
+    "explanationAr": "يلحق بالمصدر بعد حذف -mak/-mek؛ تضاف لاحقة الشخص، ويظهر y بعد حركة نهائية.",
+    "form": "جذر + -(y)AcAk + لاحقة الشخص",
+    "whenToUse": "للخطط والتوقعات المستقبلية.",
+    "examples": [
+      {
+        "tr": "Yarın gelecekler.",
+        "ar": "سيأتون غداً.",
+        "wrong": "Yarın geliyorlar. (مستقبل صريح)",
+        "correction": "Yarın gelecekler.",
+        "why": "صيغة -ecek تبيّن المستقبل بوضوح."
+      },
+      {
+        "tr": "Başlayacağım.",
+        "ar": "سأبدأ.",
+        "wrong": "Başlaacağım.",
+        "correction": "Başlayacağım.",
+        "why": "يظهر حرف y رابطاً بعد الحركة a."
+      }
+    ]
+  },
+  {
+    "id": "g-07",
+    "level": "B1",
+    "titleAr": "الماضي المباشر -DI",
+    "explanationAr": "ينقل حدثاً ماضياً يقدمه المتكلم بوصفه مباشراً أو مشاهداً، مع صور صوتية منسجمة.",
+    "form": "جذر + -DI",
+    "whenToUse": "لسرد وقائع الماضي المباشرة.",
+    "examples": [
+      {
+        "tr": "Tren gecikti.",
+        "ar": "تأخر القطار.",
+        "wrong": "Tren gecikdi.",
+        "correction": "Tren gecikti.",
+        "why": "بعد الصامت المهموس k تأتي t."
+      },
+      {
+        "tr": "Dün müzeyi gördüm.",
+        "ar": "رأيت المتحف أمس.",
+        "wrong": "Dün müzeyi gördü. (أنا)",
+        "correction": "Dün müzeyi gördüm.",
+        "why": "لاحقة المتكلم المفرد في الماضي -üm."
+      }
+    ]
+  },
+  {
+    "id": "g-08",
+    "level": "B1",
+    "titleAr": "الماضي المنقول أو الاستنتاجي -miş",
+    "explanationAr": "يقدم خبراً منقولاً أو استنتاجاً/اكتشافاً لاحقاً؛ لا يعني دائماً الشك، ويحدده السياق.",
+    "form": "جذر + -mış/-miş/-muş/-müş",
+    "whenToUse": "للخبر غير المشاهد أو النتيجة المكتشفة من قرينة.",
+    "examples": [
+      {
+        "tr": "Meğer anahtarı evde unutmuşum.",
+        "ar": "اتضح أنني نسيت المفتاح في البيت.",
+        "wrong": "Meğer anahtarı evde unuttum. (اكتشاف لاحق)",
+        "correction": "Meğer anahtarı evde unutmuşum.",
+        "why": "meğer مع اكتشاف لاحق يناسبه -muş."
+      },
+      {
+        "tr": "Tren erken gelmiş.",
+        "ar": "يبدو أن القطار وصل مبكراً.",
+        "wrong": "Tren erken geldi. (خبر منقول)",
+        "correction": "Tren erken gelmiş.",
+        "why": "-miş يبرز تلقي الخبر أو الاستدلال عليه."
+      }
+    ]
+  },
+  {
+    "id": "g-09",
+    "level": "B1",
+    "titleAr": "السبب بـ -dığı için",
+    "explanationAr": "تربط الجملة السابقة بـ için لتقديم سبب، وتتغير اللاحقة حسب انسجام الحركات والملكية.",
+    "form": "فعل/صفة + -DIğI için",
+    "whenToUse": "لشرح السبب في جملة مترابطة.",
+    "examples": [
+      {
+        "tr": "Yol kapalı olduğu için geç kaldık.",
+        "ar": "تأخرنا لأن الطريق كان مغلقاً.",
+        "wrong": "Yol kapalı olduğu için geç kaldım. (نحن)",
+        "correction": "Yol kapalı olduğu için geç kaldık.",
+        "why": "فاعل النتيجة نحن، لذلك يلزم -k."
+      },
+      {
+        "tr": "Çok çalıştığım için yoruldum.",
+        "ar": "تعبت لأنني عملت كثيراً.",
+        "wrong": "Çok çalıştığı için yoruldum. (أنا)",
+        "correction": "Çok çalıştığım için yoruldum.",
+        "why": "جملة السبب تعود إلى المتكلم المفرد: çalıştığım."
+      }
+    ]
+  },
+  {
+    "id": "g-10",
+    "level": "B2",
+    "titleAr": "المبني للمجهول",
+    "explanationAr": "يبرز الحدث أو الشيء المتأثر به، ويُشتق عادةً بإضافة -(I)l أو -(I)n.",
+    "form": "جذر + -(I)l / -(I)n",
+    "whenToUse": "عندما يكون الفاعل غير معروف أو أقل أهمية من الإجراء.",
+    "examples": [
+      {
+        "tr": "Belgeler inceleniyor.",
+        "ar": "تُفحص الوثائق.",
+        "wrong": "Belgeler inceliyor.",
+        "correction": "Belgeler inceleniyor.",
+        "why": "الصيغة مع n علامة للمجهول هنا."
+      },
+      {
+        "tr": "Kapı kapatıldı.",
+        "ar": "أُغلق الباب.",
+        "wrong": "Kapı kapattı.",
+        "correction": "Kapı kapatıldı.",
+        "why": "kapattı تعني أن فاعلاً أغلق؛ kapatıldı مجهول."
+      }
+    ]
+  },
+  {
+    "id": "g-11",
+    "level": "B2",
+    "titleAr": "الشرط -sa/-se",
+    "explanationAr": "تُضاف اللاحقة إلى جذر الفعل، ويمكن ربطها بلاحقة الشخص؛ وتنسجم مع الحركة الأخيرة.",
+    "form": "جذر + -sA + لواحق عند الحاجة",
+    "whenToUse": "لذكر شرط أو احتمال يترتب عليه فعل.",
+    "examples": [
+      {
+        "tr": "Vaktin olursa beni ara.",
+        "ar": "اتصل بي إن كان لديك وقت.",
+        "wrong": "Vaktin olursa beni ararsın. (أمر/طلب)",
+        "correction": "Vaktin olursa beni ara.",
+        "why": "الطلب المباشر هنا ara، أما ararsın فتقرير أو توقع بحسب السياق."
+      },
+      {
+        "tr": "Yağmur yağarsa içeride kalırız.",
+        "ar": "إذا أمطرت سنبقى في الداخل.",
+        "wrong": "Yağmur yağınca içeride kalırız.",
+        "correction": "Yağmur yağarsa içeride kalırız.",
+        "why": "-sa يضع شرطاً؛ -ınca تعني عندما/بعد أن."
+      }
+    ]
+  },
+  {
+    "id": "g-12",
+    "level": "C1",
+    "titleAr": "الصفة الفعلية -(y)An",
+    "explanationAr": "تختصر جملة موصولة بوصف الفاعل أو الحدث الذي يسبق الاسم: büyüyen şehir.",
+    "form": "جذر الفعل + -(y)An + اسم",
+    "whenToUse": "لتكثيف الجمل الوصفية في النصوص التحليلية.",
+    "examples": [
+      {
+        "tr": "Burada yaşayan insanlar parkı kullanıyor.",
+        "ar": "يستخدم الحديقة الناس الذين يعيشون هنا.",
+        "wrong": "Burada yaşamak insanlar parkı kullanıyor.",
+        "correction": "Burada yaşayan insanlar parkı kullanıyor.",
+        "why": "قبل الاسم نحتاج الصفة الفعلية yaşayan."
+      },
+      {
+        "tr": "Çalışan ekip çözüm buldu.",
+        "ar": "وجد الفريق العامل حلاً.",
+        "wrong": "Çalışıyor ekip çözüm buldu.",
+        "correction": "Çalışan ekip çözüm buldu.",
+        "why": "صيغة -an تصف الفريق؛ الحاضر المستمر لا يسبق الاسم بهذه الوظيفة."
+      }
+    ]
+  },
+  {
+    "id": "g-13",
+    "level": "C1",
+    "titleAr": "التنازل her ne kadar… olsa da",
+    "explanationAr": "يقر جزء من الجملة بحقيقة أو قيد، ثم يقدم الجزء الرئيس نتيجة موازنة أو مخالفة.",
+    "form": "Her ne kadar + صفة/جملة + olsa da, …",
+    "whenToUse": "لبناء حجة تعترف بقيد ولا تجعل القيد خاتمة الحجة.",
+    "examples": [
+      {
+        "tr": "Her ne kadar pahalı olsa da proje yararlı.",
+        "ar": "مع أنه مكلف، فالمشروع مفيد.",
+        "wrong": "Her ne kadar pahalı ama proje yararlı.",
+        "correction": "Her ne kadar pahalı olsa da proje yararlı.",
+        "why": "لا يجمع التركيب القياسي بين her ne kadar وama بهذه الصورة."
+      },
+      {
+        "tr": "Her ne kadar yorulsam da devam ettim.",
+        "ar": "مع أنني تعبت، واصلت.",
+        "wrong": "Her ne kadar yoruldum da devam ettim.",
+        "correction": "Her ne kadar yorulsam da devam ettim.",
+        "why": "التركيب التنازلي يتطلب صيغة الشرط -sa/-se قبل da."
+      }
+    ]
+  },
+  {
+    "id": "g-14",
+    "level": "C2",
+    "titleAr": "الاسمية بـ -mA",
+    "explanationAr": "تحول الفعل إلى اسم يمكن إسناد الملكية أو الحالة إليه، مثل uygulanması «تطبيقه».",
+    "form": "جذر + -mA + لاحقة ملكية/حالة",
+    "whenToUse": "لصياغة نثر تحليلي موجز، وتحديد الفاعل أو المفعول ضمن عبارة اسمية.",
+    "examples": [
+      {
+        "tr": "Kararın uygulanması zaman alacak.",
+        "ar": "سيستغرق تنفيذ القرار وقتاً.",
+        "wrong": "Kararın uygulamak zaman alacak.",
+        "correction": "Kararın uygulanması zaman alacak.",
+        "why": "بعد الاسم المضاف kararın يلزم الاسم الحدثي uygulanması."
+      },
+      {
+        "tr": "Verileri karşılaştırmamız gerekiyor.",
+        "ar": "علينا مقارنة البيانات.",
+        "wrong": "Verileri karşılaştırmak gerekiyor. (علينا نحن)",
+        "correction": "Verileri karşılaştırmamız gerekiyor.",
+        "why": "إضافة -ımız تحدد الفاعل «مقارنتنا» بوضوح."
+      }
+    ]
+  }
+]

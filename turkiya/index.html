@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f5f0">
+  <meta name="description" content="تعلّم التركية خطوة بخطوة بالعربية، مع دروس ومراجعة ذكية وتدريب على المهارات الأربع.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="./assets/icons/app-icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/icons/icon-180.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./css/themes.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <title>تركيّة — تعلّم التركية</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">انتقل إلى المحتوى</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="القائمة الرئيسية">
+      <a class="brand" href="#home" aria-label="تركية، الصفحة الرئيسية">
+        <span class="brand-mark" aria-hidden="true"><img src="./assets/icons/app-icon.svg" alt=""></span>
+        <span class="brand-copy"><strong>تركيّة</strong><small>لغةٌ تُعاش</small></span>
+      </a>
+      <div class="sidebar-label">مساحة التعلّم</div>
+      <nav class="side-nav" id="side-nav">
+        <a href="#home" data-route="home" class="nav-link"><span class="nav-icon" data-icon="home"></span><span>الرئيسية</span></a>
+        <a href="#lessons" data-route="lessons" class="nav-link"><span class="nav-icon" data-icon="book"></span><span>المسار التعليمي</span></a>
+        <a href="#alphabet" data-route="alphabet" class="nav-link"><span class="nav-icon" data-icon="list"></span><span>الحروف والأصوات</span></a>
+        <a href="#vocabulary" data-route="vocabulary" class="nav-link"><span class="nav-icon" data-icon="cards"></span><span>المفردات</span></a>
+        <a href="#grammar" data-route="grammar" class="nav-link"><span class="nav-icon" data-icon="grammar"></span><span>القواعد</span></a>
+        <a href="#listening" data-route="listening" class="nav-link"><span class="nav-icon" data-icon="headphones"></span><span>الاستماع</span></a>
+        <a href="#speaking" data-route="speaking" class="nav-link"><span class="nav-icon" data-icon="mic"></span><span>التحدث</span></a>
+        <a href="#reading" data-route="reading" class="nav-link"><span class="nav-icon" data-icon="read"></span><span>القراءة</span></a>
+        <a href="#writing" data-route="writing" class="nav-link"><span class="nav-icon" data-icon="write"></span><span>الكتابة</span></a>
+        <a href="#review" data-route="review" class="nav-link"><span class="nav-icon" data-icon="refresh"></span><span>مراجعة اليوم <span class="nav-count" id="review-count">0</span></span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="streak-mini"><span class="streak-symbol" data-icon="flame"></span><span><b id="sidebar-streak">0</b> يوم تعلّم</span><span class="streak-dot" aria-hidden="true"></span></div>
+        <div class="sidebar-note">تقدّمك محفوظ على هذا الجهاز</div>
+      </div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <button class="mobile-brand" type="button" data-route="home" aria-label="الصفحة الرئيسية"><img src="./assets/icons/app-icon.svg" alt=""><span>تركيّة</span></button>
+        <div class="topbar-context"><span class="eyebrow">رحلتك إلى التركية</span><span class="connection-pill" id="connection-status"><i></i><span>جارٍ التحقق من الاتصال</span></span></div>
+        <div class="topbar-actions">
+          <button class="icon-button" id="install-button" type="button" hidden aria-label="تثبيت التطبيق" title="تثبيت التطبيق"><span data-icon="download"></span></button>
+          <button class="icon-button" id="theme-toggle" type="button" aria-label="تبديل المظهر" title="تبديل المظهر"><span data-icon="moon"></span></button>
+          <button class="avatar-button" id="profile-button" type="button" data-route="profile" aria-label="ملفي الشخصي">م</button>
+        </div>
+      </header>
+
+      <main id="main-content" class="page-content" tabindex="-1">
+        <div id="view-root" aria-live="polite" aria-busy="true">
+          <div class="loading-state"><span class="loading-ring"></span><p>نجهّز مساحة التعلّم…</p></div>
+        </div>
+      </main>
+      <footer class="site-footer"><span>تعلّم على مهل، واستخدم ما تعلّمته.</span><button id="backup-shortcut" type="button" class="text-button">نسخة بياناتي</button></footer>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" aria-label="التنقل السفلي">
+    <a href="#home" data-route="home" class="mobile-nav-link"><span data-icon="home"></span><small>الرئيسية</small></a>
+    <a href="#lessons" data-route="lessons" class="mobile-nav-link"><span data-icon="book"></span><small>الدروس</small></a>
+    <a href="#alphabet" data-route="alphabet" class="mobile-nav-link"><span data-icon="list"></span><small>الحروف</small></a>
+    <a href="#vocabulary" data-route="vocabulary" class="mobile-nav-link"><span data-icon="cards"></span><small>الكلمات</small></a>
+    <a href="#review" data-route="review" class="mobile-nav-link"><span data-icon="refresh"></span><small>المراجعة</small></a>
+    <a href="#profile" data-route="profile" class="mobile-nav-link"><span data-icon="user"></span><small>ملفي</small></a>
+  </nav>
+
+  <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <dialog id="app-dialog" class="app-dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

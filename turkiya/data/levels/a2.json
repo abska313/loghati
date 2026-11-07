@@ -1,0 +1,352 @@
+{
+  "level": "A2",
+  "titleAr": "المستوى المبتدئ الثاني",
+  "descriptionAr": "يتعامل المتعلم مع مواقف يومية متكررة، ويصف الخطط والاتجاهات بعبارات مترابطة.",
+  "units": [
+    {
+      "id": "a2-u1",
+      "titleAr": "مواقف وتراكيب أساسية",
+      "lessons": [
+        {
+          "id": "a2-l1",
+          "titleAr": "السؤال عن الطريق",
+          "titleTr": "Yol tarifi",
+          "objectivesAr": [
+            "طلب الاتجاهات وفهمها.",
+            "استخدام لواحق المكان والاتجاه."
+          ],
+          "explanationAr": "تدل -de/-da على الموقع، و-(y)e/-(y)a على الاتجاه، و-den/-dan على نقطة الانطلاق. يختار انسجام الحركات والملاءمة الصوتية اللاحقة المناسبة.",
+          "vocabulary": [
+            {
+              "id": "a2-l1-v1",
+              "tr": "istasyon",
+              "ar": "محطة",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "İstasyon nerede?",
+              "exampleAr": "أين المحطة؟",
+              "category": "المواصلات"
+            },
+            {
+              "id": "a2-l1-v2",
+              "tr": "köprü",
+              "ar": "جسر",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Köprüden sonra sağa dönün.",
+              "exampleAr": "انعطف يميناً بعد الجسر.",
+              "category": "السفر"
+            },
+            {
+              "id": "a2-l1-v3",
+              "tr": "karşısında",
+              "ar": "مقابل",
+              "ipa": "",
+              "pos": "ظرف مكان",
+              "exampleTr": "Eczane bankanın karşısında.",
+              "exampleAr": "الصيدلية مقابل البنك.",
+              "category": "المواصلات"
+            },
+            {
+              "id": "a2-l1-v4",
+              "tr": "dönmek",
+              "ar": "ينعطف/يعود",
+              "ipa": "",
+              "pos": "فعل",
+              "exampleTr": "İlk sokakta sola dönün.",
+              "exampleAr": "انعطف يساراً في الشارع الأول.",
+              "category": "المواصلات"
+            }
+          ],
+          "grammar": {
+            "titleAr": "لواحق المكان والاتجاه",
+            "explanationAr": "تُضاف لاحقة الحالة إلى الاسم: istasyonda «في المحطة»، istasyona «إلى المحطة»، istasyondan «من المحطة». تتأثر الصوامت بالمماثلة الصوتية، مثل durak + ta.",
+            "form": "اسم + -(y)DA / -(y)A / -DAn",
+            "examples": [
+              {
+                "tr": "İstasyon meydanda.",
+                "ar": "المحطة في الساحة.",
+                "wrong": "İstasyon meydana. (الموقع)",
+                "correction": "İstasyon meydanda.",
+                "why": "الموقع الثابت يأخذ -da، أما meydana فتعني إلى الساحة."
+              },
+              {
+                "tr": "Otobüs durakta bekliyor.",
+                "ar": "الحافلة تنتظر في الموقف.",
+                "wrong": "Otobüs durakda bekliyor.",
+                "correction": "Otobüs durakta bekliyor.",
+                "why": "بعد الصامت المهموس k تصبح اللاحقة -ta لا -da."
+              }
+            ]
+          },
+          "dialogue": [
+            {
+              "speaker": "A",
+              "tr": "Affedersiniz, istasyon nerede?",
+              "ar": "عذراً، أين المحطة؟"
+            },
+            {
+              "speaker": "B",
+              "tr": "Şu caddeden düz gidin.",
+              "ar": "امشِ مستقيماً في هذا الشارع."
+            },
+            {
+              "speaker": "A",
+              "tr": "Köprüden sonra mı?",
+              "ar": "بعد الجسر؟"
+            },
+            {
+              "speaker": "B",
+              "tr": "Evet, ilk sokakta sola dönün.",
+              "ar": "نعم، انعطف يساراً في الشارع الأول."
+            },
+            {
+              "speaker": "A",
+              "tr": "İstasyon uzak mı?",
+              "ar": "هل المحطة بعيدة؟"
+            },
+            {
+              "speaker": "B",
+              "tr": "Hayır, beş dakika yürüme mesafesinde.",
+              "ar": "لا، تبعد خمس دقائق مشياً."
+            }
+          ],
+          "reading": {
+            "titleAr": "إلى محطة القطار",
+            "textTr": "Zeynep şehir merkezinde bir istasyon arıyor. Bir görevliye soruyor ve caddede düz ilerlemesi gerektiğini öğreniyor. Köprüden sonra sola dönüyor. İstasyon, küçük bir parkın karşısında.",
+            "translationAr": "تبحث زينب عن محطة في وسط المدينة. تسأل موظفاً فتعرف أنه ينبغي أن تتابع السير مستقيماً في الشارع. تنعطف يساراً بعد الجسر. تقع المحطة مقابل حديقة صغيرة.",
+            "questions": [
+              {
+                "questionAr": "أين تقع المحطة؟",
+                "options": [
+                  "مقابل حديقة صغيرة",
+                  "داخل الجسر",
+                  "بجانب المطار"
+                ],
+                "correctIndex": 0,
+                "explanationAr": "تقول الجملة الأخيرة إن المحطة مقابل حديقة صغيرة."
+              }
+            ]
+          },
+          "comprehension": [
+            {
+              "questionAr": "في أي موضع تنعطف زينب؟",
+              "options": [
+                "قبل الجسر",
+                "بعد الجسر",
+                "عند المحطة"
+              ],
+              "correctIndex": 1,
+              "explanationAr": "تنعطف بعد الجسر."
+            }
+          ],
+          "writing": [
+            {
+              "promptAr": "اكتب توجيهاً قصيراً من موقف الحافلة إلى متجر قريب.",
+              "expectedTr": "Duraktan düz gidin ve ilk sokakta sağa dönün.",
+              "explanationAr": "استخدم صيغة الأمر المهذبة -in/-ın وقدّم توجيهاً واضحاً."
+            }
+          ],
+          "listening": [
+            {
+              "sentenceTr": "Eczane, bankanın karşısında.",
+              "questionAr": "أين الصيدلية؟",
+              "options": [
+                "مقابل البنك",
+                "داخل البنك",
+                "خلف المحطة"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "karşısında تعني مقابل."
+            }
+          ],
+          "pronunciation": [
+            {
+              "textTr": "istasyondan",
+              "focusAr": "لاحظ أن اللاحقة -dan تبدأ بصوت d بعد n، وأن كل مقطع صوتي واضح."
+            }
+          ],
+          "finalQuiz": [
+            {
+              "questionAr": "أي صيغة تعني «في الموقف» بعد durak؟",
+              "options": [
+                "durakta",
+                "duraka",
+                "duraktan"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "لاحقة المكان هي -ta هنا بسبب الصامت المهموس k."
+            }
+          ]
+        },
+        {
+          "id": "a2-l2",
+          "titleAr": "دعوة وتنسيق موعد",
+          "titleTr": "Hafta sonu planı",
+          "objectivesAr": [
+            "قبول دعوة أو الاعتذار عنها.",
+            "الحديث عن المستقبل القريب."
+          ],
+          "explanationAr": "تُستخدم اللاحقة -acak/-ecek مع لواحق الأشخاص للدلالة على المستقبل. بعد جذر ينتهي بحركة، يظهر حرف y للفصل، مثل başlayacağım.",
+          "vocabulary": [
+            {
+              "id": "a2-l2-v1",
+              "tr": "buluşmak",
+              "ar": "يلتقي",
+              "ipa": "",
+              "pos": "فعل",
+              "exampleTr": "Saat üçte buluşalım.",
+              "exampleAr": "لنلتقِ في الثالثة.",
+              "category": "العلاقات الاجتماعية"
+            },
+            {
+              "id": "a2-l2-v2",
+              "tr": "sergi",
+              "ar": "معرض",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Yeni sergiye gideceğiz.",
+              "exampleAr": "سنذهب إلى المعرض الجديد.",
+              "category": "الثقافة"
+            },
+            {
+              "id": "a2-l2-v3",
+              "tr": "uygun",
+              "ar": "مناسب",
+              "ipa": "",
+              "pos": "صفة",
+              "exampleTr": "Cumartesi benim için uygun.",
+              "exampleAr": "السبت مناسب لي.",
+              "category": "الحياة اليومية"
+            },
+            {
+              "id": "a2-l2-v4",
+              "tr": "söz vermek",
+              "ar": "يَعِد",
+              "ipa": "",
+              "pos": "فعل مركب",
+              "exampleTr": "Sana haber vereceğim.",
+              "exampleAr": "سأخبرك.",
+              "category": "العلاقات الاجتماعية"
+            }
+          ],
+          "grammar": {
+            "titleAr": "المستقبل -acak/-ecek",
+            "explanationAr": "تلحق صيغة المستقبل بجذر الفعل، ويحدد انسجام الحركات -acak أو -ecek. تُضاف لواحق الشخص، وقد يظهر y بعد حركة نهائية: başlayacağım.",
+            "form": "جذر الفعل + -(y)AcAk + لاحقة الشخص",
+            "examples": [
+              {
+                "tr": "Yarın sergiye gideceğiz.",
+                "ar": "سنذهب إلى المعرض غداً.",
+                "wrong": "Yarın sergiye gidiyoruz. (مستقبل مؤكد)",
+                "correction": "Yarın sergiye gideceğiz.",
+                "why": "للتدرب على علامة المستقبل الصريحة نستخدم gideceğiz."
+              },
+              {
+                "tr": "Sana akşam haber vereceğim.",
+                "ar": "سأخبرك مساءً.",
+                "wrong": "Sana akşam haber verecek. (أنا)",
+                "correction": "Sana akşam haber vereceğim.",
+                "why": "مع أنا تلحق -im في المستقبل، فتكون vereceğim."
+              }
+            ]
+          },
+          "dialogue": [
+            {
+              "speaker": "A",
+              "tr": "Cumartesi yeni sergiye gideceğim. Sen de gelir misin?",
+              "ar": "سأذهب إلى المعرض الجديد السبت. هل تأتي أيضاً؟"
+            },
+            {
+              "speaker": "B",
+              "tr": "Memnuniyetle. Saat kaçta buluşacağız?",
+              "ar": "بكل سرور. في أي ساعة سنلتقي؟"
+            },
+            {
+              "speaker": "A",
+              "tr": "Saat üçte, müzenin girişinde.",
+              "ar": "في الثالثة عند مدخل المتحف."
+            },
+            {
+              "speaker": "B",
+              "tr": "Uygun. Otobüsle geleceğim.",
+              "ar": "مناسب. سأصل بالحافلة."
+            },
+            {
+              "speaker": "A",
+              "tr": "Harika, sana cuma günü tekrar yazarım.",
+              "ar": "رائع، سأكتب إليك مجدداً يوم الجمعة."
+            }
+          ],
+          "reading": {
+            "titleAr": "موعد ثقافي",
+            "textTr": "Deniz ve arkadaşı cumartesi günü fotoğraf sergisine gidecek. Saat üçte müzenin girişinde buluşacaklar. Deniz tramvayla gelecek; arkadaşı ise yürüyerek gidecek çünkü müze evine yakın. Sergiden sonra kahve içmeyi düşünüyorlar.",
+            "translationAr": "سيذهب دنيز وصديقه إلى معرض للتصوير يوم السبت. سيلتقيان عند مدخل المتحف في الثالثة. سيأتي دنيز بالترام، أما صديقه فسيمشي لأن المتحف قريب من بيته. ويفكران في شرب القهوة بعد المعرض.",
+            "questions": [
+              {
+                "questionAr": "كيف سيصل صديق دنيز؟",
+                "options": [
+                  "بالترام",
+                  "مشياً",
+                  "بسيارة أجرة"
+                ],
+                "correctIndex": 1,
+                "explanationAr": "القراءة تذكر أن المتحف قريب من بيت الصديق، لذلك سيذهب مشياً."
+              }
+            ]
+          },
+          "comprehension": [
+            {
+              "questionAr": "أين سيلتقي الصديقان؟",
+              "options": [
+                "عند مدخل المتحف",
+                "في المقهى",
+                "في محطة الترام"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "موعدهما عند مدخل المتحف."
+            }
+          ],
+          "writing": [
+            {
+              "promptAr": "اقبل دعوة إلى فيلم وحدد موعداً مستقبلياً.",
+              "expectedTr": "Memnuniyetle. Yarın saat yedide buluşacağız.",
+              "explanationAr": "استعمل المستقبل -acağız/-eceğiz لتحديد ما سيحدث."
+            }
+          ],
+          "listening": [
+            {
+              "sentenceTr": "Pazar günü ailemi ziyaret edeceğim.",
+              "questionAr": "ماذا سيفعل المتحدث يوم الأحد؟",
+              "options": [
+                "يزور أسرته",
+                "يذهب إلى معرض",
+                "يعمل في المتحف"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "ailemi ziyaret edeceğim تعني سأزور أسرتي."
+            }
+          ],
+          "pronunciation": [
+            {
+              "textTr": "gideceğiz",
+              "focusAr": "تدرّب على تسلسل الحركات e-e-i؛ ولا تحذف المقطع الأخير -ğiz."
+            }
+          ],
+          "finalQuiz": [
+            {
+              "questionAr": "ما اللاحقة التي تكوّن مستقبل «gelmek» مع أنا؟",
+              "options": [
+                "geleceğim",
+                "geliyorum",
+                "geldim"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "geleceğim هي صيغة المستقبل للمتكلم المفرد."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

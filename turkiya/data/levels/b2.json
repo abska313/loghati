@@ -1,0 +1,357 @@
+{
+  "level": "B2",
+  "titleAr": "المستوى المتوسط الثاني",
+  "descriptionAr": "يفهم قضايا عامة أكثر تجريداً، ويبرر موقفه ويميز بين صيغ متنوعة ومعانٍ دقيقة.",
+  "units": [
+    {
+      "id": "b2-u1",
+      "titleAr": "التواصل والتحليل",
+      "lessons": [
+        {
+          "id": "b2-l1",
+          "titleAr": "تقليل النفايات",
+          "titleTr": "Atığı azaltmak",
+          "objectivesAr": [
+            "تلخيص مشكلة بيئية محلية.",
+            "استخدام المبني للمجهول والغاية بـ -mek için."
+          ],
+          "explanationAr": "يُشتق المبني للمجهول غالباً بإضافة -(I)l أو -(I)n إلى جذر الفعل، مثل ayırmak → ayrılmak. وتُستخدم -mek için للتعبير عن الغاية.",
+          "vocabulary": [
+            {
+              "id": "b2-l1-v1",
+              "tr": "atık",
+              "ar": "نفاية/مخلّف",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Atıklar ayrı kutulara atılıyor.",
+              "exampleAr": "تُلقى النفايات في صناديق منفصلة.",
+              "category": "الطبيعة"
+            },
+            {
+              "id": "b2-l1-v2",
+              "tr": "geri dönüşüm",
+              "ar": "إعادة التدوير",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Geri dönüşüm kaynakları korur.",
+              "exampleAr": "تحافظ إعادة التدوير على الموارد.",
+              "category": "الطبيعة"
+            },
+            {
+              "id": "b2-l1-v3",
+              "tr": "kaynak",
+              "ar": "مورد/مصدر",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Su kaynaklarını korumalıyız.",
+              "exampleAr": "ينبغي أن نحافظ على موارد المياه.",
+              "category": "الطبيعة"
+            },
+            {
+              "id": "b2-l1-v4",
+              "tr": "alışkanlık",
+              "ar": "عادة",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Küçük alışkanlıklar fark yaratır.",
+              "exampleAr": "تُحدث العادات الصغيرة فرقاً.",
+              "category": "الحياة اليومية"
+            }
+          ],
+          "grammar": {
+            "titleAr": "المبني للمجهول والغاية",
+            "explanationAr": "في المبني للمجهول يُبرز الحدث أو المفعول بدلاً من الفاعل: Atıklar ayrılıyor. ولتوضيح الغاية، يأتي مصدر الفعل قبل için: israfı azaltmak için.",
+            "form": "جذر + -(I)l/-(I)n ؛ مصدر + için",
+            "examples": [
+              {
+                "tr": "Plastik ayrı toplanıyor.",
+                "ar": "يُجمع البلاستيك على نحو منفصل.",
+                "wrong": "Plastik ayrı topluyor. (مجهول)",
+                "correction": "Plastik ayrı toplanıyor.",
+                "why": "topluyor فعل معلوم «يجمع»، أما toplanıyor فيدل هنا على «يُجمع»."
+              },
+              {
+                "tr": "Su tasarrufu yapmak için kısa duş alıyorum.",
+                "ar": "آخذ حماماً قصيراً لتوفير الماء.",
+                "wrong": "Su tasarrufu yapmak için kısa duş alır. (أنا)",
+                "correction": "Su tasarrufu yapmak için kısa duş alıyorum.",
+                "why": "المتحدث عن نفسه يحتاج لاحقة الشخص -um في الحاضر المستمر."
+              }
+            ]
+          },
+          "dialogue": [
+            {
+              "speaker": "A",
+              "tr": "Mahallede yeni geri dönüşüm kutuları gördüm.",
+              "ar": "رأيت صناديق جديدة لإعادة التدوير في الحي."
+            },
+            {
+              "speaker": "B",
+              "tr": "Evet, cam ve kâğıt artık ayrı toplanıyor.",
+              "ar": "نعم، صار الزجاج والورق يُجمعان منفصلين."
+            },
+            {
+              "speaker": "A",
+              "tr": "Bu uygulama işe yarıyor mu?",
+              "ar": "هل تنجح هذه المبادرة؟"
+            },
+            {
+              "speaker": "B",
+              "tr": "Tek başına yetmez, ama alışkanlıkları değiştirmeye yardımcı oluyor.",
+              "ar": "لا تكفي وحدها، لكنها تساعد على تغيير العادات."
+            },
+            {
+              "speaker": "A",
+              "tr": "Ben de atıkları azaltmak için alışveriş çantası taşıyorum.",
+              "ar": "وأنا أحمل حقيبة تسوق لتقليل النفايات."
+            },
+            {
+              "speaker": "B",
+              "tr": "Güzel; küçük adımlar da kaynakları korur.",
+              "ar": "جيد؛ فالخطوات الصغيرة تحافظ أيضاً على الموارد."
+            }
+          ],
+          "reading": {
+            "titleAr": "مبادرة الحي",
+            "textTr": "Bir semt belediyesi, evlerdeki organik atıklar için kompost noktaları kurdu. Atıkların bu noktalarda biriktirilmesiyle bahçe toprağı zenginleştiriliyor. Projenin amacı yalnızca çöp miktarını azaltmak değil; sakinlere kaynakların yeniden kullanılabileceğini de göstermek. İlk üç ayda katılım beklenenden düşük kaldı. Bunun üzerine gönüllüler apartmanlarda kısa bilgilendirme toplantıları düzenledi.",
+            "translationAr": "أنشأت بلدية أحد الأحياء نقاطاً للسماد العضوي من نفايات المنازل. ويُثرى تراب الحدائق بتجميع النفايات في هذه النقاط. ولا يقتصر هدف المشروع على تقليل كمية القمامة، بل يهدف أيضاً إلى إظهار إمكانية إعادة استخدام الموارد للسكان. ظل الإقبال في الأشهر الثلاثة الأولى أقل من المتوقع. لذلك نظم المتطوعون لقاءات توعوية قصيرة في المباني السكنية.",
+            "questions": [
+              {
+                "questionAr": "لماذا نظم المتطوعون لقاءات؟",
+                "options": [
+                  "لأن الإقبال كان أقل من المتوقع",
+                  "لإغلاق نقاط السماد",
+                  "لزيادة النفايات"
+                ],
+                "correctIndex": 0,
+                "explanationAr": "تذكر القراءة أن المشاركة كانت أقل من المتوقع، فاستجاب المتطوعون بالتوعية."
+              }
+            ]
+          },
+          "comprehension": [
+            {
+              "questionAr": "ما إحدى فوائد المشروع؟",
+              "options": [
+                "إثراء تراب الحدائق",
+                "زيادة استهلاك الماء",
+                "إلغاء إعادة الاستخدام"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "يُستخدم السماد لإثراء تراب الحدائق."
+            }
+          ],
+          "writing": [
+            {
+              "promptAr": "اقترح إجراءين لتقليل النفايات واشرح الغاية منهما.",
+              "expectedTr": "Plastik poşet kullanmamak için bez çanta taşıyabiliriz. Atıkları azaltmak için yeniden kullanılabilir ürünler seçebiliriz.",
+              "explanationAr": "استعمل -mek için قبل بيان الغاية، وقدم اقتراحاً قابلاً للتطبيق."
+            }
+          ],
+          "listening": [
+            {
+              "sentenceTr": "Kâğıt ve cam, mahalledeki kutularda ayrı toplanıyor.",
+              "questionAr": "كيف تُجمع المواد؟",
+              "options": [
+                "معاً في حاوية واحدة",
+                "منفصلة في صناديق الحي",
+                "لا تُجمع"
+              ],
+              "correctIndex": 1,
+              "explanationAr": "الجملة تقول ayrı toplanıyor: تُجمع منفصلة."
+            }
+          ],
+          "pronunciation": [
+            {
+              "textTr": "ayrıştırılıyor",
+              "focusAr": "ركّز على المقاطع ayrış-tı-rı-lı-yor، وعلى التمييز بين ş وs."
+            }
+          ],
+          "finalQuiz": [
+            {
+              "questionAr": "أي صيغة مبنية للمجهول؟",
+              "options": [
+                "Belediye atıkları topluyor.",
+                "Atıklar toplanıyor.",
+                "Atıkları toplamak istiyorum."
+              ],
+              "correctIndex": 1,
+              "explanationAr": "Atıklar toplanıyor تعني «تُجمع النفايات» دون ذكر الفاعل."
+            }
+          ]
+        },
+        {
+          "id": "b2-l2",
+          "titleAr": "قراءة خبر بحذر",
+          "titleTr": "Haberi değerlendirmek",
+          "objectivesAr": [
+            "تمييز الادعاء من الدليل.",
+            "استخدام الشرط والعبارات المنقولة بحذر."
+          ],
+          "explanationAr": "تُنشأ جملة الشرط بإضافة -sa/-se، وقد تتصل بها لاحقة الشخص: gelirse. ولعرض معلومة منقولة دون تأكيد شخصي يمكن استخدام -mış/-miş، مع ضرورة تسمية المصدر عند التحقق.",
+          "vocabulary": [
+            {
+              "id": "b2-l2-v1",
+              "tr": "kaynakça",
+              "ar": "قائمة المصادر",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Kaynakçayı kontrol ettim.",
+              "exampleAr": "تحققت من قائمة المصادر.",
+              "category": "الثقافة"
+            },
+            {
+              "id": "b2-l2-v2",
+              "tr": "iddia",
+              "ar": "ادعاء",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Bu iddia kanıt gerektiriyor.",
+              "exampleAr": "هذا الادعاء يحتاج إلى دليل.",
+              "category": "الثقافة"
+            },
+            {
+              "id": "b2-l2-v3",
+              "tr": "doğrulamak",
+              "ar": "يتحقق/يثبت",
+              "ipa": "",
+              "pos": "فعل",
+              "exampleTr": "Bilgiyi iki kaynaktan doğrulayın.",
+              "exampleAr": "تحققوا من المعلومة من مصدرين.",
+              "category": "التكنولوجيا"
+            },
+            {
+              "id": "b2-l2-v4",
+              "tr": "paylaşım",
+              "ar": "منشور/مشاركة",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Paylaşım çok hızlı yayıldı.",
+              "exampleAr": "انتشر المنشور بسرعة كبيرة.",
+              "category": "التكنولوجيا"
+            }
+          ],
+          "grammar": {
+            "titleAr": "الشرط ونقل الادعاء",
+            "explanationAr": "تلحق -sa/-se بجذر الفعل لصياغة شرط، مثل kaynak güvenilir olursa. أما -miş فتفيد الخبر المنقول أو الاستنتاج، ولا تجعل الادعاء حقيقة مثبتة.",
+            "form": "جذر + -sA ؛ جملة منقولة + -mış",
+            "examples": [
+              {
+                "tr": "Kaynak güvenilir olursa haberi paylaşırız.",
+                "ar": "إذا كان المصدر موثوقاً فسننشر الخبر.",
+                "wrong": "Kaynak güvenilir ise haberi paylaşıyoruz. (شرط موجز)",
+                "correction": "Kaynak güvenilir olursa haberi paylaşırız.",
+                "why": "الصيغة الأولى شرط مباشر واضح؛ ise ممكنة أيضاً لكنها تركيب مختلف."
+              },
+              {
+                "tr": "Haberde yeni bir uygulama çıkmış deniyor.",
+                "ar": "يقال إن تطبيقاً جديداً صدر في الخبر.",
+                "wrong": "Yeni uygulama çıktı. (منقول)",
+                "correction": "Haberde yeni bir uygulama çıktığı söyleniyor.",
+                "why": "الصيغة المنقولة هنا طبيعية وتفصل بين القول والتحقق من الخبر."
+              }
+            ]
+          },
+          "dialogue": [
+            {
+              "speaker": "A",
+              "tr": "Bu paylaşım doğru mu?",
+              "ar": "هل هذا المنشور صحيح؟"
+            },
+            {
+              "speaker": "B",
+              "tr": "Henüz bilmiyorum; önce kaynağı kontrol etmeliyiz.",
+              "ar": "لا أعرف بعد؛ ينبغي أن نتحقق من المصدر أولاً."
+            },
+            {
+              "speaker": "A",
+              "tr": "Birçok kişi paylaşmış.",
+              "ar": "شارك به أشخاص كثيرون."
+            },
+            {
+              "speaker": "B",
+              "tr": "Çok paylaşılması kanıt olduğu anlamına gelmez.",
+              "ar": "كثرة مشاركته لا تعني أنه دليل."
+            },
+            {
+              "speaker": "A",
+              "tr": "İki bağımsız kaynak doğrularsa paylaşırım.",
+              "ar": "سأنشره إذا أكدته جهتان مستقلتان."
+            },
+            {
+              "speaker": "B",
+              "tr": "Aynen; iddia ile doğrulanmış bilgiyi ayıralım.",
+              "ar": "صحيح؛ لنميز بين الادعاء والمعلومة المتحققة."
+            }
+          ],
+          "reading": {
+            "titleAr": "انتشار سريع",
+            "textTr": "Bir sosyal medya hesabı, şehirde içme suyunun kesileceğini iddia etti. Mesaj kısa sürede yayıldı; ancak paylaşımda tarih ve resmî kaynak yoktu. Yerel yönetimin duyuruları incelendiğinde kesinti planına rastlanmadı. Bir gazeteci, iddiayı belediyeye sorarak doğruladı ve yanlış olduğunu açıkladı. Bu örnek, paylaşım sayısının tek başına güvenilirlik ölçüsü olmadığını gösteriyor.",
+            "translationAr": "ادعى حساب على وسائل التواصل أن مياه الشرب ستنقطع في المدينة. انتشرت الرسالة سريعاً، لكن المنشور لم يتضمن تاريخاً أو مصدراً رسمياً. وعند فحص إعلانات البلدية المحلية لم يُعثر على خطة انقطاع. تحقق صحفي من الادعاء بسؤال البلدية وأوضح أنه غير صحيح. يبين هذا المثال أن عدد المشاركات وحده ليس معياراً للموثوقية.",
+            "questions": [
+              {
+                "questionAr": "ما الذي فعله الصحفي للتحقق؟",
+                "options": [
+                  "سأل البلدية",
+                  "اكتفى بعدد المشاركات",
+                  "حذف جميع الإعلانات"
+                ],
+                "correctIndex": 0,
+                "explanationAr": "تقول القراءة إنه سأل البلدية للتحقق."
+              }
+            ]
+          },
+          "comprehension": [
+            {
+              "questionAr": "ما الذي لا يثبت الموثوقية وحده؟",
+              "options": [
+                "وجود تاريخ",
+                "عدد المشاركات",
+                "مصدر رسمي"
+              ],
+              "correctIndex": 1,
+              "explanationAr": "عدد المشاركات لا يكفي بمفرده."
+            }
+          ],
+          "writing": [
+            {
+              "promptAr": "اكتب قاعدة قصيرة للتحقق من خبر قبل مشاركته.",
+              "expectedTr": "Bir haberi paylaşmadan önce kaynağını kontrol ederim; iki güvenilir kaynak doğrularsa paylaşırım.",
+              "explanationAr": "استخدم قبل النشر عبارة paylaşmadan önce وشرط -sa/-se."
+            }
+          ],
+          "listening": [
+            {
+              "sentenceTr": "Uzmanlar doğrularsa kurum açıklama yapacak.",
+              "questionAr": "متى ستصدر المؤسسة بياناً؟",
+              "options": [
+                "إذا أكد الخبر الخبراء",
+                "بعد أن يحذف المنشور",
+                "دون تحقق"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "تربط الجملة البيان بتأكيد الخبراء."
+            }
+          ],
+          "pronunciation": [
+            {
+              "textTr": "doğrulamak",
+              "focusAr": "انطق ğ وفق نطقها التركية اللينة، ولا تستبدل ı في المقطع الأخير بـ i."
+            }
+          ],
+          "finalQuiz": [
+            {
+              "questionAr": "أي جملة تفصل بين الادعاء والتحقق؟",
+              "options": [
+                "Herkes paylaştı, demek ki doğru.",
+                "İki kaynak doğrularsa paylaşırım.",
+                "Paylaşım çok hızlı yayıldı."
+              ],
+              "correctIndex": 1,
+              "explanationAr": "الجملة الشرطية تشترط تحقق مصدرين قبل المشاركة."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

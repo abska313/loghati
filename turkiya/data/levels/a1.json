@@ -1,0 +1,357 @@
+{
+  "level": "A1",
+  "titleAr": "المستوى المبتدئ الأول",
+  "descriptionAr": "يتواصل المتعلم في مواقف مألوفة مثل الروتين والطلبات البسيطة مستخدماً جملاً أساسية.",
+  "units": [
+    {
+      "id": "a1-u1",
+      "titleAr": "مواقف وتراكيب أساسية",
+      "lessons": [
+        {
+          "id": "a1-l1",
+          "titleAr": "يوم عادي",
+          "titleTr": "Sıradan bir gün",
+          "objectivesAr": [
+            "وصف روتين صباحي بسيط.",
+            "تصريف أفعال الحاضر المستمر للمفرد."
+          ],
+          "explanationAr": "يُستخدم الحاضر المستمر المنتهي بـ -yor لوصف ما يحدث الآن أو في هذه الفترة. يتغير حرف الوصل بحسب الفعل، وتظهر صيغ مثل geliyorum و çalışıyorum.",
+          "vocabulary": [
+            {
+              "id": "a1-l1-v1",
+              "tr": "uyanmak",
+              "ar": "يستيقظ",
+              "ipa": "",
+              "pos": "فعل",
+              "exampleTr": "Saat yedide uyanıyorum.",
+              "exampleAr": "أستيقظ في السابعة.",
+              "category": "الحياة اليومية"
+            },
+            {
+              "id": "a1-l1-v2",
+              "tr": "kahvaltı",
+              "ar": "فطور",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Kahvaltı yapıyorum.",
+              "exampleAr": "أتناول الفطور.",
+              "category": "الطعام والشراب"
+            },
+            {
+              "id": "a1-l1-v3",
+              "tr": "işe",
+              "ar": "إلى العمل",
+              "ipa": "",
+              "pos": "اسم+لاحقة",
+              "exampleTr": "Otobüsle işe gidiyorum.",
+              "exampleAr": "أذهب إلى العمل بالحافلة.",
+              "category": "العمل"
+            },
+            {
+              "id": "a1-l1-v4",
+              "tr": "akşam",
+              "ar": "مساء",
+              "ipa": "",
+              "pos": "اسم/ظرف",
+              "exampleTr": "Akşam kitap okuyorum.",
+              "exampleAr": "أقرأ كتاباً مساءً.",
+              "category": "الحياة اليومية"
+            }
+          ],
+          "grammar": {
+            "titleAr": "الحاضر المستمر -yor",
+            "explanationAr": "أضف -yor إلى جذر الفعل مع حروف الوصل المناسبة، ثم ألحق علامة الشخص. تُستخدم الصيغة للأحداث الجارية وللروتين القريب من لحظة الكلام.",
+            "form": "جذر الفعل + (I)yor + لاحقة الشخص",
+            "examples": [
+              {
+                "tr": "Her sabah kahvaltı yapıyorum.",
+                "ar": "أتناول الفطور كل صباح.",
+                "wrong": "Her sabah kahvaltı yapıyor. (أنا)",
+                "correction": "Her sabah kahvaltı yapıyorum.",
+                "why": "فاعل المتكلم المفرد يأخذ -um في هذه الصيغة."
+              },
+              {
+                "tr": "Şimdi eve gidiyorum.",
+                "ar": "أنا ذاهب إلى البيت الآن.",
+                "wrong": "Şimdi eve gidiyor muyum? (خبر)",
+                "correction": "Şimdi eve gidiyorum.",
+                "why": "السؤال يغير المقصود؛ هذه جملة خبرية وليست استفهاماً."
+              }
+            ]
+          },
+          "dialogue": [
+            {
+              "speaker": "A",
+              "tr": "Saat kaçta uyanıyorsun?",
+              "ar": "في أي ساعة تستيقظ؟"
+            },
+            {
+              "speaker": "B",
+              "tr": "Saat yedide uyanıyorum.",
+              "ar": "أستيقظ في السابعة."
+            },
+            {
+              "speaker": "A",
+              "tr": "Sonra ne yapıyorsun?",
+              "ar": "ماذا تفعل بعد ذلك؟"
+            },
+            {
+              "speaker": "B",
+              "tr": "Kahvaltı yapıyorum ve işe gidiyorum.",
+              "ar": "أتناول الفطور وأذهب إلى العمل."
+            },
+            {
+              "speaker": "A",
+              "tr": "Akşam dinleniyor musun?",
+              "ar": "هل تستريح مساءً؟"
+            },
+            {
+              "speaker": "B",
+              "tr": "Evet, biraz kitap okuyorum.",
+              "ar": "نعم، أقرأ قليلاً."
+            }
+          ],
+          "reading": {
+            "titleAr": "صباح مراد",
+            "textTr": "Murat hafta içi saat yedide uyanıyor. Kahvaltıda peynir ve zeytin yiyor. İşe otobüsle gidiyor; yolculuk yaklaşık otuz dakika sürüyor. Akşam evde dinleniyor.",
+            "translationAr": "يستيقظ مراد في أيام الأسبوع عند السابعة. يأكل الجبن والزيتون في الفطور. يذهب إلى العمل بالحافلة؛ وتستغرق الرحلة نحو ثلاثين دقيقة. يستريح في البيت مساءً.",
+            "questions": [
+              {
+                "questionAr": "كيف يذهب مراد إلى العمل؟",
+                "options": [
+                  "بالقطار",
+                  "بالحافلة",
+                  "مشياً"
+                ],
+                "correctIndex": 1,
+                "explanationAr": "تذكر القراءة أنه يذهب otobüsle، أي بالحافلة."
+              }
+            ]
+          },
+          "comprehension": [
+            {
+              "questionAr": "متى يستريح مراد؟",
+              "options": [
+                "صباحاً",
+                "في الظهيرة",
+                "مساءً"
+              ],
+              "correctIndex": 2,
+              "explanationAr": "آخر جملة تحدد أنه يستريح مساءً."
+            }
+          ],
+          "writing": [
+            {
+              "promptAr": "اكتب جملتين عن وقت استيقاظك وفطورك.",
+              "expectedTr": "Saat yedide uyanıyorum. Kahvaltıda yumurta yiyorum.",
+              "explanationAr": "استخدم -yor للروتين، وغيّر الوقت والطعام وفق واقعك."
+            }
+          ],
+          "listening": [
+            {
+              "sentenceTr": "Her gün saat sekizde işe gidiyorum.",
+              "questionAr": "في أي ساعة يذهب المتحدث إلى العمل؟",
+              "options": [
+                "السابعة",
+                "الثامنة",
+                "التاسعة"
+              ],
+              "correctIndex": 1,
+              "explanationAr": "تقول الجملة saat sekizde: في الثامنة."
+            }
+          ],
+          "pronunciation": [
+            {
+              "textTr": "çalışıyorum",
+              "focusAr": "ميّز بين ç التركية (تش) وc التركية (ج)، وانطق مقطع -ı- بحركة غير مدوّرة خلفية."
+            }
+          ],
+          "finalQuiz": [
+            {
+              "questionAr": "اختر التصريف الصحيح لـ Ben (çalışmak).",
+              "options": [
+                "çalışıyor",
+                "çalışıyorum",
+                "çalışıyorsun"
+              ],
+              "correctIndex": 1,
+              "explanationAr": "مع ben نستخدم لاحقة المتكلم -um: çalışıyorum."
+            }
+          ]
+        },
+        {
+          "id": "a1-l2",
+          "titleAr": "في المقهى",
+          "titleTr": "Kafede",
+          "objectivesAr": [
+            "طلب مشروب ووجبة بأسلوب مهذب.",
+            "السؤال عن السعر واستخدام أريد."
+          ],
+          "explanationAr": "يمكن استعمال istiyorum «أريد» مع اسم أو فعل مصدري. وللطلب المهذب، تُستخدم عبارات مثل alabilir miyim? «هل يمكنني أن آخذ؟».",
+          "vocabulary": [
+            {
+              "id": "a1-l2-v1",
+              "tr": "menü",
+              "ar": "قائمة الطعام",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Menüyü alabilir miyim?",
+              "exampleAr": "هل يمكنني أخذ قائمة الطعام؟",
+              "category": "الطعام والشراب"
+            },
+            {
+              "id": "a1-l2-v2",
+              "tr": "çorba",
+              "ar": "حساء",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Mercimek çorbası istiyorum.",
+              "exampleAr": "أريد حساء العدس.",
+              "category": "الطعام والشراب"
+            },
+            {
+              "id": "a1-l2-v3",
+              "tr": "su",
+              "ar": "ماء",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Bir şişe su lütfen.",
+              "exampleAr": "زجاجة ماء من فضلك.",
+              "category": "الطعام والشراب"
+            },
+            {
+              "id": "a1-l2-v4",
+              "tr": "hesap",
+              "ar": "الحساب",
+              "ipa": "",
+              "pos": "اسم",
+              "exampleTr": "Hesabı alabilir miyim?",
+              "exampleAr": "هل يمكنني الحصول على الحساب؟",
+              "category": "المال والأعمال"
+            }
+          ],
+          "grammar": {
+            "titleAr": "الطلب بـ istiyorum وalabilir miyim?",
+            "explanationAr": "يأتي اسم المفعول مع لاحقة التعريف عند تحديد شيء معروف، مثل menüyü. أما alabilir miyim? فهي صيغة سؤال مهذبة مبنية على القدرة.",
+            "form": "اسم + istiyorum / اسم-(y)I + alabilir miyim?",
+            "examples": [
+              {
+                "tr": "Bir çay istiyorum.",
+                "ar": "أريد شاياً.",
+                "wrong": "Bir çay istiyor. (أنا)",
+                "correction": "Bir çay istiyorum.",
+                "why": "لاحقة المتكلم في istiyorum هي -um."
+              },
+              {
+                "tr": "Hesabı alabilir miyim?",
+                "ar": "هل يمكنني الحصول على الحساب؟",
+                "wrong": "Hesap alabilir miyim? (الحساب المحدد)",
+                "correction": "Hesabı alabilir miyim?",
+                "why": "تُضاف لاحقة المفعول المحدد -ı إلى الحساب المعروف."
+              }
+            ]
+          },
+          "dialogue": [
+            {
+              "speaker": "A",
+              "tr": "Merhaba, menüyü alabilir miyim?",
+              "ar": "مرحباً، هل يمكنني أخذ قائمة الطعام؟"
+            },
+            {
+              "speaker": "B",
+              "tr": "Tabii, buyurun.",
+              "ar": "بالطبع، تفضل."
+            },
+            {
+              "speaker": "A",
+              "tr": "Bir mercimek çorbası ve su istiyorum.",
+              "ar": "أريد حساء عدس وماء."
+            },
+            {
+              "speaker": "B",
+              "tr": "Başka bir şey ister misiniz?",
+              "ar": "هل ترغب في شيء آخر؟"
+            },
+            {
+              "speaker": "A",
+              "tr": "Hayır, teşekkürler. Hesabı sonra alabilir miyim?",
+              "ar": "لا، شكراً. هل يمكنني أخذ الحساب لاحقاً؟"
+            },
+            {
+              "speaker": "B",
+              "tr": "Elbette.",
+              "ar": "بكل سرور."
+            }
+          ],
+          "reading": {
+            "titleAr": "استراحة الغداء",
+            "textTr": "Elif küçük bir kafeye giriyor. Önce menüyü inceliyor, sonra mercimek çorbası ve bir bardak su istiyor. Çorbası sıcak geliyor. Yemeğini bitirince garsondan hesabı rica ediyor.",
+            "translationAr": "تدخل إليف مقهى صغيراً. تتفحص قائمة الطعام أولاً، ثم تطلب حساء العدس وكأس ماء. يصل الحساء ساخناً. وبعد أن تنهي وجبتها، تطلب الحساب من النادل.",
+            "questions": [
+              {
+                "questionAr": "ماذا تطلب إليف؟",
+                "options": [
+                  "حساء عدس وكأس ماء",
+                  "قهوة وكعكة",
+                  "شاي فقط"
+                ],
+                "correctIndex": 0,
+                "explanationAr": "القراءة تذكر حساء العدس وكأس الماء صراحةً."
+              }
+            ]
+          },
+          "comprehension": [
+            {
+              "questionAr": "متى تطلب إليف الحساب؟",
+              "options": [
+                "قبل أن تطلب الطعام",
+                "بعد أن تنهي وجبتها",
+                "عند دخول المقهى"
+              ],
+              "correctIndex": 1,
+              "explanationAr": "تطلبه بعد إنهاء الطعام."
+            }
+          ],
+          "writing": [
+            {
+              "promptAr": "اكتب طلباً مهذباً لمشروب واذكر أنك تريد الحساب لاحقاً.",
+              "expectedTr": "Bir çay istiyorum. Hesabı sonra alabilir miyim?",
+              "explanationAr": "يمكن استخدام istiyorum للطلب وalabilir miyim? للسؤال المهذب."
+            }
+          ],
+          "listening": [
+            {
+              "sentenceTr": "Bir kahve ve bir su istiyorum.",
+              "questionAr": "ماذا يريد الزبون؟",
+              "options": [
+                "قهوة وماء",
+                "شاي وحساء",
+                "ماء فقط"
+              ],
+              "correctIndex": 0,
+              "explanationAr": "يسمي المتحدث kahve وsu."
+            }
+          ],
+          "pronunciation": [
+            {
+              "textTr": "çorba",
+              "focusAr": "انطق ç مثل «تش»، ولا تخلط بينه وبين c في كلمة garson."
+            }
+          ],
+          "finalQuiz": [
+            {
+              "questionAr": "أي عبارة تعني «هل يمكنني الحصول على الحساب؟»",
+              "options": [
+                "Hesabı alabilir miyim?",
+                "Hesap ne zaman?",
+                "Su istiyorum."
+              ],
+              "correctIndex": 0,
+              "explanationAr": "هذه صيغة الطلب المهذب للحساب المحدد."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
