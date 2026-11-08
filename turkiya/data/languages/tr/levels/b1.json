@@ -10,7 +10,7 @@
         {
           "id": "b1-l1",
           "titleAr": "رحلة لم تسر كما خُطط لها",
-          "titleTr": "Planlanmayan bir yolculuk",
+          "titleTarget": "Planlanmayan bir yolculuk",
           "objectivesAr": [
             "سرد أحداث ماضية متتابعة.",
             "التمييز بين الماضي المباشر والماضي المنقول."
@@ -19,41 +19,41 @@
           "vocabulary": [
             {
               "id": "b1-l1-v1",
-              "tr": "gecikmek",
+              "target": "gecikmek",
               "ar": "يتأخر",
               "ipa": "",
               "pos": "فعل",
-              "exampleTr": "Tren yarım saat gecikti.",
+              "exampleTarget": "Tren yarım saat gecikti.",
               "exampleAr": "تأخر القطار نصف ساعة.",
               "category": "السفر"
             },
             {
               "id": "b1-l1-v2",
-              "tr": "peron",
+              "target": "peron",
               "ar": "رصيف المحطة",
               "ipa": "",
               "pos": "اسم",
-              "exampleTr": "Yanlış peronda bekledik.",
+              "exampleTarget": "Yanlış peronda bekledik.",
               "exampleAr": "انتظرنا على الرصيف الخطأ.",
               "category": "المواصلات"
             },
             {
               "id": "b1-l1-v3",
-              "tr": "şaşırmak",
+              "target": "şaşırmak",
               "ar": "يتفاجأ/يحتار",
               "ipa": "",
               "pos": "فعل",
-              "exampleTr": "Saatin değiştiğine şaşırdım.",
+              "exampleTarget": "Saatin değiştiğine şaşırdım.",
               "exampleAr": "تفاجأت بتغيير الوقت.",
               "category": "المشاعر"
             },
             {
               "id": "b1-l1-v4",
-              "tr": "çözüm",
+              "target": "çözüm",
               "ar": "حل",
               "ipa": "",
               "pos": "اسم",
-              "exampleTr": "Bir çözüm bulduk.",
+              "exampleTarget": "Bir çözüm bulduk.",
               "exampleAr": "وجدنا حلاً.",
               "category": "الحياة اليومية"
             }
@@ -64,14 +64,14 @@
             "form": "جذر الفعل + -DI / -mış (انسجام صوتي)",
             "examples": [
               {
-                "tr": "Tren geç geldi.",
+                "target": "Tren geç geldi.",
                 "ar": "وصل القطار متأخراً.",
                 "wrong": "Tren geç gelmiş. (مشاهدة مباشرة مؤكدة)",
                 "correction": "Tren geç geldi.",
                 "why": "المثال يروي ما شهده المتكلم مباشرةً، لذا يناسبه الماضي المباشر."
               },
               {
-                "tr": "Meğer yanlış peronda beklemişiz.",
+                "target": "Meğer yanlış peronda beklemişiz.",
                 "ar": "اتضح أننا انتظرنا على الرصيف الخطأ.",
                 "wrong": "Meğer yanlış peronda bekledik. (اكتشاف لاحق)",
                 "correction": "Meğer yanlış peronda beklemişiz.",
@@ -82,38 +82,38 @@
           "dialogue": [
             {
               "speaker": "A",
-              "tr": "Dün yolculuğunuz nasıl geçti?",
+              "target": "Dün yolculuğunuz nasıl geçti?",
               "ar": "كيف كانت رحلتكم أمس؟"
             },
             {
               "speaker": "B",
-              "tr": "Trenimiz gecikti, bu yüzden aktarma trenini kaçırdık.",
+              "target": "Trenimiz gecikti, bu yüzden aktarma trenini kaçırdık.",
               "ar": "تأخر قطارنا، ولذلك فاتنا القطار الواصل."
             },
             {
               "speaker": "A",
-              "tr": "Sonra ne yaptınız?",
+              "target": "Sonra ne yaptınız?",
               "ar": "ماذا فعلتم بعد ذلك؟"
             },
             {
               "speaker": "B",
-              "tr": "Görevliye sorduk; meğer başka bir perondaymışız.",
+              "target": "Görevliye sorduk; meğer başka bir perondaymışız.",
               "ar": "سألنا الموظف؛ واتضح أننا كنا على رصيف آخر."
             },
             {
               "speaker": "A",
-              "tr": "Yine de zamanında vardınız mı?",
+              "target": "Yine de zamanında vardınız mı?",
               "ar": "ومع ذلك هل وصلتم في الوقت؟"
             },
             {
               "speaker": "B",
-              "tr": "Evet, yeni bir çözüm bulduk.",
+              "target": "Evet, yeni bir çözüm bulduk.",
               "ar": "نعم، وجدنا حلاً آخر."
             }
           ],
           "reading": {
             "titleAr": "القطار المتأخر",
-            "textTr": "Geçen ay Eylül, Ankara’ya trenle gitti. Tren otuz dakika gecikti ve Eylül aktarma saatini kaçırdı. Panikle görevliye danıştı. Biletindeki peron numarasını yanlış okuduğunu fark etti. Sonraki trenle yolculuğuna devam etti ve akşam arkadaşına zamanında ulaştı.",
+            "textTarget": "Geçen ay Eylül, Ankara’ya trenle gitti. Tren otuz dakika gecikti ve Eylül aktarma saatini kaçırdı. Panikle görevliye danıştı. Biletindeki peron numarasını yanlış okuduğunu fark etti. Sonraki trenle yolculuğuna devam etti ve akşam arkadaşına zamanında ulaştı.",
             "translationAr": "في الشهر الماضي ذهبت أيلول إلى أنقرة بالقطار. تأخر القطار ثلاثين دقيقة وفات أيلول موعد القطار الواصل. سألت الموظف بقلق، ثم أدركت أنها قرأت رقم الرصيف في تذكرتها خطأ. تابعت رحلتها بالقطار التالي ووصلت إلى صديقتها مساءً في الموعد.",
             "questions": [
               {
@@ -143,13 +143,13 @@
           "writing": [
             {
               "promptAr": "اكتب جملتين عن مشكلة واجهتها في رحلة سابقة وكيف حللتها.",
-              "expectedTr": "Otobüs gecikti. Görevliye sordum ve başka bir otobüse bindim.",
+              "expectedTarget": "Otobüs gecikti. Görevliye sordum ve başka bir otobüse bindim.",
               "explanationAr": "استخدم الماضي المباشر -dı/-di للأحداث التي تسردها مباشرةً."
             }
           ],
           "listening": [
             {
-              "sentenceTr": "Otobüs gecikmiş; yolcular başka bir araç bekliyor.",
+              "sentenceTarget": "Otobüs gecikmiş; yolcular başka bir araç bekliyor.",
               "questionAr": "ماذا حدث بحسب الخبر؟",
               "options": [
                 "تأخر الحافلة",
@@ -162,7 +162,7 @@
           ],
           "pronunciation": [
             {
-              "textTr": "şaşırdım",
+              "textTarget": "şaşırdım",
               "focusAr": "اقرأ ş كـ«ش»، وانتبه إلى النقطة أسفل ı غير المنقوطة في المقطع الأخير."
             }
           ],
@@ -182,7 +182,7 @@
         {
           "id": "b1-l2",
           "titleAr": "العمل من المنزل",
-          "titleTr": "Evden çalışmak",
+          "titleTarget": "Evden çalışmak",
           "objectivesAr": [
             "عرض مزايا وعيوب خيار مألوف.",
             "استخدام -dığı için وama لربط الأسباب والتباين."
@@ -191,41 +191,41 @@
           "vocabulary": [
             {
               "id": "b1-l2-v1",
-              "tr": "verimli",
+              "target": "verimli",
               "ar": "منتج/فعّال",
               "ipa": "",
               "pos": "صفة",
-              "exampleTr": "Evde daha verimli çalışıyorum.",
+              "exampleTarget": "Evde daha verimli çalışıyorum.",
               "exampleAr": "أعمل بفاعلية أكبر في المنزل.",
               "category": "العمل"
             },
             {
               "id": "b1-l2-v2",
-              "tr": "odaklanmak",
+              "target": "odaklanmak",
               "ar": "يركز",
               "ipa": "",
               "pos": "فعل",
-              "exampleTr": "Sessiz ortamda odaklanıyorum.",
+              "exampleTarget": "Sessiz ortamda odaklanıyorum.",
               "exampleAr": "أركز في بيئة هادئة.",
               "category": "العمل"
             },
             {
               "id": "b1-l2-v3",
-              "tr": "toplantı",
+              "target": "toplantı",
               "ar": "اجتماع",
               "ipa": "",
               "pos": "اسم",
-              "exampleTr": "Toplantı saat onda başlayacak.",
+              "exampleTarget": "Toplantı saat onda başlayacak.",
               "exampleAr": "سيبدأ الاجتماع في العاشرة.",
               "category": "العمل"
             },
             {
               "id": "b1-l2-v4",
-              "tr": "denge",
+              "target": "denge",
               "ar": "توازن",
               "ipa": "",
               "pos": "اسم",
-              "exampleTr": "İş ve özel hayat dengesi önemli.",
+              "exampleTarget": "İş ve özel hayat dengesi önemli.",
               "exampleAr": "التوازن بين العمل والحياة الخاصة مهم.",
               "category": "العمل"
             }
@@ -236,14 +236,14 @@
             "form": "جملة + -DIğI için / جملة, ama جملة",
             "examples": [
               {
-                "tr": "Ev sessiz olduğu için odaklanabiliyorum.",
+                "target": "Ev sessiz olduğu için odaklanabiliyorum.",
                 "ar": "أستطيع التركيز لأن البيت هادئ.",
                 "wrong": "Ev sessiz olduğu için odaklanabiliyor. (أنا)",
                 "correction": "Ev sessiz olduğu için odaklanabiliyorum.",
                 "why": "لاحقة القدرة والشخص تعود إلى المتكلم: -im."
               },
               {
-                "tr": "Evde çalışmak rahat, ama bazen yalnız hissediyorum.",
+                "target": "Evde çalışmak rahat, ama bazen yalnız hissediyorum.",
                 "ar": "العمل في المنزل مريح، لكنني أشعر بالوحدة أحياناً.",
                 "wrong": "Evde çalışmak rahat çünkü yalnız hissediyorum.",
                 "correction": "Evde çalışmak rahat, ama bazen yalnız hissediyorum.",
@@ -254,38 +254,38 @@
           "dialogue": [
             {
               "speaker": "A",
-              "tr": "Evden çalışmayı seviyor musun?",
+              "target": "Evden çalışmayı seviyor musun?",
               "ar": "هل تحب العمل من المنزل؟"
             },
             {
               "speaker": "B",
-              "tr": "Evet, yolda zaman kaybetmediğim için daha çok zamanım kalıyor.",
+              "target": "Evet, yolda zaman kaybetmediğim için daha çok zamanım kalıyor.",
               "ar": "نعم، لأنني لا أضيّع الوقت في الطريق يبقى لدي وقت أكثر."
             },
             {
               "speaker": "A",
-              "tr": "Toplantılar nasıl oluyor?",
+              "target": "Toplantılar nasıl oluyor?",
               "ar": "كيف تُعقد الاجتماعات؟"
             },
             {
               "speaker": "B",
-              "tr": "Çoğu çevrim içi, ama ekip arkadaşlarımla yüz yüze görüşmeyi özlüyorum.",
+              "target": "Çoğu çevrim içi, ama ekip arkadaşlarımla yüz yüze görüşmeyi özlüyorum.",
               "ar": "معظمها عبر الإنترنت، لكنني أفتقد لقاء زملائي وجهاً لوجه."
             },
             {
               "speaker": "A",
-              "tr": "Ofise ne sıklıkta gidiyorsun?",
+              "target": "Ofise ne sıklıkta gidiyorsun?",
               "ar": "كم مرة تذهب إلى المكتب؟"
             },
             {
               "speaker": "B",
-              "tr": "Haftada iki gün; böylece denge kurabiliyorum.",
+              "target": "Haftada iki gün; böylece denge kurabiliyorum.",
               "ar": "يومين في الأسبوع؛ وهكذا أستطيع تحقيق التوازن."
             }
           ],
           "reading": {
             "titleAr": "أسبوع هجين",
-            "textTr": "Mert haftada üç gün evden, iki gün ofisten çalışıyor. Evde sessiz olduğu için rapor yazarken daha iyi odaklanıyor. Buna karşılık, yeni çalışanların ekibe alışması ofiste daha kolay. Şirket bu nedenle haftada iki ortak ofis günü belirlemiş. Mert bu düzenin iş ve özel hayat arasında daha iyi bir denge sağladığını düşünüyor.",
+            "textTarget": "Mert haftada üç gün evden, iki gün ofisten çalışıyor. Evde sessiz olduğu için rapor yazarken daha iyi odaklanıyor. Buna karşılık, yeni çalışanların ekibe alışması ofiste daha kolay. Şirket bu nedenle haftada iki ortak ofis günü belirlemiş. Mert bu düzenin iş ve özel hayat arasında daha iyi bir denge sağladığını düşünüyor.",
             "translationAr": "يعمل مرت ثلاثة أيام من المنزل ويومين من المكتب أسبوعياً. ولأن المنزل هادئ، يركز على كتابة التقارير بصورة أفضل. في المقابل، يسهل على الموظفين الجدد الاندماج في الفريق بالمكتب. لذلك حددت الشركة يومين أسبوعياً للعمل المشترك في المكتب. ويرى مرت أن هذا النظام يحقق توازناً أفضل بين العمل والحياة الخاصة.",
             "questions": [
               {
@@ -315,13 +315,13 @@
           "writing": [
             {
               "promptAr": "اكتب رأيك في الدراسة أو العمل عن بعد مع سبب ومقابلة.",
-              "expectedTr": "Evden çalışmayı seviyorum çünkü zaman kazanıyorum, ama ekip arkadaşlarımı daha az görüyorum.",
+              "expectedTarget": "Evden çalışmayı seviyorum çünkü zaman kazanıyorum, ama ekip arkadaşlarımı daha az görüyorum.",
               "explanationAr": "اربط السبب بـ çünkü أو -dığı için، واستخدم ama للتباين."
             }
           ],
           "listening": [
             {
-              "sentenceTr": "Toplantı çevrim içi olduğu için ofise gitmiyorum.",
+              "sentenceTarget": "Toplantı çevrim içi olduğu için ofise gitmiyorum.",
               "questionAr": "لماذا لا يذهب المتحدث إلى المكتب؟",
               "options": [
                 "لأن الاجتماع عبر الإنترنت",
@@ -334,7 +334,7 @@
           ],
           "pronunciation": [
             {
-              "textTr": "olduğu için",
+              "textTarget": "olduğu için",
               "focusAr": "حافظ على تتابع المقاطع، وميّز ı غير المنقوطة عن i المنقوطة."
             }
           ],

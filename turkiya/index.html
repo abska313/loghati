@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f6f5f0">
-  <meta name="description" content="تعلّم التركية خطوة بخطوة بالعربية، مع دروس ومراجعة ذكية وتدريب على المهارات الأربع.">
+  <meta name="description" content="لغتي منصة عربية لتعلّم اللغات؛ ابدأ بالتركية واستكشف مهارات الاستماع والنطق والمراجعة المتباعدة.">
   <meta name="color-scheme" content="light dark">
   <link rel="icon" href="./assets/icons/app-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./assets/icons/icon-180.png">
@@ -12,24 +12,26 @@
   <link rel="stylesheet" href="./css/themes.css">
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/responsive.css">
-  <title>تركيّة — تعلّم التركية</title>
+  <link rel="stylesheet" href="./css/youtube.css">
+  <title>لغتي — تعلّم اللغات بالعربية</title>
 </head>
 <body>
   <a class="skip-link" href="#main-content">انتقل إلى المحتوى</a>
   <div class="app-shell">
     <aside class="sidebar" aria-label="القائمة الرئيسية">
-      <a class="brand" href="#home" aria-label="تركية، الصفحة الرئيسية">
+      <a class="brand" href="#home" aria-label="لغتي، الصفحة الرئيسية">
         <span class="brand-mark" aria-hidden="true"><img src="./assets/icons/app-icon.svg" alt=""></span>
-        <span class="brand-copy"><strong>تركيّة</strong><small>لغةٌ تُعاش</small></span>
+        <span class="brand-copy"><strong>لغتي</strong><small>تعلّم اللغات بالعربية</small></span>
       </a>
       <div class="sidebar-label">مساحة التعلّم</div>
       <nav class="side-nav" id="side-nav">
         <a href="#home" data-route="home" class="nav-link"><span class="nav-icon" data-icon="home"></span><span>الرئيسية</span></a>
         <a href="#lessons" data-route="lessons" class="nav-link"><span class="nav-icon" data-icon="book"></span><span>المسار التعليمي</span></a>
-        <a href="#alphabet" data-route="alphabet" class="nav-link"><span class="nav-icon" data-icon="list"></span><span>الحروف والأصوات</span></a>
+        <a href="#alphabet" data-route="alphabet" data-requires-alphabet class="nav-link"><span class="nav-icon" data-icon="list"></span><span>الحروف والأصوات</span></a>
         <a href="#vocabulary" data-route="vocabulary" class="nav-link"><span class="nav-icon" data-icon="cards"></span><span>المفردات</span></a>
         <a href="#grammar" data-route="grammar" class="nav-link"><span class="nav-icon" data-icon="grammar"></span><span>القواعد</span></a>
-        <a href="#listening" data-route="listening" class="nav-link"><span class="nav-icon" data-icon="headphones"></span><span>الاستماع</span></a>
+        <a href="#listening" data-route="listening" class="nav-link"><span class="nav-icon" data-icon="headphones"></span><span>الاستماع والتمارين</span></a>
+        <a href="#youtube" data-route="youtube" class="nav-link"><span class="nav-icon" data-icon="play"></span><span>فيديوهات للاستماع</span></a>
         <a href="#speaking" data-route="speaking" class="nav-link"><span class="nav-icon" data-icon="mic"></span><span>التحدث</span></a>
         <a href="#reading" data-route="reading" class="nav-link"><span class="nav-icon" data-icon="read"></span><span>القراءة</span></a>
         <a href="#writing" data-route="writing" class="nav-link"><span class="nav-icon" data-icon="write"></span><span>الكتابة</span></a>
@@ -43,8 +45,8 @@
 
     <div class="main-column">
       <header class="topbar">
-        <button class="mobile-brand" type="button" data-route="home" aria-label="الصفحة الرئيسية"><img src="./assets/icons/app-icon.svg" alt=""><span>تركيّة</span></button>
-        <div class="topbar-context"><span class="eyebrow">رحلتك إلى التركية</span><span class="connection-pill" id="connection-status"><i></i><span>جارٍ التحقق من الاتصال</span></span></div>
+        <button class="mobile-brand" type="button" data-route="home" aria-label="الصفحة الرئيسية"><img src="./assets/icons/app-icon.svg" alt=""><span>لغتي</span></button>
+        <div class="topbar-context"><span class="eyebrow" id="target-language-context">اختر لغة التعلّم</span><label class="language-switcher"><span class="sr-only">لغة التعلّم</span><select id="language-switcher"><option>جارٍ تحميل اللغات…</option></select></label><span class="connection-pill" id="connection-status" role="status"><i></i><span>جارٍ التحقق من الاتصال</span></span></div>
         <div class="topbar-actions">
           <button class="icon-button" id="install-button" type="button" hidden aria-label="تثبيت التطبيق" title="تثبيت التطبيق"><span data-icon="download"></span></button>
           <button class="icon-button" id="theme-toggle" type="button" aria-label="تبديل المظهر" title="تبديل المظهر"><span data-icon="moon"></span></button>
@@ -64,10 +66,10 @@
   <nav class="mobile-nav" aria-label="التنقل السفلي">
     <a href="#home" data-route="home" class="mobile-nav-link"><span data-icon="home"></span><small>الرئيسية</small></a>
     <a href="#lessons" data-route="lessons" class="mobile-nav-link"><span data-icon="book"></span><small>الدروس</small></a>
-    <a href="#alphabet" data-route="alphabet" class="mobile-nav-link"><span data-icon="list"></span><small>الحروف</small></a>
+    <a href="#alphabet" data-route="alphabet" data-requires-alphabet class="mobile-nav-link"><span data-icon="list"></span><small>الحروف</small></a>
     <a href="#vocabulary" data-route="vocabulary" class="mobile-nav-link"><span data-icon="cards"></span><small>الكلمات</small></a>
     <a href="#review" data-route="review" class="mobile-nav-link"><span data-icon="refresh"></span><small>المراجعة</small></a>
-    <a href="#profile" data-route="profile" class="mobile-nav-link"><span data-icon="user"></span><small>ملفي</small></a>
+    <a href="#youtube" data-route="youtube" class="mobile-nav-link"><span data-icon="play"></span><small>فيديو</small></a>
   </nav>
 
   <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>

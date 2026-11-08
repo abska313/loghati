@@ -1,18 +1,22 @@
 import { saveQuizResult } from './progress.js';
+import { getTargetLocale } from './language-registry.js';
 
-export function normalizeTurkish(value) {
-  return String(value || '').trim().normalize('NFC').toLocaleLowerCase('tr-TR').replace(/[.!?،,؛;:]+$/u, '').replace(/\s+/g, ' ');
+export function normalizeTarget(value, locale = getTargetLocale()) {
+  return String(value || '').trim().normalize('NFC').toLocaleLowerCase(locale).replace(/[.!?،,؛;:]+$/u, '').replace(/\s+/g, ' ');
 }
 
-export function matchesExpected(input, expected) {
+// Compatibility alias for the current Turkish curriculum and older local backups.
+export function normalizeTurkish(value) { return normalizeTarget(value, 'tr-TR'); }
+
+export function matchesExpected(input, expected, locale = getTargetLocale()) {
   const accepted = Array.isArray(expected) ? expected : [expected];
-  const candidate = normalizeTurkish(input);
-  return accepted.some((answer) => normalizeTurkish(answer) === candidate);
+  const candidate = normalizeTarget(input, locale);
+  return accepted.some((answer) => normalizeTarget(answer, locale) === candidate);
 }
 
 export function questionMarkup(question, index, prefix = 'q') {
   const options = (question.options || []).map((option, optionIndex) => `
-    <label class="quiz-option"><input type="radio" name="${prefix}-${index}" value="${optionIndex}"><span>${escapeHtml(option)}</span></label>`).join('');
+    <label class="quiz-option"><input type="radio" name="${prefix}-${index}" value="${optionIndex}"><span dir="auto">${escapeHtml(option)}</span></label>`).join('');
   return `<div class="question-card" data-question="${index}" data-correct="${Number(question.correctIndex) || 0}" data-explanation="${escapeAttr(question.explanationAr || '')}"><p>${escapeHtml(question.questionAr || '')}</p><div class="option-list">${options}</div><div class="quiz-feedback" aria-live="polite"></div></div>`;
 }
 

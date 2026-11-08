@@ -1,18 +1,21 @@
 import { get, getAll, put } from './database.js';
+import { getActiveLanguageId } from './language-registry.js';
 
-const PROFILE_KEY = 'profile';
-const DAY_KEY = 'daily';
 const todayKey = () => new Date().toLocaleDateString('en-CA');
 const dayDiff = (a, b) => Math.round((new Date(`${b}T12:00:00`) - new Date(`${a}T12:00:00`)) / 86400000);
+const profileKey = () => getActiveLanguageId() === 'tr' ? 'profile' : `profile:${getActiveLanguageId()}`;
+const languageName = () => document.documentElement.dataset.targetName || 'اللغة';
 
 async function getProfile() {
-  return (await get('meta', PROFILE_KEY)) || {
-    key: PROFILE_KEY, displayName: 'متعلّم التركية', xp: 0, streak: 0,
+  const key = profileKey();
+  return (await get('meta', key)) || {
+    key, languageId: getActiveLanguageId(), displayName: `متعلّم ${languageName()}`, xp: 0, streak: 0,
     lastStudyDate: null, totalSeconds: 0, dailyGoal: 20, currentLevel: 'Pre-A1', createdAt: new Date().toISOString()
   };
 }
 
 export async function recordStudy({ seconds = 0, xp = 0, lessonId = null, level = null } = {}) {
+  const languageId = getActiveLanguageId();
   const profile = await getProfile();
   const today = todayKey();
   if (profile.lastStudyDate !== today) {
@@ -23,9 +26,12 @@ export async function recordStudy({ seconds = 0, xp = 0, lessonId = null, level 
   profile.xp += Math.max(0, Math.round(xp));
   profile.totalSeconds += Math.max(0, Math.round(seconds));
   if (level) profile.currentLevel = level;
+  profile.languageId = languageId;
   profile.updatedAt = new Date().toISOString();
   await put('meta', profile);
-  const daily = (await get('progress', today)) || { id: today, seconds: 0, xp: 0, lessons: [] };
+  const dayId = languageId === 'tr' ? today : `${languageId}:${today}`;
+  const daily = (await get('progress', dayId)) || { id: dayId, dayKey: today, languageId, seconds: 0, xp: 0, lessons: [] };
+  daily.dayKey = today;
   daily.seconds += Math.max(0, Math.round(seconds));
   daily.xp += Math.max(0, Math.round(xp));
   if (lessonId && !daily.lessons.includes(lessonId)) daily.lessons.push(lessonId);
@@ -34,7 +40,8 @@ export async function recordStudy({ seconds = 0, xp = 0, lessonId = null, level 
 }
 
 export async function markLessonComplete(lessonId, level) {
-  const record = (await get('progress', `lesson:${lessonId}`)) || { id: `lesson:${lessonId}`, completedAt: null, level };
+  const id = `lesson:${lessonId}`;
+  const record = (await get('progress', id)) || { id, completedAt: null, level };
   if (record.completedAt) return false;
   record.completedAt = new Date().toISOString();
   record.level = level;
@@ -58,12 +65,16 @@ export async function getDashboardStats(lessons = []) {
   const now = new Date();
   const weekStart = new Date(now); weekStart.setHours(0, 0, 0, 0); weekStart.setDate(weekStart.getDate() - 6);
   const weekStartKey = weekStart.toLocaleDateString('en-CA');
-  const weeklySeconds = progressRecords.filter((record) => /^\d{4}-\d{2}-\d{2}$/u.test(record.id) && record.id >= weekStartKey && record.id <= today).reduce((sum, record) => sum + (record.seconds || 0), 0);
+  const dateOf = (record) => record.dayKey || (/^\d{4}-\d{2}-\d{2}$/u.test(record.id || '') ? record.id : null);
+  const weeklySeconds = progressRecords.filter((record) => {
+    const day = dateOf(record);
+    return day && day >= weekStartKey && day <= today;
+  }).reduce((sum, record) => sum + (record.seconds || 0), 0);
   const weeklyGoalMinutes = Number(profile.weeklyGoalMinutes) || 100;
   const reviewedToday = reviews.filter((item) => item.lastReviewedAt && new Date(item.lastReviewedAt).toLocaleDateString('en-CA') === today).length;
   const learnerLevel = Math.floor(Math.max(0, Number(profile.xp) || 0) / 100) + 1;
-  const daily = progressRecords.find((record) => record.id === today) || { seconds: 0, xp: 0, lessons: [] };
-  const completed = progressRecords.filter((record) => record.id.startsWith('lesson:') && record.completedAt);
+  const daily = progressRecords.find((record) => dateOf(record) === today) || { seconds: 0, xp: 0, lessons: [] };
+  const completed = progressRecords.filter((record) => record.id?.startsWith('lesson:') && record.completedAt);
   const due = reviews.filter((item) => !item.suspended && new Date(item.nextDue || 0).getTime() <= Date.now()).length;
   const practiced = reviews.filter((item) => (item.repetitions || 0) > 0).length;
   const weakSkills = Object.create(null);
@@ -80,13 +91,12 @@ export async function getDashboardStats(lessons = []) {
   });
   const hours = Math.floor(profile.totalSeconds / 3600);
   const minutes = Math.floor((profile.totalSeconds % 3600) / 60);
-  const dueTodaySeconds = daily.seconds || 0;
-  const todayMinutes = Math.floor(dueTodaySeconds / 60);
+  const todayMinutes = Math.floor((daily.seconds || 0) / 60);
   return {
     profile, daily, due, completedCount: completed.length, lessonCount: lessons.length,
     vocabularyCount: vocab.length, practicedCount: practiced, favoriteCount: favorites.length,
-    quizCount: results.length, quizResults: results.slice(-8).reverse(), skills,
-    levelProgress, hours, minutes, todayMinutes, goalPercent: Math.min(100, Math.round(todayMinutes / Math.max(1, profile.dailyGoal) * 100)),
+    quizCount: results.length, quizResults: results.slice(-8).reverse(), skills, levelProgress, hours, minutes, todayMinutes,
+    goalPercent: Math.min(100, Math.round(todayMinutes / Math.max(1, profile.dailyGoal) * 100)),
     weeklyMinutes: Math.floor(weeklySeconds / 60), weeklyGoalMinutes,
     weeklyPercent: Math.min(100, Math.round((weeklySeconds / 60) / Math.max(1, weeklyGoalMinutes) * 100)),
     reviewedToday, learnerLevel
@@ -97,7 +107,7 @@ export async function getProfileData() { return getProfile(); }
 
 export async function updateProfile(patch) {
   const profile = await getProfile();
-  const updated = { ...profile, ...patch, key: PROFILE_KEY, updatedAt: new Date().toISOString() };
+  const updated = { ...profile, ...patch, key: profileKey(), languageId: getActiveLanguageId(), updatedAt: new Date().toISOString() };
   await put('meta', updated);
   return updated;
 }

@@ -10,7 +10,7 @@
         {
           "id": "c1-l1",
           "titleAr": "المدينة والفضاء العام",
-          "titleTr": "Kamusal alan üzerine",
+          "titleTarget": "Kamusal alan üzerine",
           "objectivesAr": [
             "بناء حجة متوازنة حول التخطيط الحضري.",
             "استخدام sıfat-fiil وعبارات التنازل."
@@ -19,41 +19,41 @@
           "vocabulary": [
             {
               "id": "c1-l1-v1",
-              "tr": "kamusal",
+              "target": "kamusal",
               "ar": "عام/عمومي",
               "ipa": "",
               "pos": "صفة",
-              "exampleTr": "Kamusal alan herkes için olmalı.",
+              "exampleTarget": "Kamusal alan herkes için olmalı.",
               "exampleAr": "ينبغي أن يكون الفضاء العام للجميع.",
               "category": "الثقافة"
             },
             {
               "id": "c1-l1-v2",
-              "tr": "erişilebilirlik",
+              "target": "erişilebilirlik",
               "ar": "إمكانية الوصول",
               "ipa": "",
               "pos": "اسم",
-              "exampleTr": "Erişilebilirlik tasarımda önemlidir.",
+              "exampleTarget": "Erişilebilirlik tasarımda önemlidir.",
               "exampleAr": "إمكانية الوصول مهمة في التصميم.",
               "category": "الحياة اليومية"
             },
             {
               "id": "c1-l1-v3",
-              "tr": "yoğunluk",
+              "target": "yoğunluk",
               "ar": "كثافة/ازدحام",
               "ipa": "",
               "pos": "اسم",
-              "exampleTr": "Trafik yoğunluğu arttı.",
+              "exampleTarget": "Trafik yoğunluğu arttı.",
               "exampleAr": "ازدادت كثافة المرور.",
               "category": "المواصلات"
             },
             {
               "id": "c1-l1-v4",
-              "tr": "dönüşüm",
+              "target": "dönüşüm",
               "ar": "تحول",
               "ipa": "",
               "pos": "اسم",
-              "exampleTr": "Kentsel dönüşüm dikkatle planlanmalı.",
+              "exampleTarget": "Kentsel dönüşüm dikkatle planlanmalı.",
               "exampleAr": "ينبغي تخطيط التحول الحضري بعناية.",
               "category": "العمل"
             }
@@ -64,14 +64,14 @@
             "form": "جذر + -(y)An + اسم ؛ her ne kadar … olsa da",
             "examples": [
               {
-                "tr": "Yaya yolları güvenliği artırıyor.",
+                "target": "Yaya yolları güvenliği artırıyor.",
                 "ar": "تعزز ممرات المشاة السلامة.",
                 "wrong": "Yürüyen yollar güvenliği artırıyor.",
                 "correction": "Yaya yolları güvenliği artırıyor.",
                 "why": "yaya yolu هو التعبير الطبيعي عن ممر المشاة؛ أما yürüyen yollar فتبدو ترجمة حرفية غير سليمة هنا."
               },
               {
-                "tr": "Her ne kadar proje pahalı olsa da uzun vadede yarar sağlayabilir.",
+                "target": "Her ne kadar proje pahalı olsa da uzun vadede yarar sağlayabilir.",
                 "ar": "مع أن المشروع مكلف، فقد يحقق فائدة على المدى الطويل.",
                 "wrong": "Her ne kadar proje pahalı, uzun vadede yararlı.",
                 "correction": "Her ne kadar proje pahalı olsa da uzun vadede yarar sağlayabilir.",
@@ -82,38 +82,38 @@
           "dialogue": [
             {
               "speaker": "A",
-              "tr": "Yeni meydan hakkında ne düşünüyorsun?",
+              "target": "Yeni meydan hakkında ne düşünüyorsun?",
               "ar": "ما رأيك في الساحة الجديدة؟"
             },
             {
               "speaker": "B",
-              "tr": "Yaya alanlarının artması olumlu; erişilebilirlik de düşünülmüş.",
+              "target": "Yaya alanlarının artması olumlu; erişilebilirlik de düşünülmüş.",
               "ar": "زيادة مساحات المشاة أمر إيجابي، وقد روعيت إمكانية الوصول أيضاً."
             },
             {
               "speaker": "A",
-              "tr": "Ama araç trafiği çevre sokaklara kaymış.",
+              "target": "Ama araç trafiği çevre sokaklara kaymış.",
               "ar": "لكن حركة السيارات انتقلت إلى الشوارع المحيطة."
             },
             {
               "speaker": "B",
-              "tr": "Doğru; her ne kadar meydan daha canlı olsa da ulaşım bütünüyle çözülmüş değil.",
+              "target": "Doğru; her ne kadar meydan daha canlı olsa da ulaşım bütünüyle çözülmüş değil.",
               "ar": "صحيح؛ فعلى الرغم من أن الساحة أصبحت أكثر حيوية، لم تُحل مشكلة النقل تماماً."
             },
             {
               "speaker": "A",
-              "tr": "O hâlde etkiyi mahalle genelinde ölçmek gerekir.",
+              "target": "O hâlde etkiyi mahalle genelinde ölçmek gerekir.",
               "ar": "إذن ينبغي قياس الأثر على مستوى الحي كله."
             },
             {
               "speaker": "B",
-              "tr": "Kesinlikle, tasarım kadar uygulama da önemli.",
+              "target": "Kesinlikle, tasarım kadar uygulama da önemli.",
               "ar": "بالتأكيد، فالتنفيذ مهم بقدر التصميم."
             }
           ],
           "reading": {
             "titleAr": "ساحة جديدة",
-            "textTr": "Büyük bir meydanın yayalara açılması, merkezdeki kamusal yaşamı canlandırdı. Çocukların ve yaşlıların rahatça kullanabildiği oturma alanları oluşturuldu. Bununla birlikte, araç trafiğinin çevre sokaklara yönelmesi bazı mahalle sakinlerini rahatsız etti. Uzmanlar, projeyi yalnızca meydandaki yaya sayısıyla değerlendirmek yerine erişilebilirlik, gürültü ve çevre sokaklardaki hareketlilik gibi ölçütlerle birlikte ele almayı öneriyor. Böylece dönüşümün kimin için yarar sağladığı daha açık görülebilir.",
+            "textTarget": "Büyük bir meydanın yayalara açılması, merkezdeki kamusal yaşamı canlandırdı. Çocukların ve yaşlıların rahatça kullanabildiği oturma alanları oluşturuldu. Bununla birlikte, araç trafiğinin çevre sokaklara yönelmesi bazı mahalle sakinlerini rahatsız etti. Uzmanlar, projeyi yalnızca meydandaki yaya sayısıyla değerlendirmek yerine erişilebilirlik, gürültü ve çevre sokaklardaki hareketlilik gibi ölçütlerle birlikte ele almayı öneriyor. Böylece dönüşümün kimin için yarar sağladığı daha açık görülebilir.",
             "translationAr": "أدى فتح ساحة كبيرة للمشاة إلى تنشيط الحياة العامة في المركز. وأُنشئت أماكن جلوس يستطيع الأطفال وكبار السن استخدامها بسهولة. ومع ذلك، أزعج تحويل حركة السيارات إلى الشوارع المحيطة بعض سكان الحي. ويوصي الخبراء بتقييم المشروع من خلال معايير مثل إمكانية الوصول والضوضاء والحركة في الشوارع المجاورة، لا بعدد المشاة في الساحة وحده. وبذلك يمكن رؤية الفئات التي أفادها التحول بوضوح أكبر.",
             "questions": [
               {
@@ -143,13 +143,13 @@
           "writing": [
             {
               "promptAr": "اكتب فقرة موجزة توازن بين فائدة مشروع عام ومحدودية محتملة.",
-              "expectedTr": "Her ne kadar yeni meydan yaya erişimini kolaylaştırsa da çevre sokaklardaki trafik ayrıca değerlendirilmelidir.",
+              "expectedTarget": "Her ne kadar yeni meydan yaya erişimini kolaylaştırsa da çevre sokaklardaki trafik ayrıca değerlendirilmelidir.",
               "explanationAr": "ابدأ بإقرار تنازلي ثم اطرح نقطة التوازن باستخدام olsa da."
             }
           ],
           "listening": [
             {
-              "sentenceTr": "Her ne kadar ulaşım kolaylaşsa da erişilebilirlik sorunları sürüyor.",
+              "sentenceTarget": "Her ne kadar ulaşım kolaylaşsa da erişilebilirlik sorunları sürüyor.",
               "questionAr": "ما الفكرة الرئيسة؟",
               "options": [
                 "تحسن النقل مع بقاء مشكلات الوصول",
@@ -162,7 +162,7 @@
           ],
           "pronunciation": [
             {
-              "textTr": "erişilebilirlik",
+              "textTarget": "erişilebilirlik",
               "focusAr": "قسّم الكلمة إلى مقاطع، وانطق ş وç بوضوح من دون تسوية الحركات المنقوطة وغير المنقوطة."
             }
           ],
@@ -182,7 +182,7 @@
         {
           "id": "c1-l2",
           "titleAr": "ذاكرة المكان",
-          "titleTr": "Mekânın belleği",
+          "titleTarget": "Mekânın belleği",
           "objectivesAr": [
             "تحليل دلالة مكان في سرد قصير.",
             "استخدام -miş gibi وعبارات الاستنتاج."
@@ -191,41 +191,41 @@
           "vocabulary": [
             {
               "id": "c1-l2-v1",
-              "tr": "eşik",
+              "target": "eşik",
               "ar": "عتبة",
               "ipa": "",
               "pos": "اسم",
-              "exampleTr": "Eşikte biraz durdu.",
+              "exampleTarget": "Eşikte biraz durdu.",
               "exampleAr": "توقف قليلاً عند العتبة.",
               "category": "المنزل"
             },
             {
               "id": "c1-l2-v2",
-              "tr": "solmak",
+              "target": "solmak",
               "ar": "يبهت",
               "ipa": "",
               "pos": "فعل",
-              "exampleTr": "Duvarın rengi solmuş.",
+              "exampleTarget": "Duvarın rengi solmuş.",
               "exampleAr": "بهت لون الجدار.",
               "category": "الحياة اليومية"
             },
             {
               "id": "c1-l2-v3",
-              "tr": "iz",
+              "target": "iz",
               "ar": "أثر",
               "ipa": "",
               "pos": "اسم",
-              "exampleTr": "Masada eski bir iz vardı.",
+              "exampleTarget": "Masada eski bir iz vardı.",
               "exampleAr": "كان على الطاولة أثر قديم.",
               "category": "الثقافة"
             },
             {
               "id": "c1-l2-v4",
-              "tr": "anımsamak",
+              "target": "anımsamak",
               "ar": "يتذكر",
               "ipa": "",
               "pos": "فعل",
-              "exampleTr": "Sokağın kokusunu anımsadı.",
+              "exampleTarget": "Sokağın kokusunu anımsadı.",
               "exampleAr": "تذكر رائحة الشارع.",
               "category": "المشاعر"
             }
@@ -236,14 +236,14 @@
             "form": "فعل + -mış gibi ؛ görünen o ki + جملة",
             "examples": [
               {
-                "tr": "Kapı yıllardır açılmamış gibi görünüyordu.",
+                "target": "Kapı yıllardır açılmamış gibi görünüyordu.",
                 "ar": "بدت كأن الباب لم يُفتح منذ سنوات.",
                 "wrong": "Kapı yıllardır açılmadı gibi görünüyordu.",
                 "correction": "Kapı yıllardır açılmamış gibi görünüyordu.",
                 "why": "قبل gibi تأتي صيغة -mış، وفي النفي تكون açılmamış."
               },
               {
-                "tr": "Görünen o ki ev boş kalmış.",
+                "target": "Görünen o ki ev boş kalmış.",
                 "ar": "يبدو أن البيت ظل خالياً.",
                 "wrong": "Görünen o ki ev boş kaldı. (استنتاج من القرائن)",
                 "correction": "Görünen o ki ev boş kalmış.",
@@ -254,38 +254,38 @@
           "dialogue": [
             {
               "speaker": "A",
-              "tr": "Eski evin önünden geçtin mi?",
+              "target": "Eski evin önünden geçtin mi?",
               "ar": "هل مررت بالبيت القديم؟"
             },
             {
               "speaker": "B",
-              "tr": "Evet. Kapısı yıllardır açılmamış gibi görünüyordu.",
+              "target": "Evet. Kapısı yıllardır açılmamış gibi görünüyordu.",
               "ar": "نعم. بدا كأن بابه لم يُفتح منذ سنوات."
             },
             {
               "speaker": "A",
-              "tr": "Bahçede hâlâ bir limon ağacı var mı?",
+              "target": "Bahçede hâlâ bir limon ağacı var mı?",
               "ar": "هل ما زالت هناك شجرة ليمون في الحديقة؟"
             },
             {
               "speaker": "B",
-              "tr": "Var; duvarın dibindeki taşlar bile çocukluğumu anımsattı.",
+              "target": "Var; duvarın dibindeki taşlar bile çocukluğumu anımsattı.",
               "ar": "نعم؛ حتى الحجارة عند الجدار ذكرتني بطفولتي."
             },
             {
               "speaker": "A",
-              "tr": "Görünen o ki ev boş kalmış.",
+              "target": "Görünen o ki ev boş kalmış.",
               "ar": "يبدو أن البيت ظل خالياً."
             },
             {
               "speaker": "B",
-              "tr": "Ama sokak, eski seslerini hâlâ saklıyor.",
+              "target": "Ama sokak, eski seslerini hâlâ saklıyor.",
               "ar": "لكن الشارع ما زال يحتفظ بأصواته القديمة."
             }
           ],
           "reading": {
             "titleAr": "باب لا يفتح",
-            "textTr": "Leyla, çocukluğunun geçtiği sokağa yıllar sonra döndü. Eski evin duvarındaki boya solmuş, eşikte ince bir toz birikmişti. Bahçedeki limon ağacıysa hâlâ ayaktaydı. Kapı açılmamış gibi sessiz duruyordu; yine de rüzgâr, içeriden kalmış bir perdeyi hafifçe oynattı. Leyla o anda evin değil, kendi belleğinin kapısında beklediğini düşündü.",
+            "textTarget": "Leyla, çocukluğunun geçtiği sokağa yıllar sonra döndü. Eski evin duvarındaki boya solmuş, eşikte ince bir toz birikmişti. Bahçedeki limon ağacıysa hâlâ ayaktaydı. Kapı açılmamış gibi sessiz duruyordu; yine de rüzgâr, içeriden kalmış bir perdeyi hafifçe oynattı. Leyla o anda evin değil, kendi belleğinin kapısında beklediğini düşündü.",
             "translationAr": "عادت ليلى بعد سنوات إلى الشارع الذي قضت طفولتها فيه. بهت الطلاء على جدار البيت القديم، وتراكم غبار رقيق عند العتبة. لكن شجرة الليمون في الحديقة بقيت قائمة. ظل الباب ساكناً كما لو أنه لم يُفتح، ومع ذلك حرّكت الريح ستارةً بقيت في الداخل قليلاً. فكرت ليلى عندئذ أنها تنتظر عند باب ذاكرتها هي، لا عند باب البيت.",
             "questions": [
               {
@@ -315,13 +315,13 @@
           "writing": [
             {
               "promptAr": "اكتب جملتين تصفان مكاناً قديماً وتستنتجان ما يوحي به.",
-              "expectedTr": "Duvarın rengi solmuştu. Görünen o ki bu ev uzun zamandır boş kalmıştı.",
+              "expectedTarget": "Duvarın rengi solmuştu. Görünen o ki bu ev uzun zamandır boş kalmıştı.",
               "explanationAr": "استخدم تفصيلاً محسوساً ثم استنتاجاً حذراً بصيغة görünen o ki."
             }
           ],
           "listening": [
             {
-              "sentenceTr": "Kapı açılmamış gibi sessiz duruyordu.",
+              "sentenceTarget": "Kapı açılmamış gibi sessiz duruyordu.",
               "questionAr": "كيف بدا الباب؟",
               "options": [
                 "كأنه لم يُفتح",
@@ -334,7 +334,7 @@
           ],
           "pronunciation": [
             {
-              "textTr": "açılmamış",
+              "textTarget": "açılmamış",
               "focusAr": "حافظ على ç وı، وانطق اللاحقة -mış بحركة خلفية غير منقوطة."
             }
           ],

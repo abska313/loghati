@@ -1,19 +1,22 @@
 const CACHE_PREFIX = 'turkiya-app-';
-const CACHE_VERSION = 'v5';
+const CACHE_VERSION = 'v8';
 const CACHE_NAME = `${CACHE_PREFIX}${CACHE_VERSION}`;
 const APP_ROOT = new URL('./', self.registration.scope);
 const SHELL_FILES = [
   'index.html', 'manifest.webmanifest', 'manus-routes.json',
-  'css/themes.css', 'css/main.css', 'css/responsive.css',
+  'css/themes.css', 'css/main.css', 'css/responsive.css', 'css/youtube.css',
   'js/app.js', 'js/router.js', 'js/alphabet.js', 'js/database.js', 'js/data.js',
-  'js/progress.js', 'js/spaced-repetition.js', 'js/audio.js',
-  'js/pwa.js', 'js/lessons.js', 'js/vocabulary.js', 'js/quizzes.js', 'js/skills.js',
-  'assets/icons/app-icon.svg', 'assets/icons/icon-192.png', 'assets/icons/icon-512.png',
-  'assets/icons/icon-180.png',
+  'js/language-registry.js', 'js/language-picker.js', 'js/progress.js', 'js/spaced-repetition.js',
+  'js/audio.js', 'js/pwa.js', 'js/lessons.js', 'js/vocabulary.js', 'js/quizzes.js',
+  'js/skills.js', 'js/youtube-utils.js', 'js/youtube.js',
+  'assets/icons/app-icon.svg', 'assets/icons/icon-192.png', 'assets/icons/icon-512.png', 'assets/icons/icon-180.png',
   'assets/images/turkish-tea.jpg',
-  'data/levels/pre-a1.json', 'data/levels/a1.json', 'data/levels/a2.json',
-  'data/levels/b1.json', 'data/levels/b2.json', 'data/levels/c1.json', 'data/levels/c2.json',
-  'data/vocabulary/index.json', 'data/grammar/index.json'
+  'data/languages.json',
+  'data/languages/tr/levels/pre-a1.json', 'data/languages/tr/levels/a1.json',
+  'data/languages/tr/levels/a2.json', 'data/languages/tr/levels/b1.json',
+  'data/languages/tr/levels/b2.json', 'data/languages/tr/levels/c1.json',
+  'data/languages/tr/levels/c2.json',
+  'data/languages/tr/vocabulary/index.json', 'data/languages/tr/grammar/index.json'
 ];
 
 self.addEventListener('install', (event) => {

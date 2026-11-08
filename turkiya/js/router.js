@@ -1,4 +1,4 @@
-const ROUTES = new Set(['home', 'lessons', 'alphabet', 'vocabulary', 'grammar', 'listening', 'speaking', 'reading', 'writing', 'review', 'profile']);
+const ROUTES = new Set(['home', 'lessons', 'alphabet', 'vocabulary', 'grammar', 'listening', 'youtube', 'speaking', 'reading', 'writing', 'review', 'profile']);
 let currentRoute = 'home';
 let onRouteChange = () => {};
 

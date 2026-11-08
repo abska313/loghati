@@ -10,7 +10,7 @@
         {
           "id": "pre-a1-l1",
           "titleAr": "التحية والتعارف",
-          "titleTr": "Merhaba, ben…",
+          "titleTarget": "Merhaba, ben…",
           "objectivesAr": [
             "إلقاء التحية والوداع في موقف بسيط.",
             "ذكر الاسم والسؤال عنه."
@@ -19,41 +19,41 @@
           "vocabulary": [
             {
               "id": "pre-a1-l1-v1",
-              "tr": "merhaba",
+              "target": "merhaba",
               "ar": "مرحباً",
               "ipa": "",
               "pos": "اسم/تحية",
-              "exampleTr": "Merhaba, Ece.",
+              "exampleTarget": "Merhaba, Ece.",
               "exampleAr": "مرحباً يا إيجه.",
               "category": "المحادثات الرسمية وغير الرسمية"
             },
             {
               "id": "pre-a1-l1-v2",
-              "tr": "ben",
+              "target": "ben",
               "ar": "أنا",
               "ipa": "",
               "pos": "ضمير",
-              "exampleTr": "Ben Ali.",
+              "exampleTarget": "Ben Ali.",
               "exampleAr": "أنا علي.",
               "category": "المحادثات الرسمية وغير الرسمية"
             },
             {
               "id": "pre-a1-l1-v3",
-              "tr": "ad",
+              "target": "ad",
               "ar": "اسم",
               "ipa": "",
               "pos": "اسم",
-              "exampleTr": "Adım Lina.",
+              "exampleTarget": "Adım Lina.",
               "exampleAr": "اسمي لينا.",
               "category": "الحياة اليومية"
             },
             {
               "id": "pre-a1-l1-v4",
-              "tr": "güle güle",
+              "target": "güle güle",
               "ar": "إلى اللقاء (للمغادر)",
               "ipa": "",
               "pos": "عبارة",
-              "exampleTr": "Güle güle, Mehmet.",
+              "exampleTarget": "Güle güle, Mehmet.",
               "exampleAr": "إلى اللقاء يا محمد.",
               "category": "المحادثات الرسمية وغير الرسمية"
             }
@@ -64,14 +64,14 @@
             "form": "ben + ad / ad + -(I)m",
             "examples": [
               {
-                "tr": "Benim adım Lina.",
+                "target": "Benim adım Lina.",
                 "ar": "اسمي لينا.",
                 "wrong": "Ben adım Lina.",
                 "correction": "Benim adım Lina.",
                 "why": "الملكية تحتاج ضميراً مضافاً أو لاحقة الملكية؛ والصيغة الطبيعية هنا Benim adım…"
               },
               {
-                "tr": "Adın ne?",
+                "target": "Adın ne?",
                 "ar": "ما اسمك؟ (غير رسمي)",
                 "wrong": "Adın kim?",
                 "correction": "Adın ne?",
@@ -82,33 +82,33 @@
           "dialogue": [
             {
               "speaker": "A",
-              "tr": "Merhaba!",
+              "target": "Merhaba!",
               "ar": "مرحباً!"
             },
             {
               "speaker": "B",
-              "tr": "Merhaba. Ben Ali.",
+              "target": "Merhaba. Ben Ali.",
               "ar": "مرحباً. أنا علي."
             },
             {
               "speaker": "A",
-              "tr": "Benim adım Ece.",
+              "target": "Benim adım Ece.",
               "ar": "اسمي إيجه."
             },
             {
               "speaker": "B",
-              "tr": "Memnun oldum.",
+              "target": "Memnun oldum.",
               "ar": "سُررت بلقائك."
             },
             {
               "speaker": "A",
-              "tr": "Ben de memnun oldum. Güle güle!",
+              "target": "Ben de memnun oldum. Güle güle!",
               "ar": "وأنا أيضاً. إلى اللقاء!"
             }
           ],
           "reading": {
             "titleAr": "لقاء في الصف",
-            "textTr": "Merhaba! Benim adım Sara. Bu, yeni arkadaşım Can. Can da öğrenci. Ders başlıyor; sonra görüşürüz.",
+            "textTarget": "Merhaba! Benim adım Sara. Bu, yeni arkadaşım Can. Can da öğrenci. Ders başlıyor; sonra görüşürüz.",
             "translationAr": "مرحباً! اسمي سارة. هذا صديقي الجديد جان. جان طالب أيضاً. يبدأ الدرس؛ نلتقي لاحقاً.",
             "questions": [
               {
@@ -138,14 +138,14 @@
           "writing": [
             {
               "promptAr": "اكتب جملة تعرّف فيها باسمك.",
-              "expectedTr": "Benim adım Lina.",
+              "expectedTarget": "Benim adım Lina.",
               "acceptNameIntro": true,
               "explanationAr": "استبدل Lina باسمك، ويمكنك قول Ben Ali عند التعريف المباشر."
             }
           ],
           "listening": [
             {
-              "sentenceTr": "Benim adım Deniz.",
+              "sentenceTarget": "Benim adım Deniz.",
               "questionAr": "ما اسم المتحدث؟",
               "options": [
                 "دنيز",
@@ -158,7 +158,7 @@
           ],
           "pronunciation": [
             {
-              "textTr": "merhaba",
+              "textTarget": "merhaba",
               "focusAr": "انتبه إلى وضوح الحركتين e وa، وإلى نطق h خفيفاً."
             }
           ],
@@ -178,7 +178,7 @@
         {
           "id": "pre-a1-l2",
           "titleAr": "أشياء الصف وعباراته",
-          "titleTr": "Sınıfta",
+          "titleTarget": "Sınıfta",
           "objectivesAr": [
             "تسمية أشياء مألوفة في الصف.",
             "استخدام هذا/هذه والسؤال عن شيء."
@@ -187,41 +187,41 @@
           "vocabulary": [
             {
               "id": "pre-a1-l2-v1",
-              "tr": "kitap",
+              "target": "kitap",
               "ar": "كتاب",
               "ipa": "",
               "pos": "اسم",
-              "exampleTr": "Bu bir kitap.",
+              "exampleTarget": "Bu bir kitap.",
               "exampleAr": "هذا كتاب.",
               "category": "الدراسة"
             },
             {
               "id": "pre-a1-l2-v2",
-              "tr": "kalem",
+              "target": "kalem",
               "ar": "قلم",
               "ipa": "",
               "pos": "اسم",
-              "exampleTr": "Kalem masada.",
+              "exampleTarget": "Kalem masada.",
               "exampleAr": "القلم على الطاولة.",
               "category": "الدراسة"
             },
             {
               "id": "pre-a1-l2-v3",
-              "tr": "defter",
+              "target": "defter",
               "ar": "دفتر",
               "ipa": "",
               "pos": "اسم",
-              "exampleTr": "Defterim burada.",
+              "exampleTarget": "Defterim burada.",
               "exampleAr": "دفتري هنا.",
               "category": "الدراسة"
             },
             {
               "id": "pre-a1-l2-v4",
-              "tr": "öğretmen",
+              "target": "öğretmen",
               "ar": "معلّم/معلّمة",
               "ipa": "",
               "pos": "اسم",
-              "exampleTr": "Öğretmen sınıfta.",
+              "exampleTarget": "Öğretmen sınıfta.",
               "exampleAr": "المعلّم في الصف.",
               "category": "الدراسة"
             }
@@ -232,14 +232,14 @@
             "form": "bu + (bir) + اسم / Bu ne?",
             "examples": [
               {
-                "tr": "Bu bir defter.",
+                "target": "Bu bir defter.",
                 "ar": "هذا دفتر.",
                 "wrong": "Bu bir defter mi?",
                 "correction": "Bu bir defter.",
                 "why": "العبارة خبرية؛ لا نضيف mi إلا إذا كان المقصود سؤال نعم أو لا."
               },
               {
-                "tr": "Bu ne?",
+                "target": "Bu ne?",
                 "ar": "ما هذا؟",
                 "wrong": "Bu kim? (عن كتاب)",
                 "correction": "Bu ne?",
@@ -250,33 +250,33 @@
           "dialogue": [
             {
               "speaker": "A",
-              "tr": "Bu ne?",
+              "target": "Bu ne?",
               "ar": "ما هذا؟"
             },
             {
               "speaker": "B",
-              "tr": "Bu bir kitap.",
+              "target": "Bu bir kitap.",
               "ar": "هذا كتاب."
             },
             {
               "speaker": "A",
-              "tr": "Peki, bu ne?",
+              "target": "Peki, bu ne?",
               "ar": "حسناً، ما هذا؟"
             },
             {
               "speaker": "B",
-              "tr": "Bu kalem.",
+              "target": "Bu kalem.",
               "ar": "هذا قلم."
             },
             {
               "speaker": "A",
-              "tr": "Teşekkür ederim.",
+              "target": "Teşekkür ederim.",
               "ar": "شكراً لك."
             }
           ],
           "reading": {
             "titleAr": "حقيبة ندى",
-            "textTr": "Nida sınıfta. Çantasında bir kitap, iki kalem ve bir defter var. Öğretmen yeni bir kelime yazıyor. Nida defterine bakıyor.",
+            "textTarget": "Nida sınıfta. Çantasında bir kitap, iki kalem ve bir defter var. Öğretmen yeni bir kelime yazıyor. Nida defterine bakıyor.",
             "translationAr": "ندى في الصف. في حقيبتها كتاب وقلمان ودفتر. يكتب المعلم كلمة جديدة. تنظر ندى إلى دفترها.",
             "questions": [
               {
@@ -306,13 +306,13 @@
           "writing": [
             {
               "promptAr": "اكتب جملة تسمي فيها شيئاً في حقيبتك.",
-              "expectedTr": "Çantamda bir kitap var.",
+              "expectedTarget": "Çantamda bir kitap var.",
               "explanationAr": "استخدم var للدلالة على وجود الشيء، وبدّل الاسم بما يناسبك."
             }
           ],
           "listening": [
             {
-              "sentenceTr": "Bu bir kalem.",
+              "sentenceTarget": "Bu bir kalem.",
               "questionAr": "ما الشيء المذكور؟",
               "options": [
                 "دفتر",
@@ -325,7 +325,7 @@
           ],
           "pronunciation": [
             {
-              "textTr": "öğretmen",
+              "textTarget": "öğretmen",
               "focusAr": "تدرّب على الحرف التركي ğ؛ فهو لا يُنطق عادةً كـ g عربية صلبة، بل يطيل الحركة أو يربطها."
             }
           ],

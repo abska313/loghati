@@ -10,7 +10,7 @@
         {
           "id": "a1-l1",
           "titleAr": "يوم عادي",
-          "titleTr": "Sıradan bir gün",
+          "titleTarget": "Sıradan bir gün",
           "objectivesAr": [
             "وصف روتين صباحي بسيط.",
             "تصريف أفعال الحاضر المستمر للمفرد."
@@ -19,41 +19,41 @@
           "vocabulary": [
             {
               "id": "a1-l1-v1",
-              "tr": "uyanmak",
+              "target": "uyanmak",
               "ar": "يستيقظ",
               "ipa": "",
               "pos": "فعل",
-              "exampleTr": "Saat yedide uyanıyorum.",
+              "exampleTarget": "Saat yedide uyanıyorum.",
               "exampleAr": "أستيقظ في السابعة.",
               "category": "الحياة اليومية"
             },
             {
               "id": "a1-l1-v2",
-              "tr": "kahvaltı",
+              "target": "kahvaltı",
               "ar": "فطور",
               "ipa": "",
               "pos": "اسم",
-              "exampleTr": "Kahvaltı yapıyorum.",
+              "exampleTarget": "Kahvaltı yapıyorum.",
               "exampleAr": "أتناول الفطور.",
               "category": "الطعام والشراب"
             },
             {
               "id": "a1-l1-v3",
-              "tr": "işe",
+              "target": "işe",
               "ar": "إلى العمل",
               "ipa": "",
               "pos": "اسم+لاحقة",
-              "exampleTr": "Otobüsle işe gidiyorum.",
+              "exampleTarget": "Otobüsle işe gidiyorum.",
               "exampleAr": "أذهب إلى العمل بالحافلة.",
               "category": "العمل"
             },
             {
               "id": "a1-l1-v4",
-              "tr": "akşam",
+              "target": "akşam",
               "ar": "مساء",
               "ipa": "",
               "pos": "اسم/ظرف",
-              "exampleTr": "Akşam kitap okuyorum.",
+              "exampleTarget": "Akşam kitap okuyorum.",
               "exampleAr": "أقرأ كتاباً مساءً.",
               "category": "الحياة اليومية"
             }
@@ -64,14 +64,14 @@
             "form": "جذر الفعل + (I)yor + لاحقة الشخص",
             "examples": [
               {
-                "tr": "Her sabah kahvaltı yapıyorum.",
+                "target": "Her sabah kahvaltı yapıyorum.",
                 "ar": "أتناول الفطور كل صباح.",
                 "wrong": "Her sabah kahvaltı yapıyor. (أنا)",
                 "correction": "Her sabah kahvaltı yapıyorum.",
                 "why": "فاعل المتكلم المفرد يأخذ -um في هذه الصيغة."
               },
               {
-                "tr": "Şimdi eve gidiyorum.",
+                "target": "Şimdi eve gidiyorum.",
                 "ar": "أنا ذاهب إلى البيت الآن.",
                 "wrong": "Şimdi eve gidiyor muyum? (خبر)",
                 "correction": "Şimdi eve gidiyorum.",
@@ -82,38 +82,38 @@
           "dialogue": [
             {
               "speaker": "A",
-              "tr": "Saat kaçta uyanıyorsun?",
+              "target": "Saat kaçta uyanıyorsun?",
               "ar": "في أي ساعة تستيقظ؟"
             },
             {
               "speaker": "B",
-              "tr": "Saat yedide uyanıyorum.",
+              "target": "Saat yedide uyanıyorum.",
               "ar": "أستيقظ في السابعة."
             },
             {
               "speaker": "A",
-              "tr": "Sonra ne yapıyorsun?",
+              "target": "Sonra ne yapıyorsun?",
               "ar": "ماذا تفعل بعد ذلك؟"
             },
             {
               "speaker": "B",
-              "tr": "Kahvaltı yapıyorum ve işe gidiyorum.",
+              "target": "Kahvaltı yapıyorum ve işe gidiyorum.",
               "ar": "أتناول الفطور وأذهب إلى العمل."
             },
             {
               "speaker": "A",
-              "tr": "Akşam dinleniyor musun?",
+              "target": "Akşam dinleniyor musun?",
               "ar": "هل تستريح مساءً؟"
             },
             {
               "speaker": "B",
-              "tr": "Evet, biraz kitap okuyorum.",
+              "target": "Evet, biraz kitap okuyorum.",
               "ar": "نعم، أقرأ قليلاً."
             }
           ],
           "reading": {
             "titleAr": "صباح مراد",
-            "textTr": "Murat hafta içi saat yedide uyanıyor. Kahvaltıda peynir ve zeytin yiyor. İşe otobüsle gidiyor; yolculuk yaklaşık otuz dakika sürüyor. Akşam evde dinleniyor.",
+            "textTarget": "Murat hafta içi saat yedide uyanıyor. Kahvaltıda peynir ve zeytin yiyor. İşe otobüsle gidiyor; yolculuk yaklaşık otuz dakika sürüyor. Akşam evde dinleniyor.",
             "translationAr": "يستيقظ مراد في أيام الأسبوع عند السابعة. يأكل الجبن والزيتون في الفطور. يذهب إلى العمل بالحافلة؛ وتستغرق الرحلة نحو ثلاثين دقيقة. يستريح في البيت مساءً.",
             "questions": [
               {
@@ -143,13 +143,13 @@
           "writing": [
             {
               "promptAr": "اكتب جملتين عن وقت استيقاظك وفطورك.",
-              "expectedTr": "Saat yedide uyanıyorum. Kahvaltıda yumurta yiyorum.",
+              "expectedTarget": "Saat yedide uyanıyorum. Kahvaltıda yumurta yiyorum.",
               "explanationAr": "استخدم -yor للروتين، وغيّر الوقت والطعام وفق واقعك."
             }
           ],
           "listening": [
             {
-              "sentenceTr": "Her gün saat sekizde işe gidiyorum.",
+              "sentenceTarget": "Her gün saat sekizde işe gidiyorum.",
               "questionAr": "في أي ساعة يذهب المتحدث إلى العمل؟",
               "options": [
                 "السابعة",
@@ -162,7 +162,7 @@
           ],
           "pronunciation": [
             {
-              "textTr": "çalışıyorum",
+              "textTarget": "çalışıyorum",
               "focusAr": "ميّز بين ç التركية (تش) وc التركية (ج)، وانطق مقطع -ı- بحركة غير مدوّرة خلفية."
             }
           ],
@@ -182,7 +182,7 @@
         {
           "id": "a1-l2",
           "titleAr": "في المقهى",
-          "titleTr": "Kafede",
+          "titleTarget": "Kafede",
           "objectivesAr": [
             "طلب مشروب ووجبة بأسلوب مهذب.",
             "السؤال عن السعر واستخدام أريد."
@@ -191,41 +191,41 @@
           "vocabulary": [
             {
               "id": "a1-l2-v1",
-              "tr": "menü",
+              "target": "menü",
               "ar": "قائمة الطعام",
               "ipa": "",
               "pos": "اسم",
-              "exampleTr": "Menüyü alabilir miyim?",
+              "exampleTarget": "Menüyü alabilir miyim?",
               "exampleAr": "هل يمكنني أخذ قائمة الطعام؟",
               "category": "الطعام والشراب"
             },
             {
               "id": "a1-l2-v2",
-              "tr": "çorba",
+              "target": "çorba",
               "ar": "حساء",
               "ipa": "",
               "pos": "اسم",
-              "exampleTr": "Mercimek çorbası istiyorum.",
+              "exampleTarget": "Mercimek çorbası istiyorum.",
               "exampleAr": "أريد حساء العدس.",
               "category": "الطعام والشراب"
             },
             {
               "id": "a1-l2-v3",
-              "tr": "su",
+              "target": "su",
               "ar": "ماء",
               "ipa": "",
               "pos": "اسم",
-              "exampleTr": "Bir şişe su lütfen.",
+              "exampleTarget": "Bir şişe su lütfen.",
               "exampleAr": "زجاجة ماء من فضلك.",
               "category": "الطعام والشراب"
             },
             {
               "id": "a1-l2-v4",
-              "tr": "hesap",
+              "target": "hesap",
               "ar": "الحساب",
               "ipa": "",
               "pos": "اسم",
-              "exampleTr": "Hesabı alabilir miyim?",
+              "exampleTarget": "Hesabı alabilir miyim?",
               "exampleAr": "هل يمكنني الحصول على الحساب؟",
               "category": "المال والأعمال"
             }
@@ -236,14 +236,14 @@
             "form": "اسم + istiyorum / اسم-(y)I + alabilir miyim?",
             "examples": [
               {
-                "tr": "Bir çay istiyorum.",
+                "target": "Bir çay istiyorum.",
                 "ar": "أريد شاياً.",
                 "wrong": "Bir çay istiyor. (أنا)",
                 "correction": "Bir çay istiyorum.",
                 "why": "لاحقة المتكلم في istiyorum هي -um."
               },
               {
-                "tr": "Hesabı alabilir miyim?",
+                "target": "Hesabı alabilir miyim?",
                 "ar": "هل يمكنني الحصول على الحساب؟",
                 "wrong": "Hesap alabilir miyim? (الحساب المحدد)",
                 "correction": "Hesabı alabilir miyim?",
@@ -254,38 +254,38 @@
           "dialogue": [
             {
               "speaker": "A",
-              "tr": "Merhaba, menüyü alabilir miyim?",
+              "target": "Merhaba, menüyü alabilir miyim?",
               "ar": "مرحباً، هل يمكنني أخذ قائمة الطعام؟"
             },
             {
               "speaker": "B",
-              "tr": "Tabii, buyurun.",
+              "target": "Tabii, buyurun.",
               "ar": "بالطبع، تفضل."
             },
             {
               "speaker": "A",
-              "tr": "Bir mercimek çorbası ve su istiyorum.",
+              "target": "Bir mercimek çorbası ve su istiyorum.",
               "ar": "أريد حساء عدس وماء."
             },
             {
               "speaker": "B",
-              "tr": "Başka bir şey ister misiniz?",
+              "target": "Başka bir şey ister misiniz?",
               "ar": "هل ترغب في شيء آخر؟"
             },
             {
               "speaker": "A",
-              "tr": "Hayır, teşekkürler. Hesabı sonra alabilir miyim?",
+              "target": "Hayır, teşekkürler. Hesabı sonra alabilir miyim?",
               "ar": "لا، شكراً. هل يمكنني أخذ الحساب لاحقاً؟"
             },
             {
               "speaker": "B",
-              "tr": "Elbette.",
+              "target": "Elbette.",
               "ar": "بكل سرور."
             }
           ],
           "reading": {
             "titleAr": "استراحة الغداء",
-            "textTr": "Elif küçük bir kafeye giriyor. Önce menüyü inceliyor, sonra mercimek çorbası ve bir bardak su istiyor. Çorbası sıcak geliyor. Yemeğini bitirince garsondan hesabı rica ediyor.",
+            "textTarget": "Elif küçük bir kafeye giriyor. Önce menüyü inceliyor, sonra mercimek çorbası ve bir bardak su istiyor. Çorbası sıcak geliyor. Yemeğini bitirince garsondan hesabı rica ediyor.",
             "translationAr": "تدخل إليف مقهى صغيراً. تتفحص قائمة الطعام أولاً، ثم تطلب حساء العدس وكأس ماء. يصل الحساء ساخناً. وبعد أن تنهي وجبتها، تطلب الحساب من النادل.",
             "questions": [
               {
@@ -315,13 +315,13 @@
           "writing": [
             {
               "promptAr": "اكتب طلباً مهذباً لمشروب واذكر أنك تريد الحساب لاحقاً.",
-              "expectedTr": "Bir çay istiyorum. Hesabı sonra alabilir miyim?",
+              "expectedTarget": "Bir çay istiyorum. Hesabı sonra alabilir miyim?",
               "explanationAr": "يمكن استخدام istiyorum للطلب وalabilir miyim? للسؤال المهذب."
             }
           ],
           "listening": [
             {
-              "sentenceTr": "Bir kahve ve bir su istiyorum.",
+              "sentenceTarget": "Bir kahve ve bir su istiyorum.",
               "questionAr": "ماذا يريد الزبون؟",
               "options": [
                 "قهوة وماء",
@@ -334,7 +334,7 @@
           ],
           "pronunciation": [
             {
-              "textTr": "çorba",
+              "textTarget": "çorba",
               "focusAr": "انطق ç مثل «تش»، ولا تخلط بينه وبين c في كلمة garson."
             }
           ],

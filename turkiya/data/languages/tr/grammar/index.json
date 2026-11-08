@@ -8,14 +8,14 @@
     "whenToUse": "في التعارف وتحديد صاحب شيء.",
     "examples": [
       {
-        "tr": "Benim adım Deniz.",
+        "target": "Benim adım Deniz.",
         "ar": "اسمي دنيز.",
         "wrong": "Benim ad Deniz.",
         "correction": "Benim adım Deniz.",
         "why": "تحتاج الكلمة علامة الملكية -ım."
       },
       {
-        "tr": "Adın ne?",
+        "target": "Adın ne?",
         "ar": "ما اسمك؟",
         "wrong": "Adın kim?",
         "correction": "Adın ne?",
@@ -32,14 +32,14 @@
     "whenToUse": "عند تسمية شيء قريب أو السؤال عنه.",
     "examples": [
       {
-        "tr": "Bu bir kalem.",
+        "target": "Bu bir kalem.",
         "ar": "هذا قلم.",
         "wrong": "Bu kalem mi? (خبر)",
         "correction": "Bu bir kalem.",
         "why": "mi يحولها إلى سؤال نعم أو لا."
       },
       {
-        "tr": "Bu kim?",
+        "target": "Bu kim?",
         "ar": "من هذا؟",
         "wrong": "Bu ne? (عن شخص)",
         "correction": "Bu kim?",
@@ -56,14 +56,14 @@
     "whenToUse": "لوصف حدث جارٍ أو نشاط معتاد في الوقت الحالي.",
     "examples": [
       {
-        "tr": "Şimdi çalışıyorum.",
+        "target": "Şimdi çalışıyorum.",
         "ar": "أعمل الآن.",
         "wrong": "Şimdi çalışıyor. (أنا)",
         "correction": "Şimdi çalışıyorum.",
         "why": "لاحقة المتكلم المفرد -um لازمة."
       },
       {
-        "tr": "Ece kitap okuyor.",
+        "target": "Ece kitap okuyor.",
         "ar": "تقرأ إيجه كتاباً.",
         "wrong": "Ece kitap okuyorum.",
         "correction": "Ece kitap okuyor.",
@@ -80,14 +80,14 @@
     "whenToUse": "في الطلبات اليومية، ولا سيما في المقاهي والمتاجر.",
     "examples": [
       {
-        "tr": "Bir çay istiyorum.",
+        "target": "Bir çay istiyorum.",
         "ar": "أريد شاياً.",
         "wrong": "Bir çay istiyor. (أنا)",
         "correction": "Bir çay istiyorum.",
         "why": "istiyorum صيغة المتكلم."
       },
       {
-        "tr": "Hesabı alabilir miyim?",
+        "target": "Hesabı alabilir miyim?",
         "ar": "هل يمكنني أخذ الحساب؟",
         "wrong": "Hesapı alabilir miyim?",
         "correction": "Hesabı alabilir miyim?",
@@ -104,14 +104,14 @@
     "whenToUse": "لتحديد موقع الحركة أو اتجاهها أو مصدرها.",
     "examples": [
       {
-        "tr": "Durakta bekliyorum.",
+        "target": "Durakta bekliyorum.",
         "ar": "أنتظر في الموقف.",
         "wrong": "Durakda bekliyorum.",
         "correction": "Durakta bekliyorum.",
         "why": "الصامت k مهموس، فتتحول d إلى t."
       },
       {
-        "tr": "Okula gidiyorum.",
+        "target": "Okula gidiyorum.",
         "ar": "أذهب إلى المدرسة.",
         "wrong": "Okulda gidiyorum.",
         "correction": "Okula gidiyorum.",
@@ -128,14 +128,14 @@
     "whenToUse": "للخطط والتوقعات المستقبلية.",
     "examples": [
       {
-        "tr": "Yarın gelecekler.",
+        "target": "Yarın gelecekler.",
         "ar": "سيأتون غداً.",
         "wrong": "Yarın geliyorlar. (مستقبل صريح)",
         "correction": "Yarın gelecekler.",
         "why": "صيغة -ecek تبيّن المستقبل بوضوح."
       },
       {
-        "tr": "Başlayacağım.",
+        "target": "Başlayacağım.",
         "ar": "سأبدأ.",
         "wrong": "Başlaacağım.",
         "correction": "Başlayacağım.",
@@ -152,14 +152,14 @@
     "whenToUse": "لسرد وقائع الماضي المباشرة.",
     "examples": [
       {
-        "tr": "Tren gecikti.",
+        "target": "Tren gecikti.",
         "ar": "تأخر القطار.",
         "wrong": "Tren gecikdi.",
         "correction": "Tren gecikti.",
         "why": "بعد الصامت المهموس k تأتي t."
       },
       {
-        "tr": "Dün müzeyi gördüm.",
+        "target": "Dün müzeyi gördüm.",
         "ar": "رأيت المتحف أمس.",
         "wrong": "Dün müzeyi gördü. (أنا)",
         "correction": "Dün müzeyi gördüm.",
@@ -176,14 +176,14 @@
     "whenToUse": "للخبر غير المشاهد أو النتيجة المكتشفة من قرينة.",
     "examples": [
       {
-        "tr": "Meğer anahtarı evde unutmuşum.",
+        "target": "Meğer anahtarı evde unutmuşum.",
         "ar": "اتضح أنني نسيت المفتاح في البيت.",
         "wrong": "Meğer anahtarı evde unuttum. (اكتشاف لاحق)",
         "correction": "Meğer anahtarı evde unutmuşum.",
         "why": "meğer مع اكتشاف لاحق يناسبه -muş."
       },
       {
-        "tr": "Tren erken gelmiş.",
+        "target": "Tren erken gelmiş.",
         "ar": "يبدو أن القطار وصل مبكراً.",
         "wrong": "Tren erken geldi. (خبر منقول)",
         "correction": "Tren erken gelmiş.",
@@ -200,14 +200,14 @@
     "whenToUse": "لشرح السبب في جملة مترابطة.",
     "examples": [
       {
-        "tr": "Yol kapalı olduğu için geç kaldık.",
+        "target": "Yol kapalı olduğu için geç kaldık.",
         "ar": "تأخرنا لأن الطريق كان مغلقاً.",
         "wrong": "Yol kapalı olduğu için geç kaldım. (نحن)",
         "correction": "Yol kapalı olduğu için geç kaldık.",
         "why": "فاعل النتيجة نحن، لذلك يلزم -k."
       },
       {
-        "tr": "Çok çalıştığım için yoruldum.",
+        "target": "Çok çalıştığım için yoruldum.",
         "ar": "تعبت لأنني عملت كثيراً.",
         "wrong": "Çok çalıştığı için yoruldum. (أنا)",
         "correction": "Çok çalıştığım için yoruldum.",
@@ -224,14 +224,14 @@
     "whenToUse": "عندما يكون الفاعل غير معروف أو أقل أهمية من الإجراء.",
     "examples": [
       {
-        "tr": "Belgeler inceleniyor.",
+        "target": "Belgeler inceleniyor.",
         "ar": "تُفحص الوثائق.",
         "wrong": "Belgeler inceliyor.",
         "correction": "Belgeler inceleniyor.",
         "why": "الصيغة مع n علامة للمجهول هنا."
       },
       {
-        "tr": "Kapı kapatıldı.",
+        "target": "Kapı kapatıldı.",
         "ar": "أُغلق الباب.",
         "wrong": "Kapı kapattı.",
         "correction": "Kapı kapatıldı.",
@@ -248,14 +248,14 @@
     "whenToUse": "لذكر شرط أو احتمال يترتب عليه فعل.",
     "examples": [
       {
-        "tr": "Vaktin olursa beni ara.",
+        "target": "Vaktin olursa beni ara.",
         "ar": "اتصل بي إن كان لديك وقت.",
         "wrong": "Vaktin olursa beni ararsın. (أمر/طلب)",
         "correction": "Vaktin olursa beni ara.",
         "why": "الطلب المباشر هنا ara، أما ararsın فتقرير أو توقع بحسب السياق."
       },
       {
-        "tr": "Yağmur yağarsa içeride kalırız.",
+        "target": "Yağmur yağarsa içeride kalırız.",
         "ar": "إذا أمطرت سنبقى في الداخل.",
         "wrong": "Yağmur yağınca içeride kalırız.",
         "correction": "Yağmur yağarsa içeride kalırız.",
@@ -272,14 +272,14 @@
     "whenToUse": "لتكثيف الجمل الوصفية في النصوص التحليلية.",
     "examples": [
       {
-        "tr": "Burada yaşayan insanlar parkı kullanıyor.",
+        "target": "Burada yaşayan insanlar parkı kullanıyor.",
         "ar": "يستخدم الحديقة الناس الذين يعيشون هنا.",
         "wrong": "Burada yaşamak insanlar parkı kullanıyor.",
         "correction": "Burada yaşayan insanlar parkı kullanıyor.",
         "why": "قبل الاسم نحتاج الصفة الفعلية yaşayan."
       },
       {
-        "tr": "Çalışan ekip çözüm buldu.",
+        "target": "Çalışan ekip çözüm buldu.",
         "ar": "وجد الفريق العامل حلاً.",
         "wrong": "Çalışıyor ekip çözüm buldu.",
         "correction": "Çalışan ekip çözüm buldu.",
@@ -296,14 +296,14 @@
     "whenToUse": "لبناء حجة تعترف بقيد ولا تجعل القيد خاتمة الحجة.",
     "examples": [
       {
-        "tr": "Her ne kadar pahalı olsa da proje yararlı.",
+        "target": "Her ne kadar pahalı olsa da proje yararlı.",
         "ar": "مع أنه مكلف، فالمشروع مفيد.",
         "wrong": "Her ne kadar pahalı ama proje yararlı.",
         "correction": "Her ne kadar pahalı olsa da proje yararlı.",
         "why": "لا يجمع التركيب القياسي بين her ne kadar وama بهذه الصورة."
       },
       {
-        "tr": "Her ne kadar yorulsam da devam ettim.",
+        "target": "Her ne kadar yorulsam da devam ettim.",
         "ar": "مع أنني تعبت، واصلت.",
         "wrong": "Her ne kadar yoruldum da devam ettim.",
         "correction": "Her ne kadar yorulsam da devam ettim.",
@@ -320,14 +320,14 @@
     "whenToUse": "لصياغة نثر تحليلي موجز، وتحديد الفاعل أو المفعول ضمن عبارة اسمية.",
     "examples": [
       {
-        "tr": "Kararın uygulanması zaman alacak.",
+        "target": "Kararın uygulanması zaman alacak.",
         "ar": "سيستغرق تنفيذ القرار وقتاً.",
         "wrong": "Kararın uygulamak zaman alacak.",
         "correction": "Kararın uygulanması zaman alacak.",
         "why": "بعد الاسم المضاف kararın يلزم الاسم الحدثي uygulanması."
       },
       {
-        "tr": "Verileri karşılaştırmamız gerekiyor.",
+        "target": "Verileri karşılaştırmamız gerekiyor.",
         "ar": "علينا مقارنة البيانات.",
         "wrong": "Verileri karşılaştırmak gerekiyor. (علينا نحن)",
         "correction": "Verileri karşılaştırmamız gerekiyor.",

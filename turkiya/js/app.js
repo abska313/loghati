@@ -10,6 +10,8 @@ import { renderAlphabet } from './alphabet.js';
 import { renderVocabulary } from './vocabulary.js';
 import { renderGrammar, renderListening, renderSpeaking, renderReading, renderWriting, renderReview } from './skills.js';
 import { escapeHtml, escapeAttr } from './quizzes.js';
+import { mountLanguagePicker } from './language-picker.js';
+import { renderYouTubeLab } from './youtube.js';
 
 const ICONS = {
   home:'<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/>',
@@ -46,6 +48,8 @@ window.turkiyaIcon = icon;
 const root = document.getElementById('view-root');
 const toastRegion = document.getElementById('toast-region');
 let toastTimer;
+let activeLanguage = null;
+let routeCleanup = null;
 
 function toast(message) {
   if (!toastRegion) return;
@@ -61,7 +65,7 @@ function applyStaticIcons() {
 
 function setTheme(theme) {
   document.documentElement.dataset.theme = theme;
-  localStorage.setItem('turkiya-theme', theme);
+  localStorage.setItem('loghati-theme', theme);
   const button = document.getElementById('theme-toggle');
   if (button) { button.innerHTML = icon(theme === 'dark' ? 'sun' : 'moon'); button.setAttribute('aria-label', theme === 'dark' ? 'التبديل إلى المظهر الفاتح' : 'التبديل إلى المظهر الداكن'); }
 }
@@ -69,7 +73,7 @@ function setTheme(theme) {
 function openDialog(title, body, { footer = '', onReady = () => {} } = {}) {
   const dialog = document.getElementById('app-dialog');
   const content = document.getElementById('dialog-content');
-  content.innerHTML = `<div class="dialog-inner"><header class="dialog-header"><div><span class="kicker">تركيّة · بياناتك على جهازك</span><h2 id="dialog-title">${escapeHtml(title)}</h2></div><button class="dialog-close" type="button" data-close-dialog aria-label="إغلاق">×</button></header><div class="dialog-body">${body}</div>${footer ? `<footer class="dialog-footer">${footer}</footer>` : ''}</div>`;
+  content.innerHTML = `<div class="dialog-inner"><header class="dialog-header"><div><span class="kicker">لغتي · بياناتك على جهازك</span><h2 id="dialog-title">${escapeHtml(title)}</h2></div><button class="dialog-close" type="button" data-close-dialog aria-label="إغلاق">×</button></header><div class="dialog-body">${body}</div>${footer ? `<footer class="dialog-footer">${footer}</footer>` : ''}</div>`;
   content.querySelectorAll('[data-close-dialog]').forEach((button) => button.addEventListener('click', () => dialog.close()));
   onReady(content);
   dialog.showModal();
@@ -81,7 +85,7 @@ async function downloadBackup() {
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const anchor = document.createElement('a');
-    anchor.href = url; anchor.download = `turkiya-backup-${new Date().toISOString().slice(0,10)}.json`;
+    anchor.href = url; anchor.download = `loghati-backup-${new Date().toISOString().slice(0,10)}.json`;
     document.body.append(anchor); anchor.click(); anchor.remove(); URL.revokeObjectURL(url);
     toast('نُزّلت نسخة JSON من بيانات هذا الجهاز.');
   } catch (error) { toast(error.message || 'تعذر إنشاء النسخة.'); }
@@ -100,13 +104,25 @@ function renderHome() {
       { name: 'قراءة', percent: 0 }, { name: 'قواعد', percent: 0 }
     ];
     const skillRows = (weak.length ? weak.map((item) => ({ name: item.name, percent: item.percent })) : fallbackSkills).map((item) => `<div class="skill-row"><span>${escapeHtml(item.name)}</span><div class="progress-track"><div class="progress-fill ${item.percent < 45 ? 'warm' : ''}" style="width:${item.percent}%"></div></div><b>${item.percent ? `${item.percent}%` : '—'}</b></div>`).join('');
-    root.innerHTML = `<section class="hero-card"><div class="hero-copy"><span class="kicker">خطوة تركية جديدة اليوم</span><h1>Merhaba!<br>لنبدأ من حيث توقّفت.</h1><p>تعلّم اللغة داخل مواقفها، وامنح ذاكرتك فرصة لاستدعاء ما تعرفه قبل إضافة كلمات جديدة.</p><div class="button-row"><button class="primary-button" type="button" data-route="${nextLesson ? 'lessons' : 'lessons'}"><span data-icon="play"></span>${nextLesson ? 'تابع المسار' : 'استكشف الدروس'}</button><button class="secondary-button" type="button" data-route="review"><span data-icon="refresh"></span>مراجعة ${due.length ? `(${due.length})` : 'اليوم'}</button></div></div><div class="hero-photo"><img src="./assets/images/turkish-tea.jpg" alt="كأس شاي تركي مع مشهد من تركيا" loading="eager"><span class="hero-stamp">لغةٌ تُعاش، لا تُحفظ فقط</span></div></section>
+    root.innerHTML = `<section class="hero-card"><div class="hero-copy"><span class="kicker">خطوة تركية جديدة اليوم</span><h1>مرحباً!<br>لنبدأ من حيث توقّفت.</h1><p>تعلّم اللغة داخل مواقفها، وامنح ذاكرتك فرصة لاستدعاء ما تعرفه قبل إضافة كلمات جديدة.</p><div class="button-row"><button class="primary-button" type="button" data-route="${nextLesson ? 'lessons' : 'lessons'}"><span data-icon="play"></span>${nextLesson ? 'تابع المسار' : 'استكشف الدروس'}</button><button class="secondary-button" type="button" data-route="review"><span data-icon="refresh"></span>مراجعة ${due.length ? `(${due.length})` : 'اليوم'}</button></div></div><div class="hero-photo"><img src="./assets/images/turkish-tea.jpg" alt="كأس شاي تركي مع مشهد من تركيا" loading="eager"><span class="hero-stamp">لغةٌ تُعاش، لا تُحفظ فقط</span></div></section>
       <section class="stats-grid" aria-label="إحصاءات التعلّم"><article class="stat-card"><span class="stat-icon" data-icon="zap"></span><div><span class="stat-value">${profile.xp}</span><span class="stat-label">نقطة خبرة XP</span></div></article><article class="stat-card"><span class="stat-icon" data-icon="flame"></span><div><span class="stat-value">${profile.streak}</span><span class="stat-label">يوم متتالٍ</span></div></article><article class="stat-card"><span class="stat-icon" data-icon="cards"></span><div><span class="stat-value">${stats.practicedCount}</span><span class="stat-label">كلمات قيد المراجعة</span></div></article><article class="stat-card"><span class="stat-icon" data-icon="clock"></span><div><span class="stat-value">${stats.hours}س ${stats.minutes}د</span><span class="stat-label">وقت التعلّم المسجّل</span></div></article></section>
       <section class="section-block content-columns"><article class="panel daily-panel"><div class="daily-copy"><span class="kicker">هدف اليوم</span><h3>${stats.todayMinutes} من ${profile.dailyGoal} دقيقة</h3><p>جلسة قصيرة منتظمة أفضل من جلسة طويلة متقطّعة.</p><div class="button-row" style="margin-top:11px"><button class="quiet-button button-small" type="button" data-route="lessons">ابدأ درساً</button><button class="quiet-button button-small" type="button" data-route="review">${due.length ? `راجع ${due.length} كلمة` : 'افتح المراجعة'}</button></div></div><div class="goal-ring" style="--ring-progress:${stats.goalPercent}%"><span>${stats.goalPercent}%</span></div></article><article class="panel panel-padding"><div class="section-heading"><div><h2>مهاراتك</h2><p>${weak.length ? 'تقدير تقريبي من نتائجك المسجلة' : 'تظهر المؤشرات بعد حل التمارين'}</p></div><span data-icon="target"></span></div><div class="skill-list">${skillRows}</div></article></section>
       <section class="section-block"><div class="section-heading"><div><h2>تعلّم بطريقة متنوعة</h2><p>بدّل بين المهارات لتسترجع اللغة في سياقات مختلفة.</p></div></div><div class="quick-grid"><button class="quick-card" type="button" data-route="lessons"><span class="quick-icon" data-icon="book"></span><strong>المسار التعليمي</strong><small>${stats.completedCount} / ${stats.lessonCount} درساً مكتمل</small></button><button class="quick-card" type="button" data-route="listening"><span class="quick-icon" data-icon="headphones"></span><strong>استمع وافهم</strong><small>تدرّب على المسموع</small></button><button class="quick-card" type="button" data-route="speaking"><span class="quick-icon" data-icon="mic"></span><strong>تحدّث وقلّد</strong><small>Shadowing وتسجيل محلي</small></button><button class="quick-card" type="button" data-route="writing"><span class="quick-icon" data-icon="write"></span><strong>اكتب بنفسك</strong><small>استرجاع وتصحيح مفسّر</small></button></div></section>
       <section class="section-block"><div class="section-heading"><div><h2>خريطة المستويات</h2><p>المستوى يشير إلى تنظيم المحتوى، ولا يمثل شهادة رسمية.</p></div><button type="button" class="section-link" data-route="lessons">عرض المنهج</button></div><div class="level-list">${stats.levelProgress.map((level) => `<article class="level-card"><span class="level-mark">${escapeHtml(level.level)}</span><div><h3>${escapeHtml(levelTitle(level.level))}</h3><p>${level.count} دروس متاحة · ${level.completed} مكتملة</p></div><div class="level-meta"><small>${level.percent}%</small><div class="progress-track"><div class="progress-fill" style="width:${level.percent}%"></div></div></div></article>`).join('')}</div></section>
-      ${nextLesson ? `<section class="section-block panel daily-panel"><div class="daily-copy"><span class="kicker">الدرس المقترح التالي</span><h3>${escapeHtml(nextLesson.titleAr)}</h3><p>${escapeHtml(nextLesson.titleTr || '')} · ${escapeHtml(nextLesson.level)} · ${escapeHtml((nextLesson.objectivesAr || []).join('، '))}</p></div><button class="primary-button button-small" type="button" data-route="lessons">افتح الدرس</button></section>` : ''}
+      ${nextLesson ? `<section class="section-block panel daily-panel"><div class="daily-copy"><span class="kicker">الدرس المقترح التالي</span><h3>${escapeHtml(nextLesson.titleAr)}</h3><p>${escapeHtml(nextLesson.titleTarget || '')} · ${escapeHtml(nextLesson.level)} · ${escapeHtml((nextLesson.objectivesAr || []).join('، '))}</p></div><button class="primary-button button-small" type="button" data-route="lessons">افتح الدرس</button></section>` : ''}
       <div class="notice warning">هذه المنصة تحفظ تقدمك محلياً على هذا الجهاز. خذ نسخة احتياطية قبل تغيير الجهاز أو مسح بيانات المتصفح. الأصوات تعتمد على دعم المتصفح ولا يوجد تحليل نطق ذكي أو مزامنة سحابية.</div>`;
+    const heroTitle = root.querySelector('.hero-copy h1');
+    if (heroTitle) heroTitle.innerHTML = `${escapeHtml(activeLanguage?.greeting || 'مرحباً')}<br>لنبدأ من حيث توقّفت.`;
+    const heroKicker = root.querySelector('.hero-copy .kicker');
+    if (heroKicker) heroKicker.textContent = `خطوة في ${activeLanguage?.nameAr || 'لغة جديدة'} اليوم`;
+    const heroImage = root.querySelector('.hero-photo img');
+    const heroPhoto = root.querySelector('.hero-photo');
+    if (heroImage && activeLanguage?.heroImage) { heroImage.src = activeLanguage.heroImage; heroImage.alt = activeLanguage.heroAltAr || `صورة تعبّر عن ${activeLanguage.nameAr}`; }
+    else if (heroPhoto) { heroPhoto.hidden = true; root.querySelector('.hero-card')?.classList.add('no-hero-image'); }
+    const videoCard = document.createElement('button');
+    videoCard.className = 'quick-card'; videoCard.type = 'button'; videoCard.dataset.route = 'youtube';
+    videoCard.innerHTML = '<span class="quick-icon" data-icon="play"></span><strong>استمع إلى فيديو</strong><small>مقاطع وتمارين YouTube</small>';
+    root.querySelector('.quick-grid')?.append(videoCard);
     applyStaticIcons();
     root.querySelector('.section-block.panel.daily-panel [data-route="lessons"]')?.addEventListener('click', (event) => {
       event.preventDefault();
@@ -138,7 +154,7 @@ async function renderProfile() {
     { title: 'قارئ نشط', detail: 'حلّ اختبار قراءة', earned: stats.skills.some((item) => item.name.includes('قراءة')) }
   ];
   root.innerHTML = `<div class="view-header"><div><span class="kicker">تقدّم محلي وخصوصية واضحة</span><h1>ملفي الشخصي</h1><p>لا يوجد حساب أو مزامنة سحابية؛ بياناتك محفوظة في متصفح هذا الجهاز.</p></div><span class="status-pill">${profile.xp} XP</span></div>
-    <div class="profile-grid"><section class="panel profile-card"><div class="profile-head"><div class="profile-avatar">ت</div><div><h2>${escapeHtml(profile.displayName || 'متعلّم التركية')}</h2><p>المستوى النشط: ${escapeHtml(profile.currentLevel || 'Pre-A1')}</p></div></div><form id="profile-form"><div class="form-field"><label for="display-name">الاسم المعروض على هذا الجهاز</label><input id="display-name" maxlength="35" value="${escapeAttr(profile.displayName || '')}"></div><div class="form-field"><label for="daily-goal">هدف التعلّم اليومي (دقيقة)</label><input id="daily-goal" type="number" min="5" max="180" step="5" value="${Number(profile.dailyGoal) || 20}"></div><button class="primary-button button-small" type="submit">حفظ الإعدادات</button></form><div class="backup-row"><button id="export-backup" class="secondary-button button-small" type="button">تصدير JSON</button><button id="import-backup" class="secondary-button button-small" type="button">استيراد نسخة</button><input id="backup-file" type="file" accept="application/json,.json" hidden></div><div class="notice">النسخ الاحتياطي يشمل تقدمك ومفرداتك وسجل الاختبارات. احفظ الملف في مكان آمن.</div></section>
+    <div class="profile-grid"><section class="panel profile-card"><div class="profile-head"><div class="profile-avatar">ت</div><div><h2>${escapeHtml(profile.displayName || `متعلّم ${activeLanguage?.nameAr || 'اللغة'}`)}</h2><p>المستوى النشط: ${escapeHtml(profile.currentLevel || 'Pre-A1')}</p></div></div><form id="profile-form"><div class="form-field"><label for="display-name">الاسم المعروض على هذا الجهاز</label><input id="display-name" maxlength="35" value="${escapeAttr(profile.displayName || '')}"></div><div class="form-field"><label for="daily-goal">هدف التعلّم اليومي (دقيقة)</label><input id="daily-goal" type="number" min="5" max="180" step="5" value="${Number(profile.dailyGoal) || 20}"></div><button class="primary-button button-small" type="submit">حفظ الإعدادات</button></form><div class="backup-row"><button id="export-backup" class="secondary-button button-small" type="button">تصدير JSON</button><button id="import-backup" class="secondary-button button-small" type="button">استيراد نسخة</button><input id="backup-file" type="file" accept="application/json,.json" hidden></div><div class="notice">النسخ الاحتياطي يشمل تقدمك ومفرداتك وسجل الاختبارات. احفظ الملف في مكان آمن.</div></section>
     <section class="panel profile-card"><div class="section-heading"><div><h2>إنجازاتك</h2><p>شارات قليلة مرتبطة بعادات التعلم، وليست سباقاً.</p></div><span data-icon="award"></span></div><div class="achievement-list">${badges.map((badge) => `<div class="achievement"><span class="achievement-icon" style="opacity:${badge.earned ? 1 : .35}" data-icon="award"></span><div><strong>${escapeHtml(badge.title)} ${badge.earned ? '✓' : '· قريباً'}</strong><small>${escapeHtml(badge.detail)}</small></div></div>`).join('')}</div></section></div>
     <section class="section-block panel panel-padding"><div class="section-heading"><div><h2>ملخص التقدّم</h2><p>${stats.completedCount} درساً · ${stats.vocabularyCount} كلمة في القاموس · ${stats.quizCount} نتيجة اختبار</p></div></div><div class="stats-grid"><article class="stat-card"><span class="stat-icon" data-icon="book"></span><div><span class="stat-value">${stats.completedCount}</span><span class="stat-label">دروس مكتملة</span></div></article><article class="stat-card"><span class="stat-icon" data-icon="cards"></span><div><span class="stat-value">${stats.favoriteCount}</span><span class="stat-label">مفردات مفضلة</span></div></article><article class="stat-card"><span class="stat-icon" data-icon="clock"></span><div><span class="stat-value">${stats.hours}س ${stats.minutes}د</span><span class="stat-label">وقت نشط مسجل</span></div></article><article class="stat-card"><span class="stat-icon" data-icon="target"></span><div><span class="stat-value">${stats.quizCount}</span><span class="stat-label">محاولات مسجلة</span></div></article></div></section>
     <section class="section-block panel panel-padding"><div class="section-heading"><div><h2>بيانات الجهاز</h2><p>تعمل هذه الصفحة دون خادم؛ حذف بيانات الموقع من إعدادات المتصفح قد يمحو سجل التعلم.</p></div></div><button id="clear-local-data" type="button" class="danger-button button-small">حذف بيانات التعلّم المحلية</button></section>`;
@@ -149,7 +165,7 @@ async function renderProfile() {
   root.querySelector('#daily-goal')?.closest('.form-field')?.after(weeklyGoalField);
   root.querySelector('#profile-form').addEventListener('submit', async (event) => {
     event.preventDefault();
-    const name = root.querySelector('#display-name').value.trim() || 'متعلّم التركية';
+    const name = root.querySelector('#display-name').value.trim() || `متعلّم ${activeLanguage?.nameAr || 'اللغة'}`;
     const goal = Math.min(180, Math.max(5, Number(root.querySelector('#daily-goal').value) || 20));
     const weeklyGoal = Math.min(900, Math.max(30, Number(root.querySelector('#weekly-goal').value) || 100));
     await updateProfile({ displayName: name, dailyGoal: goal, weeklyGoalMinutes: weeklyGoal }); toast('حُفظت إعداداتك على هذا الجهاز.'); renderProfile();
@@ -171,7 +187,7 @@ async function renderProfile() {
     event.target.value = '';
   });
   root.querySelector('#clear-local-data').addEventListener('click', async () => {
-    const approved = window.confirm('سيُحذف تقدمك ومراجعاتك ومفضلاتك ونتائجك من هذا الجهاز. هل صدّرت نسخة احتياطية قبل المتابعة؟');
+    const approved = window.confirm('سيُحذف تقدمك ومراجعاتك ومفضلاتك ونتائجك المحلية لكل اللغات من هذا الجهاز. لا يمكن التراجع عن ذلك إلا باستعادة نسخة احتياطية. هل صدّرت نسخة احتياطية قبل المتابعة؟');
     if (!approved) return;
     for (const name of storeNames) await clearStore(name);
     toast('حُذفت البيانات المحلية.'); window.dispatchEvent(new CustomEvent('turkiya:progress-changed')); renderProfile();
@@ -181,18 +197,23 @@ async function renderProfile() {
 async function renderRoute(route) {
   if (!root) return;
   const previousRoute = root.dataset.route;
-  if (previousRoute === 'speaking' && route !== 'speaking') releaseAudio();
+  if (routeCleanup) { routeCleanup(); routeCleanup = null; }
+  if ((previousRoute === 'speaking' || previousRoute === 'youtube') && previousRoute !== route) releaseAudio();
   root.dataset.route = route;
   root.setAttribute('aria-busy', 'true');
-  document.title = `${routeTitle(route)} — تركيّة`;
+  document.title = `${routeTitle(route)} — لغتي`;
   try {
     switch (route) {
       case 'home': renderHome(); break;
       case 'lessons': await renderLessons(root, { toast }); break;
-      case 'alphabet': await renderAlphabet(root, { toast }); break;
+      case 'alphabet':
+        if (activeLanguage?.id === 'tr' && activeLanguage.features?.alphabet) await renderAlphabet(root, { toast });
+        else root.innerHTML = '<div class="empty-state"><strong>قسم الحروف لهذه اللغة قيد الإعداد</strong><p>ستظهر الحروف هنا عند إضافة محتوى أبجدي مكتمل لهذه اللغة.</p></div>';
+        break;
       case 'vocabulary': await renderVocabulary(root, { toast }); break;
       case 'grammar': await renderGrammar(root); break;
       case 'listening': await renderListening(root, { toast }); break;
+      case 'youtube': routeCleanup = renderYouTubeLab(root, { language: activeLanguage, toast }); break;
       case 'speaking': await renderSpeaking(root, { toast }); break;
       case 'reading': await renderReading(root, { toast }); break;
       case 'writing': await renderWriting(root); break;
@@ -207,7 +228,7 @@ async function renderRoute(route) {
 }
 
 function routeTitle(route) {
-  return ({home:'الرئيسية',lessons:'المسار التعليمي',alphabet:'الحروف والأصوات',vocabulary:'المفردات',grammar:'القواعد',listening:'الاستماع',speaking:'التحدث',reading:'القراءة',writing:'الكتابة',review:'مراجعة اليوم',profile:'ملفي الشخصي'})[route] || 'تعلّم التركية';
+  return ({home:'الرئيسية',lessons:'المسار التعليمي',alphabet:'الحروف والأصوات',vocabulary:'المفردات',grammar:'القواعد',listening:'الاستماع',youtube:'فيديوهات للاستماع',speaking:'التحدث',reading:'القراءة',writing:'الكتابة',review:'مراجعة اليوم',profile:'ملفي الشخصي'})[route] || `تعلّم ${activeLanguage?.nameAr || 'اللغات'}`;
 }
 
 async function updateReviewBadge() {
@@ -246,7 +267,17 @@ async function init() {
     root.innerHTML = `<div class="empty-state"><strong>تعذر تهيئة التخزين المحلي</strong><p>${escapeHtml(error.message)}</p><p>جرّب متصفحاً حديثاً يدعم IndexedDB وافتح الموقع عبر HTTPS أو خادم محلي.</p></div>`;
     return;
   }
-  const savedTheme = localStorage.getItem('turkiya-theme') || 'light';
+  try {
+    const picker = await mountLanguagePicker(document.getElementById('language-switcher'), { onChange: () => window.location.reload(), onError: (error) => toast(error?.message || 'تعذر تغيير اللغة.') });
+    activeLanguage = picker.language;
+    const languageLabel = document.getElementById('target-language-context');
+    if (languageLabel) languageLabel.textContent = `تعلّم ${activeLanguage.nameAr}`;
+    document.querySelectorAll('[data-requires-alphabet]').forEach((element) => { element.hidden = !(activeLanguage.id === 'tr' && activeLanguage.features?.alphabet); });
+  } catch (error) {
+    root.innerHTML = `<div class="empty-state"><strong>تعذر تحميل قائمة اللغات</strong><p>${escapeHtml(error.message)}</p></div>`;
+    return;
+  }
+  const savedTheme = localStorage.getItem('loghati-theme') || localStorage.getItem('turkiya-theme') || 'light';
   setTheme(savedTheme);
   document.getElementById('theme-toggle')?.addEventListener('click', () => setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'));
   document.getElementById('profile-button')?.addEventListener('click', () => navigate('profile'));

@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "defaultLanguage": "tr",
+  "interfaceLanguage": "ar",
+  "languages": [
+    {
+      "id": "tr",
+      "nameAr": "التركية",
+      "nativeName": "Türkçe",
+      "locale": "tr-TR",
+      "captionLanguage": "tr",
+      "direction": "ltr",
+      "greeting": "Merhaba!",
+      "status": "active",
+      "dataPath": "languages/tr",
+      "heroImage": "./assets/images/turkish-tea.jpg",
+      "heroAltAr": "كأس شاي تركي مع مشهد من تركيا",
+      "features": { "alphabet": true }
+    },
+    {
+      "id": "fa",
+      "nameAr": "الفارسية",
+      "nativeName": "فارسی",
+      "locale": "fa-IR",
+      "captionLanguage": "fa",
+      "direction": "rtl",
+      "greeting": "سلام!",
+      "status": "planned",
+      "dataPath": "languages/fa",
+      "heroImage": "",
+      "heroAltAr": "",
+      "features": { "alphabet": false },
+      "noteAr": "تُفعّل بعد إعداد دروس ومفردات وقواعد وتمارين فعلية."
+    }
+  ]
+}

@@ -1,26 +1,28 @@
 import { getAllLessons, getGrammar, getVocabulary } from './data.js';
 import { getAll, get, put } from './database.js';
 import { addToReview, getDueReviews, rateReview } from './spaced-repetition.js';
-import { speakTurkish, startRecording, stopRecording, recognizeTurkish, canRecognize, isRecording } from './audio.js';
+import { speakTarget, startRecording, stopRecording, recognizeTarget, canRecognize, isRecording } from './audio.js';
 import { saveQuizResult, recordStudy } from './progress.js';
 import { escapeHtml, escapeAttr, questionMarkup, matchesExpected } from './quizzes.js';
+import { getTargetLocale, getTargetTextAttrs } from './language-registry.js';
 
 const icon = (name) => window.turkiyaIcon?.(name) || '';
+const languageName = () => document.documentElement.dataset.targetName || 'اللغة المستهدفة';
 
 export async function renderGrammar(root) {
-  root.innerHTML = '<div class="loading-state"><span class="loading-ring"></span><p>نحمّل قواعد التركية…</p></div>';
+  root.innerHTML = '<div class="loading-state"><span class="loading-ring"></span><p>نحمّل قواعد اللغة النشطة…</p></div>';
   try {
     const rules = await getGrammar();
-    root.innerHTML = `<div class="view-header"><div><span class="kicker">افهم كيف تعمل اللغة</span><h1>القواعد التركية</h1><p>قواعد قصيرة داخل أمثلة استعمالية، مع تصحيح خطأ شائع وسبب التصحيح.</p></div><span class="status-pill">${rules.length} قاعدة</span></div>
+    root.innerHTML = `<div class="view-header"><div><span class="kicker">افهم كيف تعمل اللغة</span><h1>قواعد ${escapeHtml(languageName())}</h1><p>قواعد قصيرة داخل أمثلة استعمالية، مع تصحيح خطأ شائع وسبب التصحيح.</p></div><span class="status-pill">${rules.length} قاعدة</span></div>
       <label class="search-box"><span data-icon="search"></span><input id="grammar-search" type="search" placeholder="ابحث عن قاعدة أو مستوى…"></label>
       <div class="filter-row">${['all','Pre-A1','A1','A2','B1','B2','C1','C2'].map((level) => `<button class="filter-chip ${level === 'all' ? 'active' : ''}" data-grammar-level="${level}">${level === 'all' ? 'كل المستويات' : level}</button>`).join('')}</div>
-      <div id="grammar-list">${rules.map((rule) => `<details class="panel rule-card" data-rule data-level="${escapeAttr(rule.level)}" data-search="${escapeAttr([rule.titleAr,rule.explanationAr,rule.level].join(' '))}"><summary class="rule-summary"><span><span class="level-pill">${escapeHtml(rule.level)}</span> <strong>${escapeHtml(rule.titleAr)}</strong></span><span data-icon="chevron"></span></summary><div class="rule-body"><p>${escapeHtml(rule.explanationAr)}</p><div class="rule-formula">${escapeHtml(rule.form || '')}</div><p><b>متى نستخدمها؟</b> ${escapeHtml(rule.whenToUse || '')}</p>${(rule.examples || []).map((example) => `<div class="example-row"><div><span class="tr" dir="ltr" lang="tr">${escapeHtml(example.tr)}</span><br>${escapeHtml(example.ar)}</div><div><span class="wrong-example" dir="ltr">${escapeHtml(example.wrong || '')}</span><br><span class="corrected-example" dir="ltr">${escapeHtml(example.correction || example.tr)}</span><small class="word-example">${escapeHtml(example.why || '')}</small></div></div>`).join('')}</div></details>`).join('') || '<div class="empty-state"><strong>لا توجد قواعد محمّلة</strong><p>تحقق من ملف بيانات القواعد.</p></div>'}</div>`;
+      <div id="grammar-list">${rules.map((rule) => `<details class="panel rule-card" data-rule data-level="${escapeAttr(rule.level)}" data-search="${escapeAttr([rule.titleAr,rule.explanationAr,rule.level].join(' '))}"><summary class="rule-summary"><span><span class="level-pill">${escapeHtml(rule.level)}</span> <strong>${escapeHtml(rule.titleAr)}</strong></span><span data-icon="chevron"></span></summary><div class="rule-body"><p>${escapeHtml(rule.explanationAr)}</p><div class="rule-formula" ${getTargetTextAttrs()}>${escapeHtml(rule.form || '')}</div><p><b>متى نستخدمها؟</b> ${escapeHtml(rule.whenToUse || '')}</p>${(rule.examples || []).map((example) => `<div class="example-row"><div><span class="tr" ${getTargetTextAttrs()}>${escapeHtml(example.target)}</span><br>${escapeHtml(example.ar)}</div><div><span class="wrong-example" ${getTargetTextAttrs()}>${escapeHtml(example.wrong || '')}</span><br><span class="corrected-example" ${getTargetTextAttrs()}>${escapeHtml(example.correction || example.target)}</span><small class="word-example">${escapeHtml(example.why || '')}</small></div></div>`).join('')}</div></details>`).join('') || '<div class="empty-state"><strong>لا توجد قواعد محمّلة</strong><p>تحقق من ملف بيانات القواعد.</p></div>'}</div>`;
     root.querySelectorAll('[data-icon]').forEach((el) => { el.innerHTML = icon(el.closest('summary') ? 'chevron' : 'search'); });
     const practice = document.createElement('section');
     practice.className = 'section-block panel panel-padding';
     const samples = rules.flatMap((rule) => (rule.examples || []).map((example) => ({
       level: rule.level, title: rule.titleAr, questionAr: `اختر الصياغة الصحيحة: ${rule.titleAr}`,
-      options: [example.correction || example.tr, example.wrong].filter(Boolean), correctIndex: 0, explanationAr: example.why || ''
+      options: [example.correction || example.target, example.wrong].filter(Boolean), correctIndex: 0, explanationAr: example.why || ''
     })));
     practice.innerHTML = `<div class="section-heading"><div><h2>اختبر القاعدة</h2><p>اختر الصياغة الصحيحة؛ تُحفظ النتيجة محلياً.</p></div></div>${samples.slice(0, 8).map((question, index) => `<div data-grammar-sample="${escapeAttr(question.title)}">${questionMarkup(question, index, 'grammar')}</div>`).join('')}`;
     root.querySelector('#grammar-list').after(practice);
@@ -57,14 +59,14 @@ export async function renderListening(root, { toast = () => {} } = {}) {
     const items = lessons.flatMap((lesson) => (lesson.listening || []).map((item, index) => ({ ...item, id: `${lesson.id}-listen-${index}`, level: lesson.level, lesson: lesson.titleAr })));
     const vocab = await getVocabulary();
     root.innerHTML = `<div class="view-header"><div><span class="kicker">استمع، توقّع، ثم تحقّق</span><h1>مختبر الاستماع</h1><p>استمع إلى الجملة بتمهّل أو بسرعة طبيعية. الصوت الذي يعمل في هذه الصفحة هو صوت الجهاز الآلي عند توفره، وليس تسجيلاً لمتحدث أصلي.</p></div><span class="status-pill">${items.length} تمريناً</span></div>
-      <div class="notice warning">تختلف الأصوات التركية المتاحة من جهاز إلى آخر. إذا لم تجد صوتاً تركياً، يبقى النص والاختبار متاحين ويمكن إعادة المحاولة لاحقاً.</div>
+      <div class="notice warning">تختلف الأصوات المتاحة لـ${escapeHtml(languageName())} من جهاز إلى آخر. إذا لم تجد صوتاً باللغة النشطة، يبقى النص والاختبار متاحين ويمكن إعادة المحاولة لاحقاً.</div>
       <div class="filter-row"><label class="range-control">السرعة <input id="speech-rate" type="range" min="0.65" max="1.1" step="0.05" value="0.85"><span id="speech-rate-label">0.85×</span></label><label class="filter-chip"><input type="checkbox" id="show-listening-text"> إظهار النصوص</label></div>
-      ${items.length ? items.map((item, index) => `<article class="activity-card" data-listen-card><div class="section-heading"><div><span class="level-pill">${escapeHtml(item.level)}</span><h3>${escapeHtml(item.lesson)}</h3></div><span class="word-pos">تمرين ${index + 1}</span></div><button class="secondary-button button-small" type="button" data-speak-listening="${escapeAttr(item.id)}">${icon('volume')} استمع</button><button class="quiet-button button-small" type="button" data-toggle-listening>إظهار النص</button><p class="activity-sentence" data-listen-sentence hidden lang="tr" dir="ltr">${escapeHtml(item.sentenceTr)}</p><div class="question-card" data-question="${escapeAttr(item.id)}" data-correct="${Number(item.correctIndex) || 0}" data-explanation="${escapeAttr(item.explanationAr || '')}"><p>${escapeHtml(item.questionAr)}</p><div class="option-list">${(item.options || []).map((option, optionIndex) => `<label class="quiz-option"><input type="radio" name="listen-${index}" value="${optionIndex}"><span>${escapeHtml(option)}</span></label>`).join('')}</div><div class="quiz-feedback" aria-live="polite"></div></div></article>`).join('') : '<div class="empty-state"><strong>لا توجد تمارين استماع متاحة بعد</strong><p>ستظهر التمارين فور إضافة جمل إلى ملفات الدروس.</p></div>'}
-      <section class="section-block panel panel-padding"><div class="section-heading"><div><h2>كلمات فاتتك؟</h2><p>أدخل الكلمات التركية مفصولة بفواصل أو مسافات لإضافتها إلى المراجعة إن كانت في القاموس.</p></div></div><div class="form-field"><label for="missed-words">الكلمات غير المفهومة</label><input id="missed-words" lang="tr" dir="ltr" placeholder="merhaba, teşekkürler"></div><button id="add-missed" type="button" class="secondary-button button-small">أضف الكلمات المعروفة للمراجعة</button></section>`;
+      ${items.length ? items.map((item, index) => `<article class="activity-card" data-listen-card><div class="section-heading"><div><span class="level-pill">${escapeHtml(item.level)}</span><h3>${escapeHtml(item.lesson)}</h3></div><span class="word-pos">تمرين ${index + 1}</span></div><button class="secondary-button button-small" type="button" data-speak-listening="${escapeAttr(item.id)}">${icon('volume')} استمع</button><button class="quiet-button button-small" type="button" data-toggle-listening>إظهار النص</button><p class="activity-sentence" data-listen-sentence hidden ${getTargetTextAttrs()}>${escapeHtml(item.sentenceTarget)}</p><div class="question-card" data-question="${escapeAttr(item.id)}" data-correct="${Number(item.correctIndex) || 0}" data-explanation="${escapeAttr(item.explanationAr || '')}"><p>${escapeHtml(item.questionAr)}</p><div class="option-list">${(item.options || []).map((option, optionIndex) => `<label class="quiz-option"><input type="radio" name="listen-${index}" value="${optionIndex}"><span>${escapeHtml(option)}</span></label>`).join('')}</div><div class="quiz-feedback" aria-live="polite"></div></div></article>`).join('') : '<div class="empty-state"><strong>لا توجد تمارين استماع متاحة بعد</strong><p>ستظهر التمارين فور إضافة جمل إلى ملفات الدروس.</p></div>'}
+      <section class="section-block panel panel-padding"><div class="section-heading"><div><h2>كلمات فاتتك؟</h2><p>أدخل الكلمات باللغة النشطة مفصولة بفواصل أو مسافات لإضافتها إلى المراجعة إن كانت في القاموس.</p></div></div><div class="form-field"><label for="missed-words">الكلمات غير المفهومة</label><input id="missed-words" ${getTargetTextAttrs()} placeholder="اكتب كلمة أو أكثر هنا"></div><button id="add-missed" type="button" class="secondary-button button-small">أضف الكلمات المعروفة للمراجعة</button></section>`;
     root.querySelectorAll('[data-speak-listening]').forEach((button) => button.addEventListener('click', () => {
       const item = items.find((entry) => entry.id === button.dataset.speakListening);
       const speed = Number(root.querySelector('#speech-rate').value);
-      const response = item && speakTurkish(item.sentenceTr, { rate: speed });
+      const response = item && speakTarget(item.sentenceTarget, { rate: speed });
       if (!response?.ok) toast(response?.message || 'تعذر تشغيل النطق.');
       else toast('صوت آلي من الجهاز، وليس تسجيلاً أصلياً.');
     }));
@@ -88,8 +90,8 @@ export async function renderListening(root, { toast = () => {} } = {}) {
     }));
     root.querySelector('#add-missed').addEventListener('click', async () => {
       const raw = root.querySelector('#missed-words').value;
-      const tokens = raw.split(/[\s,،;؛]+/u).map((item) => item.trim().toLocaleLowerCase('tr-TR')).filter(Boolean);
-      const found = vocab.filter((word) => tokens.includes(word.tr.toLocaleLowerCase('tr-TR')));
+      const tokens = raw.split(/[\s,،;؛]+/u).map((item) => item.trim().toLocaleLowerCase(getTargetLocale())).filter(Boolean);
+      const found = vocab.filter((word) => tokens.includes(word.target.toLocaleLowerCase(getTargetLocale())));
       for (const word of found) await addToReview(word);
       toast(found.length ? `أُضيفت ${found.length} كلمة إلى المراجعة.` : 'لم نجد كلمات مطابقة في القاموس.');
     });
@@ -103,17 +105,17 @@ export async function renderSpeaking(root, { toast = () => {} } = {}) {
     const dialogues = lessons.flatMap((lesson) => lesson.dialogue?.length ? [{ id: lesson.id, level: lesson.level, title: lesson.titleAr, dialogue: lesson.dialogue }] : []);
     root.innerHTML = `<div class="view-header"><div><span class="kicker">تدرّب على قولها بصوتك</span><h1>التحدث وShadowing</h1><p>استمع إلى الجملة ثم قلّدها. يمكن تسجيل صوتك محلياً للاستماع والمقارنة، من دون رفعه إلى خادم.</p></div><span class="status-pill">${dialogues.length} حوارات</span></div>
       <div class="notice warning">صوت النموذج من SpeechSynthesis وقد يكون صوتاً آلياً. تعرف المتصفح على الكلام، عند توفره، تقديري ويتطلب إذن الميكروفون؛ لا يقيّم جودة النطق حكماً دقيقاً.</div>
-      ${dialogues.map((item) => `<article class="activity-card"><div class="section-heading"><div><span class="level-pill">${escapeHtml(item.level)}</span><h3>${escapeHtml(item.title)}</h3></div></div>${item.dialogue.map((line,index) => `<div class="example-row"><div><span class="tr" lang="tr" dir="ltr">${escapeHtml(line.tr)}</span></div><div><b>${escapeHtml(line.speaker || `المتحدث ${index + 1}`)}:</b> ${escapeHtml(line.ar)} <button class="tiny-icon-button" type="button" data-speak="${escapeAttr(line.tr)}" aria-label="استمع"><span data-icon="volume"></span></button></div></div>`).join('')}</article>`).join('')}
-      <section class="section-block panel panel-padding"><div class="section-heading"><div><h2>سجّل وقارن</h2><p>اختر جملة أعلاه، استمع إليها، ثم سجّل صوتك وأعد تشغيل التسجيل.</p></div></div><div class="form-field"><label for="shadow-line">الجملة التركية للتدريب</label><input id="shadow-line" lang="tr" dir="ltr" placeholder="Merhaba, nasılsınız?"></div><div class="audio-controls"><button id="model-play" class="secondary-button button-small" type="button">${icon('volume')} استمع للنموذج</button><button id="record-toggle" class="primary-button button-small" type="button">${icon('mic')} ابدأ التسجيل</button><button id="recognize-toggle" class="quiet-button button-small" type="button" ${canRecognize() ? '' : 'disabled'}>تعرف تقريبي على الكلام</button><span id="record-status" class="word-pos"></span></div><p id="speech-comparison" class="transcript" aria-live="polite"></p><audio id="recorded-audio" controls hidden></audio></section>`;
+      ${dialogues.map((item) => `<article class="activity-card"><div class="section-heading"><div><span class="level-pill">${escapeHtml(item.level)}</span><h3>${escapeHtml(item.title)}</h3></div></div>${item.dialogue.map((line,index) => `<div class="example-row"><div><span class="tr" ${getTargetTextAttrs()}>${escapeHtml(line.target)}</span></div><div><b>${escapeHtml(line.speaker || `المتحدث ${index + 1}`)}:</b> ${escapeHtml(line.ar)} <button class="tiny-icon-button" type="button" data-speak="${escapeAttr(line.target)}" aria-label="استمع"><span data-icon="volume"></span></button></div></div>`).join('')}</article>`).join('')}
+      <section class="section-block panel panel-padding"><div class="section-heading"><div><h2>سجّل وقارن</h2><p>اختر جملة أعلاه، استمع إليها، ثم سجّل صوتك وأعد تشغيل التسجيل.</p></div></div><div class="form-field"><label for="shadow-line">جملة باللغة النشطة للتدريب</label><input id="shadow-line" ${getTargetTextAttrs()} placeholder="اكتب جملة هنا…"></div><div class="audio-controls"><button id="model-play" class="secondary-button button-small" type="button">${icon('volume')} استمع للنموذج</button><button id="record-toggle" class="primary-button button-small" type="button">${icon('mic')} ابدأ التسجيل</button><button id="recognize-toggle" class="quiet-button button-small" type="button" ${canRecognize() ? '' : 'disabled'}>تعرف تقريبي على الكلام</button><span id="record-status" class="word-pos"></span></div><p id="speech-comparison" class="transcript" aria-live="polite"></p><audio id="recorded-audio" controls hidden></audio></section>`;
     root.querySelectorAll('[data-icon]').forEach((el) => { el.innerHTML = icon('volume'); });
     root.querySelectorAll('[data-speak]').forEach((button) => button.addEventListener('click', () => {
-      const result = speakTurkish(button.dataset.speak);
+      const result = speakTarget(button.dataset.speak);
       toast(result.ok ? 'استمع ثم قلّد الإيقاع والنبر.' : result.message);
     }));
     root.querySelector('#model-play').addEventListener('click', () => {
       const text = root.querySelector('#shadow-line').value.trim();
-      if (!text) return toast('أدخل جملة تركية أولاً.');
-      const result = speakTurkish(text); if (!result.ok) toast(result.message);
+      if (!text) return toast('أدخل جملة باللغة النشطة أولاً.');
+      const result = speakTarget(text); if (!result.ok) toast(result.message);
     });
     root.querySelector('#record-toggle').addEventListener('click', async (event) => {
       const button = event.currentTarget;
@@ -135,7 +137,7 @@ export async function renderSpeaking(root, { toast = () => {} } = {}) {
       if (!canRecognize()) return toast('التعرف على الكلام غير مدعوم في هذا المتصفح.');
       status.textContent = 'جارٍ الاستماع… اسمح بالميكروفون عند الطلب.';
       try {
-        recognizeTurkish({ onResult: (text) => {
+        recognizeTarget({ onResult: (text) => {
           const target = root.querySelector('#shadow-line').value.trim();
           status.textContent = `سمع المتصفح: «${text}» — مقارنة نصية تقريبية فقط${target ? `؛ الجملة المقصودة: «${target}»` : ''}.`;
         }, onError: (error) => { status.textContent = `تعذر التعرف على الكلام: ${error}.`; }, onEnd: () => {} });
@@ -148,7 +150,7 @@ function readingWords(text, vocab) {
   return String(text || '').split(/(\s+)/u).map((part) => {
     if (!part.trim()) return part;
     const clean = part.replace(/^[^\p{L}ığüşöçİĞÜŞÖÇ]+|[^\p{L}ığüşöçİĞÜŞÖÇ]+$/gu, '');
-    const found = vocab.find((word) => word.tr?.toLocaleLowerCase('tr-TR') === clean.toLocaleLowerCase('tr-TR'));
+    const found = vocab.find((word) => word.target?.toLocaleLowerCase(getTargetLocale()) === clean.toLocaleLowerCase(getTargetLocale()));
     return `<button type="button" data-read-word="${escapeAttr(clean)}" title="${found ? escapeAttr(found.ar) : 'اضغط لمعرفة المعنى'}">${escapeHtml(part)}</button>`;
   }).join('');
 }
@@ -158,18 +160,18 @@ export async function renderReading(root, { toast = () => {} } = {}) {
   try {
     const [lessons, vocab] = await Promise.all([getAllLessons(), getVocabulary()]);
     const readings = lessons.filter((lesson) => lesson.reading).map((lesson) => ({ ...lesson.reading, level: lesson.level, lesson: lesson.titleAr, vocab: lesson.vocabulary || [] }));
-    root.innerHTML = `<div class="view-header"><div><span class="kicker">اقرأ من أجل المعنى</span><h1>مكتبة القراءة</h1><p>اختر نصاً مناسباً لمستواك، اخفِ الترجمة أولاً، واضغط على كلمة تركية لتسمعها أو ترى معناها إن كانت في القاموس.</p></div><span class="status-pill">${readings.length} نصوص</span></div>
-      ${readings.map((item,index) => `<article class="panel reading-card section-block"><div class="section-heading"><div><span class="level-pill">${escapeHtml(item.level)}</span><h2>${escapeHtml(item.titleAr || item.lesson)}</h2></div><button class="tiny-icon-button" type="button" data-speak-reading="${index}" aria-label="استمع إلى النص"><span data-icon="volume"></span></button></div><p class="word-pos">${escapeHtml(item.lesson)}</p><div class="reading-text" lang="tr" dir="ltr">${readingWords(item.textTr,vocab)}</div><button class="quiet-button button-small" type="button" data-toggle-read-translation>إظهار الترجمة العربية</button><div class="reading-translation" hidden>${escapeHtml(item.translationAr || '')}</div>${(item.questions || []).map((q,qIndex) => `<div class="question-card" data-question="read-${index}-${qIndex}" data-correct="${Number(q.correctIndex) || 0}" data-explanation="${escapeAttr(q.explanationAr || '')}"><p>${escapeHtml(q.questionAr)}</p><div class="option-list">${(q.options || []).map((option,optionIndex) => `<label class="quiz-option"><input type="radio" name="read-${index}-${qIndex}" value="${optionIndex}"><span>${escapeHtml(option)}</span></label>`).join('')}</div><div class="quiz-feedback" aria-live="polite"></div></div>`).join('')}</article>`).join('') || '<div class="empty-state"><strong>لا توجد نصوص منشورة في هذه النسخة</strong><p>أضف نصوص القراءة إلى بيانات الدروس.</p></div>'}`;
+    root.innerHTML = `<div class="view-header"><div><span class="kicker">اقرأ من أجل المعنى</span><h1>مكتبة القراءة</h1><p>اختر نصاً مناسباً لمستواك، اخفِ الترجمة أولاً، واضغط على كلمة باللغة المستهدفة لتسمعها أو ترى معناها إن كانت في القاموس.</p></div><span class="status-pill">${readings.length} نصوص</span></div>
+      ${readings.map((item,index) => `<article class="panel reading-card section-block"><div class="section-heading"><div><span class="level-pill">${escapeHtml(item.level)}</span><h2>${escapeHtml(item.titleAr || item.lesson)}</h2></div><button class="tiny-icon-button" type="button" data-speak-reading="${index}" aria-label="استمع إلى النص"><span data-icon="volume"></span></button></div><p class="word-pos">${escapeHtml(item.lesson)}</p><div class="reading-text" ${getTargetTextAttrs()}>${readingWords(item.textTarget,vocab)}</div><button class="quiet-button button-small" type="button" data-toggle-read-translation>إظهار الترجمة العربية</button><div class="reading-translation" hidden>${escapeHtml(item.translationAr || '')}</div>${(item.questions || []).map((q,qIndex) => `<div class="question-card" data-question="read-${index}-${qIndex}" data-correct="${Number(q.correctIndex) || 0}" data-explanation="${escapeAttr(q.explanationAr || '')}"><p>${escapeHtml(q.questionAr)}</p><div class="option-list">${(q.options || []).map((option,optionIndex) => `<label class="quiz-option"><input type="radio" name="read-${index}-${qIndex}" value="${optionIndex}"><span>${escapeHtml(option)}</span></label>`).join('')}</div><div class="quiz-feedback" aria-live="polite"></div></div>`).join('')}</article>`).join('') || '<div class="empty-state"><strong>لا توجد نصوص منشورة في هذه النسخة</strong><p>أضف نصوص القراءة إلى بيانات الدروس.</p></div>'}`;
     root.querySelectorAll('[data-icon]').forEach((el) => { el.innerHTML = icon('volume'); });
     root.querySelectorAll('[data-toggle-read-translation]').forEach((button) => button.addEventListener('click', () => {
       const box = button.nextElementSibling; box.hidden = !box.hidden; button.textContent = box.hidden ? 'إظهار الترجمة العربية' : 'إخفاء الترجمة';
     }));
     root.querySelectorAll('[data-speak-reading]').forEach((button) => button.addEventListener('click', () => {
-      const result = speakTurkish(readings[Number(button.dataset.speakReading)].textTr, { rate: 0.82 }); if (!result.ok) toast(result.message); else toast('صوت آلي من الجهاز.');
+      const result = speakTarget(readings[Number(button.dataset.speakReading)].textTarget, { rate: 0.82 }); if (!result.ok) toast(result.message); else toast('صوت آلي من الجهاز.');
     }));
     root.querySelectorAll('[data-read-word]').forEach((button) => button.addEventListener('click', () => {
-      const word = vocab.find((item) => item.tr?.toLocaleLowerCase('tr-TR') === button.dataset.readWord.toLocaleLowerCase('tr-TR'));
-      if (word) toast(`${word.tr} — ${word.ar}`); else { toast('لم نجد ترجمة لهذه الصيغة في القاموس.'); speakTurkish(button.dataset.readWord); }
+      const word = vocab.find((item) => item.target?.toLocaleLowerCase(getTargetLocale()) === button.dataset.readWord.toLocaleLowerCase(getTargetLocale()));
+      if (word) toast(`${word.target} — ${word.ar}`); else { toast('لم نجد ترجمة لهذه الصيغة في القاموس.'); speakTarget(button.dataset.readWord); }
     }));
     root.querySelectorAll('.question-card input').forEach((input) => input.addEventListener('change', async () => {
       const card = input.closest('.question-card'); if (card.dataset.answered) return;
@@ -188,13 +190,13 @@ export async function renderWriting(root) {
   try {
     const lessons = await getAllLessons();
     const items = lessons.flatMap((lesson) => (lesson.writing || []).map((writing,index) => ({ ...writing, level: lesson.level, lesson: lesson.titleAr, id: `${lesson.id}-write-${index}` })));
-    root.innerHTML = `<div class="view-header"><div><span class="kicker">اكتب ثم افهم التصحيح</span><h1>مختبر الكتابة</h1><p>تدريب على الإنتاج التركي. المقارنة هنا محلية مع إجابة مقترحة، وليست تصحيحاً مفتوحاً بالذكاء الاصطناعي.</p></div><span class="status-pill">${items.length} مطالبة</span></div>
-      ${items.map((item,index) => `<article class="activity-card"><div class="section-heading"><div><span class="level-pill">${escapeHtml(item.level)}</span><h3>${escapeHtml(item.lesson)}</h3></div></div><p>${escapeHtml(item.promptAr)}</p><div class="form-field"><label for="writing-${index}">اكتب إجابتك باللغة التركية</label><textarea id="writing-${index}" lang="tr" dir="ltr" placeholder="Türkçe yazın…"></textarea></div><button class="secondary-button button-small" type="button" data-check-write="${index}">تحقق من النموذج</button><div class="quiz-feedback" data-write-feedback="${index}" aria-live="polite"></div></article>`).join('') || '<div class="empty-state"><strong>لا توجد مطالبات كتابة بعد</strong><p>ستظهر تدريبات الكتابة المضافة إلى الدروس.</p></div>'}
-      <div class="notice warning">قد تكون هناك إجابات تركية صحيحة متعددة. يعرض هذا المختبر النموذج المحدد في بيانات الدرس وسبب استخدامه، ولا يحكم على كل صياغة ممكنة.</div>`;
+    root.innerHTML = `<div class="view-header"><div><span class="kicker">اكتب ثم افهم التصحيح</span><h1>مختبر الكتابة</h1><p>تدريب على الإنتاج باللغة المستهدفة. المقارنة هنا محلية مع إجابة مقترحة، وليست تصحيحاً مفتوحاً بالذكاء الاصطناعي.</p></div><span class="status-pill">${items.length} مطالبة</span></div>
+      ${items.map((item,index) => `<article class="activity-card"><div class="section-heading"><div><span class="level-pill">${escapeHtml(item.level)}</span><h3>${escapeHtml(item.lesson)}</h3></div></div><p>${escapeHtml(item.promptAr)}</p><div class="form-field"><label for="writing-${index}">اكتب إجابتك باللغة النشطة</label><textarea id="writing-${index}" ${getTargetTextAttrs()} placeholder="Türkçe yazın…"></textarea></div><button class="secondary-button button-small" type="button" data-check-write="${index}">تحقق من النموذج</button><div class="quiz-feedback" data-write-feedback="${index}" aria-live="polite"></div></article>`).join('') || '<div class="empty-state"><strong>لا توجد مطالبات كتابة بعد</strong><p>ستظهر تدريبات الكتابة المضافة إلى الدروس.</p></div>'}
+      <div class="notice warning">قد تكون هناك إجابات صحيحة متعددة باللغة المستهدفة. يعرض هذا المختبر النموذج المحدد في بيانات الدرس وسبب استخدامه، ولا يحكم على كل صياغة ممكنة.</div>`;
     root.querySelectorAll('[data-check-write]').forEach((button) => button.addEventListener('click', async () => {
       const index = Number(button.dataset.checkWrite); const item = items[index];
       const value = root.querySelector(`#writing-${index}`).value;
-      const accepted = Array.isArray(item.expectedTr) ? item.expectedTr : [item.expectedTr];
+      const accepted = Array.isArray(item.expectedTarget) ? item.expectedTarget : [item.expectedTarget];
       const ok = matchesExpected(value, accepted); const feedback = root.querySelector(`[data-write-feedback="${index}"]`);
       feedback.textContent = ok ? `إجابة مطابقة للنموذج. ${item.explanationAr || ''}` : `النموذج المقترح: ${accepted.join(' / ')}. ${item.explanationAr || ''}`;
       feedback.className = `quiz-feedback ${ok ? 'correct' : 'incorrect'}`;
@@ -222,10 +224,10 @@ export async function renderReview(root, { toast = () => {} } = {}) {
     }
     const item = due[index];
     root.innerHTML = `<div class="view-header"><div><span class="kicker">مراجعة متباعدة · ${index + 1} من ${due.length}</span><h1>استرجع قبل أن تكشف الإجابة</h1><p>تأمل الكلمة، قل معناها في ذهنك، ثم اختر درجة تذكرك.</p></div><span class="status-pill">${due.length - index} متبقية</span></div>
-      <div class="flashcard"><span class="level-pill">${escapeHtml(item.level || '')}</span><div class="word-tr" lang="tr" dir="ltr">${escapeHtml(item.tr)}</div>${item.ipa ? `<div class="word-pos">${escapeHtml(item.ipa)}</div>` : ''}<button class="tiny-icon-button" type="button" data-speak-card="${escapeAttr(item.tr)}" aria-label="استمع إلى الكلمة"><span data-icon="volume"></span></button>${revealed ? `<div class="flashcard-answer"><strong>${escapeHtml(item.ar)}</strong><br>${item.exampleTr ? `<span class="tr" dir="ltr">${escapeHtml(item.exampleTr)}</span><br>${escapeHtml(item.exampleAr || '')}` : ''}</div>` : '<button class="primary-button" type="button" data-reveal>أظهر الإجابة</button>'}</div>
+      <div class="flashcard"><span class="level-pill">${escapeHtml(item.level || '')}</span><div class="word-tr" ${getTargetTextAttrs()}>${escapeHtml(item.target || item.tr)}</div>${item.ipa ? `<div class="word-pos">${escapeHtml(item.ipa)}</div>` : ''}<button class="tiny-icon-button" type="button" data-speak-card="${escapeAttr(item.target || item.tr)}" aria-label="استمع إلى الكلمة"><span data-icon="volume"></span></button>${revealed ? `<div class="flashcard-answer"><strong>${escapeHtml(item.ar)}</strong><br>${(item.exampleTarget || item.exampleTr) ? `<span class="tr" ${getTargetTextAttrs()}>${escapeHtml(item.exampleTarget || item.exampleTr)}</span><br>${escapeHtml(item.exampleAr || '')}` : ''}</div>` : '<button class="primary-button" type="button" data-reveal>أظهر الإجابة</button>'}</div>
       ${revealed ? `<div class="rating-row"><button class="rating-button" data-rating="again"><strong>لم أتذكر</strong><small>قريباً</small></button><button class="rating-button" data-rating="hard"><strong>بصعوبة</strong><small>فاصل أقصر</small></button><button class="rating-button" data-rating="good"><strong>تذكرت</strong><small>تمديد تدريجي</small></button><button class="rating-button" data-rating="easy"><strong>سهل</strong><small>فاصل أطول</small></button></div><p class="word-pos" style="text-align:center">إذا أخطأت، تعود الكلمة بعد نحو 10 دقائق؛ الإجابة الجيدة تمدد الموعد تدريجياً.</p>` : ''}`;
     root.querySelectorAll('[data-icon]').forEach((el) => { el.innerHTML = icon('volume'); });
-    root.querySelector('[data-speak-card]')?.addEventListener('click', () => { const result = speakTurkish(item.tr); if (!result.ok) toast(result.message); });
+    root.querySelector('[data-speak-card]')?.addEventListener('click', () => { const result = speakTarget(item.target || item.tr); if (!result.ok) toast(result.message); });
     root.querySelector('[data-reveal]')?.addEventListener('click', () => { revealed = true; draw(); });
     root.querySelectorAll('[data-rating]').forEach((button) => button.addEventListener('click', async () => {
       const updated = await rateReview(item, button.dataset.rating);

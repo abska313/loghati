@@ -3,24 +3,28 @@ import { getAll, put } from './database.js';
 const DAY = 86400000;
 
 export async function addToReview(card) {
-  const id = String(card.id || card.tr);
+  const target = String(card.target ?? card.tr ?? '');
+  const exampleTarget = String(card.exampleTarget ?? card.exampleTr ?? '');
+  if (!target) throw new Error('لا يمكن إضافة بطاقة مراجعة بلا نص باللغة المستهدفة.');
+  const id = String(card.id || target);
   const current = (await getAll('reviews')).find((item) => item.id === id);
   const record = {
-    id, tr: card.tr, ar: card.ar, ipa: card.ipa || '', pos: card.pos || '',
-    exampleTr: card.exampleTr || '', exampleAr: card.exampleAr || '', level: card.level || 'Pre-A1',
+    id, target, tr: target, ar: card.ar, ipa: card.ipa || '', pos: card.pos || '',
+    exampleTarget, exampleTr: exampleTarget, exampleAr: card.exampleAr || '', level: card.level || 'Pre-A1',
     repetitions: current?.repetitions || 0, intervalDays: current?.intervalDays || 0,
     ease: current?.ease || 2.25, lapses: current?.lapses || 0,
     nextDue: current?.nextDue || new Date().toISOString(), suspended: false,
     createdAt: current?.createdAt || new Date().toISOString(), updatedAt: new Date().toISOString()
   };
   await put('reviews', record);
-  await put('vocabulary', { id, tr: record.tr, ar: record.ar, level: record.level, learnedAt: current?.createdAt || new Date().toISOString() });
+  await put('vocabulary', { id, target: record.target, tr: record.target, ar: record.ar, level: record.level, learnedAt: current?.createdAt || new Date().toISOString() });
   return record;
 }
 
 export async function getDueReviews() {
   const items = await getAll('reviews');
-  return items.filter((item) => !item.suspended && new Date(item.nextDue || 0).getTime() <= Date.now())
+  return items.map((item) => ({ ...item, target: item.target ?? item.tr ?? '', exampleTarget: item.exampleTarget ?? item.exampleTr ?? '' }))
+    .filter((item) => !item.suspended && new Date(item.nextDue || 0).getTime() <= Date.now())
     .sort((a, b) => new Date(a.nextDue) - new Date(b.nextDue));
 }
 
